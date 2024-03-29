@@ -25,6 +25,10 @@ public class MainController {
 	public String register() {
 		return "register";
 	}
+	@GetMapping("/register2")
+	public String register2() {
+		return "register2";
+	}
 	@GetMapping("/news")
 	public String news() {
 		return "news";

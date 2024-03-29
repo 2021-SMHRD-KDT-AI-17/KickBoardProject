@@ -169,27 +169,27 @@
           <div class="col-lg-8">
             <div class="card">
               <div class="card-body p-4">
-                <form action="#">
+                <form action="interview_insert">
                   <div class="mb-3">
                     <label for="title" class="form-label fw-bold">제목</label>
-                    <input type="text" class="form-control" id="title" name="title" placeholder="제목을 입력하세요">
+                    <input type="text" class="form-control" id="title" name="req_title" placeholder="제목을 입력하세요">
                   </div>
                   <div class="mb-3">
                     <label for="type" class="form-label fw-bold">구분</label>
                     <select class="form-select" id="type" name="type">
-                      <option value="구단" class="bg-danger text-white fw-bold">구단</option>
-                      <option value="선수" class="bg-primary text-white fw-bold">선수</option>
+                      <option value="구단" class="bg-danger text-white fw-bold" name="club_idx">구단</option>
+                      <option value="선수" class="bg-primary text-white fw-bold" name="player_idx">선수</option>
                     </select>
                   </div>
                   <div class="mb-3">
                     <label for="interviewee" class="form-label fw-bold">대상</label>
-                    <input type="text" class="form-control" id="interviewee" name="interviewee" placeholder="대상을 입력하세요">
+                    <input type="text" class="form-control" id="interviewee" name="player_idx" placeholder="대상을 입력하세요">
                     <!-- 초성 입력시 해당 구단이나 선수 목록 뜨기 -->
                     <div id="suggestions"></div>
                   </div>
                   <div class="mb-3">
                     <label for="content" class="form-label fw-bold">내용</label>
-                    <textarea class="form-control" id="content" name="content" rows="10" placeholder="내용을 입력하세요"></textarea>
+                    <textarea class="form-control" id="content" name="req_content" rows="10" placeholder="내용을 입력하세요"></textarea>
                   </div>
                   <div class="text-end">
                     <button type="submit" class="btn btn-primary">글작성</button>

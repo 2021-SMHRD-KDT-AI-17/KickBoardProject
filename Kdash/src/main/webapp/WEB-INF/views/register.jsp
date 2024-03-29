@@ -50,10 +50,10 @@
                     <label for="exampleInputPassword1" class="form-label">Password check</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <a href="register2.html" class="btn btn-secondary w-100 py-8 fs-4 mb-4 rounded-2">Next</a>
+                  <a href="register2" class="btn btn-secondary w-100 py-8 fs-4 mb-4 rounded-2">Next</a>
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">Already have an Account?</p>
-                    <a class="text-primary fw-bold ms-2" href="login.html">Sign in</a>
+                    <a class="text-primary fw-bold ms-2" href="login">Sign in</a>
                   </div>
                 </form>
               </div>

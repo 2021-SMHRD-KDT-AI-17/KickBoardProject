@@ -404,7 +404,7 @@
                   </div>
                 </div>
                 <div class="col-auto">
-                  <a href="#" class="btn btn-light text-decoration-underline"><i class="ti ti-note"></i>게시글 작성</a>
+                  <a href="interview_write" class="btn btn-light text-decoration-underline"><i class="ti ti-note"></i>게시글 작성</a>
                 </div>
               </div>
             </div>

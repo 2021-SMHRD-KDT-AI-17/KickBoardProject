@@ -63,10 +63,10 @@
                     <input type="text" id="selPlayer" class="form-control" disabled>
                   </div>
                 </form>
-                  <a href="login.html" class="btn btn-secondary w-100 py-8 fs-4 mb-4 rounded-2">Sign Up</a>
+                  <a href="login" class="btn btn-secondary w-100 py-8 fs-4 mb-4 rounded-2">Sign Up</a>
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">Already have an Account?</p>
-                    <a class="text-primary fw-bold ms-2" href="login.html">Sign In</a>
+                    <a class="text-primary fw-bold ms-2" href="login">Sign In</a>
                   </div>
                 </form>
               </div>

@@ -37,9 +37,9 @@
                   <a href="http://kauth.kakao.com/oauth/authorize?client_id=094ab7e7162ef731539c15a485e3357b&redirect_uri=http://localhost:8084/DBTest/register&response_type=code" >
                   <img src="resources/assets/images/logos/kakao_login_medium.png">
                   </a>
-                  <a href="main.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</a>
+                  <a href="home" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</a>
                   <div class="d-flex align-items-center justify-content-center">
-                    <a class="text-primary fw-bold ms-2" href="register.html">Create an account</a>
+                    <a class="text-primary fw-bold ms-2" href="register">Create an account</a>
                   </div>
                 </form>
               </div>
