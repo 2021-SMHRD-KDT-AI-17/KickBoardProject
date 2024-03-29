@@ -126,8 +126,8 @@ function getList(init, isPre, idx) {
                     cnt++;
                 }
             }
-            showNewsList(0);
             pagebuttonShow(cnt,news_lastIdx);
+            showNewsList(0);
         }, error: () => {
             console.log("통신실패");
         }
