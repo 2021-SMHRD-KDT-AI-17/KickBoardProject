@@ -35,17 +35,18 @@ function listChange(i, idx) {
     (() => {
         atags[i].addEventListener('click', () => {
             if (active_page != idx) {
+                /*console.log(idx);*/
                 atags[active_page].classList.remove('active');
                 atags[idx].className = "active";
                 active_page = idx;
-                showNewsList((idx - 1) * 5);
+                showNewsList((idx - 1) * idx_count);
             }
         });
     })();
 }
 function pre_post(option) {
     if (option == "post") {
-        // console.log("post");
+        /*console.log("post");*/
         news_pageNow++;
         atags[active_page].classList.remove('active');
         atags[0].classList.remove('invisible');
@@ -53,7 +54,7 @@ function pre_post(option) {
         active_page = 1;
         getList(false, false, news_lastIdx);
     } else if (option == "pre" && news_pageNow != 1) {
-        // console.log("pre");
+        /*console.log("pre")*/;
         news_pageNow--;
         atags[active_page].classList.remove('active');
         atags[1].className = "active";
@@ -101,6 +102,7 @@ function pagebuttonShow(listCount,lastIdx) {
     atags[idx_count+1].className="invisible";
 }
 function getList(init, isPre, idx) {
+	let u;
     if (init == true) u = "newsFirstList";
     else {
         if (isPre == true) u = "newsPreList";
@@ -112,7 +114,6 @@ function getList(init, isPre, idx) {
         type: "get",
         dataType: 'json',
         success: (data) => {
-            let cnt=0;
             news_imgList = [];
             news_titleList = [];
             news_linkList = [];
@@ -123,11 +124,41 @@ function getList(init, isPre, idx) {
                     news_imgList.push(data[i].article_img);
                     news_titleList.push(data[i].article_title);
                     news_linkList.push(data[i].article_url);
-                    cnt++;
                 }
             }
-            pagebuttonShow(cnt,news_lastIdx);
             showNewsList(0);
+            pagebuttonShow(data.length,news_lastIdx);
+        }, error: () => {
+            console.log("통신실패");
+        }
+    })
+}function getList(init, isPre, idx) {
+	let u;
+    if (init == true) u = "newsFirstList";
+    else {
+        if (isPre == true) u = "newsPreList";
+        else u = "newsPostList";
+        u += "?range=" + idx;
+    }
+    $.ajax({
+        url: u,
+        type: "get",
+        dataType: 'json',
+        success: (data) => {
+            news_imgList = [];
+            news_titleList = [];
+            news_linkList = [];
+            news_lastIdx = data[data.length - 1].article_idx;
+            news_firstIdx = data[0].article_idx;
+            for (var i = 0; i < data.length; i++) {
+                if(data[i]!=null){
+                    news_imgList.push(data[i].article_img);
+                    news_titleList.push(data[i].article_title);
+                    news_linkList.push(data[i].article_url);
+                }
+            }
+            showNewsList(0);
+            pagebuttonShow(data.length,news_lastIdx);
         }, error: () => {
             console.log("통신실패");
         }
