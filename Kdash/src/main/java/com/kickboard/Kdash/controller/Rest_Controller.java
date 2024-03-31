@@ -46,11 +46,13 @@ public class Rest_Controller {
 		return requestService.reqFirstList();
 	}
 	@GetMapping("/reqPreList")
-	public  @ResponseBody List<Request> prereqList(@RequestParam("range") int range){
+	public @ResponseBody List<Request> prereqList(@RequestParam("range") int range){
+		System.out.println(range+"pre");
 		return requestService.prereqList(range);
 	}
 	@GetMapping("/reqPostList")
 	public @ResponseBody List<Request> postreqList(@RequestParam("range") int range){
+		System.out.println(range+"post");
 		return requestService.postreqList(range);
 	}
 	//---

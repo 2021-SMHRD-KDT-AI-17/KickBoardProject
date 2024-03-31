@@ -113,7 +113,6 @@
                 <span class="hide-menu">logout</span>
               </a>
             </li>
-            </li>
           </ul>
         </nav>
         <!-- End Sidebar navigation -->
@@ -445,7 +444,6 @@
   const atags = document.querySelectorAll('a[class="enum"]');
   atags[0].className = "invisible";
   atags[1].className = "active";
-  console.log(atags);
 
   let req_pageNow = 1; //전체 페이지
   let active_page = 1; //현재 선택 페이징
@@ -543,29 +541,32 @@
       })();
   }
   function pre_post(option) {
-      if (option == "post") {
-          // console.log("post");
-          req_pageNow++;
-          atags[active_page].classList.remove('active');
-          atags[0].classList.remove('invisible');
-          atags[1].className = "active";
-          active_page = 1;
-          getList(false, false, req_lastIdx);
-      } else if (option == "pre" && req_pageNow != 1) {
-          // console.log("pre");
-          req_pageNow--;
-          atags[active_page].classList.remove('active');
-          atags[1].className = "active";
-          active_page = 1;
-          if (req_pageNow == 1) atags[0].className = "invisible";
-          getList(false, true, req_firstIdx);
-          atags[idx_count + 1].classList.remove('invisible');
-      }
-      for (i = 1; i < atags.length - 1; i++) {
-          var num = Number(req_pageNow * (idx_count));
-          atags[i].innerText = num - (idx_count - i);
-      }
-  }
+	    let is_ajaxSucces;
+	    if (option == "post") {
+	        // console.log("post");
+	        req_pageNow++;
+	        
+	        is_ajaxSucces=getList(false, false, req_lastIdx);
+	        if(is_ajaxSucces==true) atags[0].classList.remove('invisible');
+	    } else if (option == "pre" && req_pageNow != 1) {
+	        // console.log("pre");
+	        req_pageNow--;
+	        if (req_pageNow == 1) atags[0].className = "invisible";
+	        is_ajaxSucces=getList(false, true, req_firstIdx);
+	        atags[idx_count + 1].classList.remove('invisible');
+	    }
+	    if(is_ajaxSucces==true){
+	        atags[active_page].classList.remove('active');
+	        atags[1].className = "active";
+	        active_page = 1;
+	        for (i = 1; i < atags.length - 1; i++) {
+	            var num = Number(req_pageNow * (idx_count));
+	            atags[i].innerText = num - (idx_count - i);
+	        }
+	    }else{
+	        alert("통신실패");
+	    }
+	}
   function showReqList(startN) {
       var listnum = 0;
       var date = new Date();
@@ -618,51 +619,54 @@
           atags[idx_count + 1].className = "invisible";
   }
   function getList(init, isPre, idx) {
-  	let u;
-      if (init == true) u = "reqFirstList";
-      else {
-          if (isPre == true) u = "reqPreList";
-          else u = "reqPostList";
-          u += "?range=" + idx;
-      }
-      $.ajax({
-          url: u,
-          type: "get",
-          dataType: 'json',
-          success: (data) => {
-              req_IdxList = [];
-              req_TitleList = [];
-              req_WriterList = [];
-              req_VieweeList = [];
-              req_LikesList = [];
-              req_AtList = [];
-              req_lastIdx = data[data.length - 1].req_idx;
-              req_firstIdx = data[0].req_idx;
-              let tmp = "";
-              for (var i = 0; i < data.length; i++) {
-                  if (data[i] != null) {
-                      req_IdxList.push(data[i].req_idx);
-                      req_TitleList.push(data[i].req_title);
-                      req_WriterList.push(data[i].mem_email);
-                      if (data[i].player_idx != 0) {
-                          req_VieweeList.push("선수");
-                      }
-                      else {
-                          req_VieweeList.push("구단");
-                      }
-                      temp = "👍";
-                      temp += data[i].req_likes;
-                      req_LikesList.push(temp);
-                      req_AtList.push(data[i].req_at);
-                  }
-              }
-              showReqList(0);
-              pagebuttonShow(data.length, req_lastIdx);
-          }, error: () => {
-              console.log("통신실패");
-          }
-      })
-  }
+		let u;
+	    if (init == true) u = "reqFirstList";
+	    else {
+	        if (isPre == true) u = "reqPreList";
+	        else u = "reqPostList";
+	        u += "?range=" + idx;
+	    }
+	    $.ajax({
+	        url: u,
+	        type: "get",
+	        dataType: 'json',
+	        async :false,
+	        success: (data) => {
+	            req_IdxList = [];
+	            req_TitleList = [];
+	            req_WriterList = [];
+	            req_VieweeList = [];
+	            req_LikesList = [];
+	            req_AtList = [];
+	            req_lastIdx = data[data.length - 1].req_idx;
+	            req_firstIdx = data[0].req_idx;
+	            let tmp = "";
+	            for (var i = 0; i < data.length; i++) {
+	                if (data[i] != null) {
+	                    req_IdxList.push(data[i].req_idx);
+	                    req_TitleList.push(data[i].req_title);
+	                    req_WriterList.push(data[i].mem_email);
+	                    if (data[i].player_idx != 0) {
+	                        req_VieweeList.push("선수");
+	                    }
+	                    else {
+	                        req_VieweeList.push("구단");
+	                    }
+	                    tmp = "👍";
+	                    tmp += data[i].req_likes;
+	                    req_LikesList.push(tmp);
+	                    req_AtList.push(data[i].req_at);
+	                }
+	            }
+	            showReqList(0);
+	            pagebuttonShow(data.length, req_lastIdx);
+	            return true;
+	        }, error: () => {
+	            console.log("통신실패");
+	            return false;
+	        }
+	    })
+	}
   </script>
   <script src="resources/assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="resources/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -16,11 +16,8 @@ public class RequestController {
 	private RequestService requestService;
 	@GetMapping("/interview_detail")
 	public String interview(@RequestParam("idx") int idx, Model model) {
-		System.out.println(idx);
-		/*
-		 * Request post= (Request)requestService.getInterview(idx);
-		 * model.addAttribute("post",post);
-		 */
+		Request req=requestService.getInterview(idx);
+		model.addAttribute("interview",req);
 		return "interview_detail";
 	}
 }

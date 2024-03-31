@@ -2,14 +2,17 @@
 <mapper namespace="com.kickboard.Kdash.mapper.ReqMapper">
 	<select id="getInterview" parameterType="int"
 		resultType="com.kickboard.Kdash.entity.Request">
-		select * from tb_requesttest where req_idx=#{idx}
+		SELECT r.req_idx, m.mem_nick as mem_email, r.player_idx, r.club_idx, r.req_title, r.req_content, req_likes, r.req_at
+		FROM tb_requesttest r
+		INNER JOIN tb_membertest m ON r.mem_email = m.mem_email
+		where #{idx}=req_idx
 	</select>
 	<select id="likesTop3"
 		resultType="com.kickboard.Kdash.entity.Request">
 		SELECT r.req_idx, m.mem_nick as mem_email, r.player_idx, r.club_idx, r.req_title, r.req_content, req_likes, r.req_at
 		FROM tb_requesttest r
 		INNER JOIN tb_membertest m ON r.mem_email = m.mem_email
-		order by req_likes DESC limit 3;
+		order by req_likes DESC limit 3
 	</select>
 	<select id="reqFirstList"
 		resultType="com.kickboard.Kdash.entity.Request">
@@ -23,7 +26,7 @@
 		SELECT r.req_idx, m.mem_nick as mem_email, r.player_idx, r.club_idx, r.req_title, r.req_content, req_likes, r.req_at
 		FROM tb_requesttest r
 		INNER JOIN tb_membertest m ON r.mem_email = m.mem_email
-		where #{num}+50>=req_idx order		
+		where #{range}+50>=req_idx order by		
 		req_idx DESC limit 50
 	</select>
 	<select id="postreqList" parameterType="int"
@@ -31,8 +34,8 @@
 		SELECT r.req_idx, m.mem_nick as mem_email, r.player_idx, r.club_idx, r.req_title, r.req_content, req_likes, r.req_at
 		FROM tb_requesttest r
 		INNER JOIN tb_membertest m ON r.mem_email = m.mem_email
-		where #{num}>req_idx order by
-		by req_idx DESC limit 50
+		where #{range}>req_idx order by
+		req_idx DESC limit 50
 	</select>
 
 </mapper>
