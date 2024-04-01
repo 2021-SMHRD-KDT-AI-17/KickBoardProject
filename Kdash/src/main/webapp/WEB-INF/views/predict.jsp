@@ -171,15 +171,15 @@
             <div class="card predict-box">
               <div class="card-body">
                 <h5 class="card-title fw-semibold mb-4 text-center">
-                  <span><img src="/연습/assets/images/logos/ball_logo.png" class="field-logo">Gwangju </span>
+                  <span><img src="resources/assets/images/logos/ball_logo.png" class="field-logo">Gwangju </span>
                   vs
-                  <span> seoul</span><img src="/연습/assets/images/logos/ball_logo.png" class="field-logo"></h5>
+                  <span> seoul</span><img src="resources/assets/images/logos/ball_logo.png" class="field-logo"></h5>
                 <!-- card -->
                 <div class="row">
                   <div class="col-lg-12 player-card">
                     <div class="card">
                       <div class="card-body">
-                        <img src="/연습/assets/images/products/filed1.jpg" class="mx100-mh100">
+                        <img src="resources/assets/images/products/filed1.jpg" class="mx100-mh100">
                         <div class="card-body team-lineup-a rounded p-3">
                           <table class="table-sm table-img text-center table-text-color " style="width: 180px;">
                             <tr class="team-name-row">
@@ -575,9 +575,9 @@
                 <div class="text-center mb-3">
                   <h6 class="mb-0">2024.01.01</h6>
                   <p class="mb-0 fw-bold">
-                    <span><img src="/연습/assets/images/logos/ball_logo.png" class="small-logo">광주 fc </span>
+                    <span><img src="resources/assets/images/logos/ball_logo.png" class="small-logo">광주 fc </span>
                     vs
-                    <span>서울 fc<img src="/연습/assets/images/logos/ball_logo.png" class="small-logo"></span></p>
+                    <span>서울 fc<img src="resources/assets/images/logos/ball_logo.png" class="small-logo"></span></p>
                 </div>
                 <div class="progress mb-3">
                   <div class="progress-bar bg-success" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">승: 40%</div>
