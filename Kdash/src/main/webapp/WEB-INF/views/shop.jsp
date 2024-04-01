@@ -167,11 +167,30 @@
       <div class="container-fluid">
         <h1 class="text-center"><a href="#"><i class="ti ti-shopping-bag"></i></a>shop</h1><br>
         <div class="row">
-        
-        
+          <div class="col-sm-6 col-xl-3 itemdiv">
+            <div class="card overflow-hidden rounded-2">
+              <div class="position-relative">
+              <img src="https://shop-phinf.pstatic.net/20240314_23/1710378021976kmPkO_JPEG/37680705852582707_92926538.jpg?type=m510" class="card-img-top rounded-0 itemimg" alt="resources.">
+              	<p class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3 itemadd" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart">
+              	<i class="ti ti-basket fs-4"></i>
+              	</p>
+                </div>
+              <div class="card-body pt-3 p-4 iteminfo">
+                <h6 class="fw-semibold fs-4 itemname">${shop_list[0].goods_name}</h6>
+                <div class="d-flex align-items-center justify-content-between">
+                <!-- 할인시 <del class="ms-2 fw-normal text-muted fs-3"></del> -->
+                  <h6 class="fw-semibold fs-4 mb-0"><span class="itemprice">${shop_list[0].goods_price}</span><span>원</span></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
           <div class="col-sm-6 col-xl-3">
             <div class="card overflow-hidden rounded-2">
               <div class="position-relative">
+<<<<<<< HEAD
+=======
                 <a href="shop_details"><img src="https://shop-phinf.pstatic.net/20240314_23/1710378021976kmPkO_JPEG/37680705852582707_92926538.jpg?type=m510" class="card-img-top rounded-0" alt="resources."></a>
                 <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
               <div class="card-body pt-3 p-4">
@@ -188,6 +207,7 @@
           <%-- <div class="col-sm-6 col-xl-3">
             <div class="card overflow-hidden rounded-2">
               <div class="position-relative">
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject.git
                 <a href="javascript:void(0)"><img src="resources/assets/images/products/s5.jpg" class="card-img-top rounded-0" alt="resources."></a>
                 <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
               <div class="card-body pt-3 p-4">
@@ -226,7 +246,7 @@
                 </div>
               </div>
             </div>
-          </div> --%>
+          </div>
         </div>
         <div class="row">
           <div class="col-sm-6 col-xl-3">
