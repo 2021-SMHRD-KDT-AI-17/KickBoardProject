@@ -101,7 +101,6 @@
 </dependency>-->
 
 		
-=======
 
 		<!-- 스프링 시큐리티 -->
 		<dependency>
@@ -110,7 +109,7 @@
 			<version>3.1.5</version>
 		</dependency>
 
-		<!-- 시큐리티 태그 라이브러리 -->
+		 <!--시큐리티 태그 라이브러리 -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
@@ -123,9 +122,6 @@
 			<version>3.2.4</version>
 		</dependency>
 
-
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject.git
->>>>>>> refs/remotes/origin/master
 	</dependencies>
 
 	<build>
