@@ -132,35 +132,4 @@ function getList(init, isPre, idx) {
             console.log("통신실패");
         }
     })
-}function getList(init, isPre, idx) {
-	let u;
-    if (init == true) u = "newsFirstList";
-    else {
-        if (isPre == true) u = "newsPreList";
-        else u = "newsPostList";
-        u += "?range=" + idx;
-    }
-    $.ajax({
-        url: u,
-        type: "get",
-        dataType: 'json',
-        success: (data) => {
-            news_imgList = [];
-            news_titleList = [];
-            news_linkList = [];
-            news_lastIdx = data[data.length - 1].article_idx;
-            news_firstIdx = data[0].article_idx;
-            for (var i = 0; i < data.length; i++) {
-                if(data[i]!=null){
-                    news_imgList.push(data[i].article_img);
-                    news_titleList.push(data[i].article_title);
-                    news_linkList.push(data[i].article_url);
-                }
-            }
-            showNewsList(0);
-            pagebuttonShow(data.length,news_lastIdx);
-        }, error: () => {
-            console.log("통신실패");
-        }
-    })
 }
