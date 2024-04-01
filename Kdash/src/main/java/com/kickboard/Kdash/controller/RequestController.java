@@ -15,9 +15,13 @@ public class RequestController {
 	@Resource
 	private RequestService requestService;
 	@GetMapping("/interview_detail")
-	public String interview(@RequestParam("idx") int idx, Model model) {
+	public String getInterview(@RequestParam("idx") int idx, Model model) {
 		Request req=requestService.getInterview(idx);
 		model.addAttribute("interview",req);
 		return "interview_detail";
+	}
+	@GetMapping("/interview_write")
+	public String reqWrite() {
+		return "interview_write";
 	}
 }

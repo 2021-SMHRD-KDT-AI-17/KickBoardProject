@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
 
@@ -176,10 +175,10 @@
                       <th class="border-bottom col-lg-1">
                         <h6 class="fw-semibold mb-0">순위</h6>
                       </th>
-                      <th class="border-bottom col-lg-6">
+                      <th class="border-bottom col-lg-4">
                         <h6 class="fw-semibold mb-0">제목</h6>
                       </th>
-                      <th class="border-bottom col-lg-1">
+                      <th class="border-bottom col-lg-2">
                         <h6 class="fw-semibold mb-0">작성자</h6>
                       </th>
                       <th class="border-bottom col-lg-1">
@@ -188,7 +187,7 @@
                       <th class="border-bottom col-lg-1">
                         <h6 class="fw-semibold mb-0">추천수</h6>
                       </th>
-                      <th class="border-bottom col-lg-2">
+                      <th class="border-bottom col-lg-3">
                         <h6 class="fw-semibold mb-0">작성일</h6>
                       </th>
                     </tr>
@@ -261,11 +260,11 @@
               <thead>
                 <tr>
                   <th scope="col" class= "col-lg-1">글번호</th>
-                  <th scope="col" class= "col-lg-6">제목</th>
-                  <th scope="col" class= "col-lg-1">작성자</th>
+                  <th scope="col" class= "col-lg-4">제목</th>
+                  <th scope="col" class= "col-lg-2">작성자</th>
                   <th scope="col" class= "col-lg-1">대상</th>
                   <th scope="col" class= "col-lg-1">추천수</th>
-                  <th scope="col" class= "col-lg-2">작성일</th>
+                  <th scope="col" class= "col-lg-3">작성일</th>
                 </tr>
               </thead>
               <tbody>
@@ -395,9 +394,9 @@
               <div class="row justify-content-end">
                 <div class="col-auto">
                   <div class="input-group">
-                    <input type="text" class="form-control" id="search" placeholder="123">
+                    <input type="text" class="form-control" id="search" placeholder="키워드를 넣어보세요">
                     <span class="input-group-text">
-                      <a href="#"><i class="ti ti-search" id="searchIcon"></i></a>
+                      <i class="ti ti-search" id="searchIcon" style="cursor:pointer"></i>
                     </span>
                   </div>
                 </div>
@@ -421,6 +420,9 @@
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<<<<<<< HEAD
+  <script src="resources/assets/js/inverviewMain.js"></script>
+=======
   <script type="text/javascript">
   const gr_tr = document.getElementsByClassName("g_tr");
   const gr_title = document.getElementsByClassName("goodreq_title");
@@ -670,6 +672,7 @@
 	    })
 	}
   </script>
+>>>>>>> refs/remotes/origin/master
   <script src="resources/assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="resources/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="resources/assets/js/sidebarmenu.js"></script>

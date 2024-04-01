@@ -19,15 +19,20 @@ public class RequestService {
 		return reqMapper.reqFirstList();
 	}
 	public List<Request> prereqList(int range) {
-		System.out.println(range+"pre");
 		return reqMapper.prereqList(range);
 	}
 	public List<Request> postreqList(int range) {
-		System.out.println(range+"post");
 		return reqMapper.postreqList(range);
+	}
+	public List<Request> findreqList(String keyword) {
+		return reqMapper.findreqList(keyword);
 	}
 	public Request getInterview(int idx) {
 		return reqMapper.getInterview(idx);
+	}
+	public boolean likesUpdate(int idx, int likes) {
+		byte cnt=(byte)reqMapper.likesUpdate(idx,likes);
+		return cnt>0?true:false;
 	}
 
 }

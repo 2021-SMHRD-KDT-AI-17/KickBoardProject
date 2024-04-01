@@ -86,6 +86,16 @@
 			<version>3.2.1</version>
 		</dependency>
 
+		
+<!--	 https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl-api 
+<dependency>
+    <groupId>javax.servlet.jsp.jstl</groupId>
+    <artifactId>jstl-api</artifactId>
+    <version>1.2</version>
+</dependency>-->
+
+		
+
 		<!-- 스프링 시큐리티 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -93,7 +103,7 @@
 			<version>3.1.5</version>
 		</dependency>
 
-		<!-- 시큐리티 태그 라이브러리 -->
+		 <!--시큐리티 태그 라이브러리 -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
@@ -105,7 +115,6 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 			<version>3.2.4</version>
 		</dependency>
-
 
 	</dependencies>
 

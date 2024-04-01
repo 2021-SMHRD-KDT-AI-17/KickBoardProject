@@ -29,13 +29,21 @@
 		where #{range}+50>=req_idx order by		
 		req_idx DESC limit 50
 	</select>
-	<select id="postreqList" parameterType="int"
-		resultType="com.kickboard.Kdash.entity.Request">
+	<select id="postreqList" parameterType="int" resultType="com.kickboard.Kdash.entity.Request">
 		SELECT r.req_idx, m.mem_nick as mem_email, r.player_idx, r.club_idx, r.req_title, r.req_content, req_likes, r.req_at
 		FROM tb_requesttest r
 		INNER JOIN tb_membertest m ON r.mem_email = m.mem_email
 		where #{range}>req_idx order by
 		req_idx DESC limit 50
 	</select>
-
+	<select id="findreqList" parameterType="String" resultType="com.kickboard.Kdash.entity.Request">
+		SELECT r.req_idx, m.mem_nick as mem_email, r.player_idx, r.club_idx, r.req_title, r.req_content, req_likes, r.req_at
+		FROM tb_requesttest r
+		INNER JOIN tb_membertest m ON r.mem_email = m.mem_email
+		where req_title like CONCAT('%',#{keyword},'%') order by
+		req_idx DESC limit 50
+	</select>
+	<update id="likesUpdate" parameterType="int">
+		update tb_requesttest set req_likes=#{likes} where req_idx=#{idx}
+	</update>
 </mapper>
