@@ -549,20 +549,20 @@
                 <!-- 채팅 메시지 -->
                 <div class="chat-box flex-grow-1 d-flex flex-column">
                   <!-- 채팅 내용 표시 -->
-                  <div class="chat-message bg-white rounded p-2 mb-2">
-                    <p class="mb-0"><strong>User1:</strong> Hello, any predictions?</p>
+                  <div id="chat_box" class="chat-message bg-white rounded p-2 mb-2">
+                    <!-- <p class="mb-0"><strong>User1:</strong> Hello, any predictions?</p> -->
                   </div>
-                  <div class="chat-message bg-white rounded p-2 mb-2">
+                 <!--  <div class="chat-message bg-white rounded p-2 mb-2">
                     <p class="mb-0"><strong>User2:</strong> I think Team A will win.</p>
-                  </div>
+                  </div> -->
                   <!-- 채팅 입력 -->
-                  <form class="mt-auto">
+                  <!-- <form class="mt-auto"> -->
                     <div class="mb-3">
                       <label class="form-label">Your Message</label>
-                      <input type="text" class="form-control">
+                      <input type="text" id="msg" class="form-control">
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Send</button>
-                  </form>
+                    <button id="msg_process" class="btn btn-primary w-100">Send</button>
+                  <!-- </form> -->
                 </div>
               </div>
             </div>
