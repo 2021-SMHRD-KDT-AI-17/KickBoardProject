@@ -12,6 +12,7 @@ public interface ReqMapper {
 	public List<Request> reqFirstList();
 	public List<Request> prereqList(int range);
 	public List<Request> postreqList(int range);
+	public List<Request> findreqList(String keyword);
 
 	public Request getInterview(int idx);
 }

@@ -12,8 +12,6 @@ const r_writer = document.getElementsByClassName("req_writer");
 const r_viewee = document.getElementsByClassName("req_viewee");
 const r_likes = document.getElementsByClassName("req_likes");
 const r_at = document.getElementsByClassName("req_at");
-const sql = document.getElementById("search");
-const sqlbutton = document.getElementById("searchIcon");
 let req_IdxList = [];
 let req_TitleList = [];
 let req_WriterList = [];
@@ -230,47 +228,3 @@ function getList(init, isPre, idx) {
 		}
 	})
 }
-sqlbutton.addEventListener('click', () => {
-	console.log(sql.value);
-	$.ajax({
-		url: "reqFind" + "?keyword=" + sql.value,
-		type: "get",
-		dataType: 'json',
-		success: (data) => {
-			req_IdxList = [];
-			req_TitleList = [];
-			req_WriterList = [];
-			req_VieweeList = [];
-			req_LikesList = [];
-			req_AtList = [];
-			req_lastIdx = data[data.length - 1].req_idx;
-			req_firstIdx = data[0].req_idx;
-			let tmp = "";
-			if (data[i] != null) {
-				for (var i = 0; i < data.length; i++) {
-					req_IdxList.push(data[i].req_idx);
-					req_TitleList.push(data[i].req_title);
-					req_WriterList.push(data[i].mem_email);
-					if (data[i].player_idx != 0) {
-						req_VieweeList.push("선수");
-					}
-					else {
-						req_VieweeList.push("구단");
-					}
-					tmp = "👍";
-					tmp += data[i].req_likes;
-					req_LikesList.push(tmp);
-					req_AtList.push(data[i].req_at);
-				}
-			}else {
-				alert("'" + sql.value + "'를 포함하는 글이 없습니다");
-			}
-			showReqList(0);
-			pagebuttonShow(data.length, req_lastIdx);
-			console.log(req_IdxList + "sucess");
-		}, error: (request, err) => {
-			console.log("통신실패");
-			alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + err);
-		}
-	})
-})
