@@ -197,12 +197,7 @@
                    <tr class="g_tr">
                       <td class="border-bottom-0"><h6 class="fw-semibold mb-0">1</h6></td>
                       <td class="border-bottom-0">
-<<<<<<< HEAD
-                          <a href="interview_detail">
-                            <h6 class="fw-semibold mb-1 goodreq_title">추천 인터뷰 제목</h6></a>                     
-=======
                             <h6 class="fw-semibold mb-1 goodreq_title">추천 인터뷰 제목</h6>                    
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject.git
                       </td>
                       <td class="border-bottom-0">
                         <p class="mb-0 fw-normal goodreq_writer">제갈제니</p>
