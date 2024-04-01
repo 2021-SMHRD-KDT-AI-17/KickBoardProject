@@ -5,17 +5,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig{
-
-	@Bean
-	public BCryptPasswordEncoder encode() {
-		return new BCryptPasswordEncoder();
-	}
 	
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -25,7 +19,16 @@ public class SecurityConfig{
 	            authorizeRequests
 	                .requestMatchers("/admin/**").hasRole("ADMIN")
 	                .anyRequest().permitAll()
-	        );
+	        )
+	        .formLogin(formLogin ->
+            formLogin
+                .loginPage("/login")
+                .loginProcessingUrl("/login")
+                .defaultSuccessUrl("/")
+                .failureUrl("/failed")
+        )
+	        .logout(logout -> logout
+                    .permitAll());
 	        
 	        
 	    return http.build();

@@ -28,15 +28,16 @@
                 <form action="/login" method="post">
                   <div class="mb-3">
                     <label for="exampleInputEmail1"  class="form-label">UserEmail</label>
-                    <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                   </div>
                   <div class="mb-4">
                     <label for="exampleInputPassword1"  class="form-label">Password</label>
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <a href="http://kauth.kakao.com/oauth/authorize?client_id=094ab7e7162ef731539c15a485e3357b&redirect_uri=http://localhost:8084/DBTest/register&response_type=code" >
+                  <a href="http://kauth.kakao.com/oauth/authorize?client_id=fcfe48814f7dfaa68e95df43c81f9257&redirect_uri=https://localhost:8084/kakao/callback&response_type=code"
+                  class="btn btn-warning w-100 py-8 fs-4 mb-4 rounded-2" > Kakao Login
                   </a>
-                  <a href="home" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</a>
+                  <input type="submit" value="Sign In" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">
                   <div class="d-flex align-items-center justify-content-center">
                     <a class="text-primary fw-bold ms-2" href="register">Create an account</a>
                   </div>

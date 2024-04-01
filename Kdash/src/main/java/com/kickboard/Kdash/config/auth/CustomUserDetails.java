@@ -11,11 +11,11 @@ import java.util.Set;
 public class CustomUserDetails implements UserDetails {
 
     private Set<String> roles;
-    private String username;
+    private String email;
     private String password;
 
     public CustomUserDetails(String email, String password, Set<String> roles) {
-        this.username = email;
+        this.email = email;
         this.password = password;
         this.roles = roles;
     }
@@ -36,7 +36,7 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return username;
+        return email;
     }
 
     @Override

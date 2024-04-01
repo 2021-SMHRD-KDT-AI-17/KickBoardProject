@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.Errors;
@@ -18,10 +17,6 @@ public class AuthService {
 
 	@Autowired
 	AuthMapper authMapper;
-
-	// 추가
-	@Autowired
-	BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	@Transactional
 	public Map<String, String> validHandling(Errors errors) {
@@ -44,8 +39,6 @@ public class AuthService {
 	// 회원가입
 	@Transactional
 	public void signup(SignupDto signupDto) {
-		String encPassword = bCryptPasswordEncoder.encode(signupDto.getPassword());
-		signupDto.setPassword(encPassword);
 		authMapper.signup(signupDto);
 	}
 

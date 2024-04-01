@@ -15,8 +15,8 @@ public class CustomUserDetailsService implements UserDetailsService{
     AuthMapper authMapper;
     
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        CustomUserDetails principal  = authMapper.getUser(username);
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        CustomUserDetails principal  = authMapper.getUser(email);
         
         if(principal == null) throw new UsernameNotFoundException("회원이 존재하지 않습니다");
         
