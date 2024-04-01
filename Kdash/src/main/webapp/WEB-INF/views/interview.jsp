@@ -113,6 +113,7 @@
                 <span class="hide-menu">logout</span>
               </a>
             </li>
+            </li>
           </ul>
         </nav>
         <!-- End Sidebar navigation -->
@@ -563,7 +564,9 @@
 	            var num = Number(req_pageNow * (idx_count));
 	            atags[i].innerText = num - (idx_count - i);
 	        }
+	        console.log(req_IdxList +"success");
 	    }else{
+	    	console.log(req_IdxList +"fail");
 	        alert("통신실패");
 	    }
 	}
@@ -630,7 +633,6 @@
 	        url: u,
 	        type: "get",
 	        dataType: 'json',
-	        async :false,
 	        success: (data) => {
 	            req_IdxList = [];
 	            req_TitleList = [];
@@ -661,7 +663,7 @@
 	            showReqList(0);
 	            pagebuttonShow(data.length, req_lastIdx);
 	            return true;
-	        }, error: () => {
+	        }, error: (err) => {
 	            console.log("통신실패");
 	            return false;
 	        }
