@@ -37,10 +37,7 @@ public class MainController {
 	public String interview() {
 		return "interview";
 	}
-	@GetMapping("/shop")
-	public String shop() {
-		return "shop";
-	}
+	
 	@GetMapping("/shop_details")
 	public String shop_details() {
 		return "shop_details";

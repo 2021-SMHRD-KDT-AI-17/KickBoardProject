@@ -16,6 +16,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 	<!--  Body Wrapper -->
 	<div class="page-wrapper" id="main-wrapper" data-layout="vertical"
 		data-navbarbg="skin6" data-sidebartype="full"
@@ -366,7 +367,6 @@
 	<script src="resources/assets/libs/apexcharts/dist/apexcharts.js"></script>
 	<script src="resources/assets/libs/simplebar/dist/simplebar.js"></script>
 	<script src="resources/assets/js/dashboard.js"></script>
-
 </body>
 
 </html>
