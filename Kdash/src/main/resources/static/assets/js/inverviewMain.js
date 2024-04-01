@@ -237,6 +237,7 @@ sqlbutton.addEventListener('click', () => {
 		type: "get",
 		dataType: 'json',
 		success: (data) => {
+			console.log(data);
 			req_IdxList = [];
 			req_TitleList = [];
 			req_WriterList = [];
@@ -246,7 +247,7 @@ sqlbutton.addEventListener('click', () => {
 			req_lastIdx = data[data.length - 1].req_idx;
 			req_firstIdx = data[0].req_idx;
 			let tmp = "";
-			if (data[i] != null) {
+			if (data.length!= 0) {
 				for (var i = 0; i < data.length; i++) {
 					req_IdxList.push(data[i].req_idx);
 					req_TitleList.push(data[i].req_title);

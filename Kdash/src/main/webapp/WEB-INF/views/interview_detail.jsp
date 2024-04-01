@@ -156,12 +156,13 @@
 							<table class="table">
 								<thead>
 									<tr>
-										<th scope="col" class="text-center fw-semibold fs-4 mb-0">${interview.req_idx}</th>
+										<th scope="col" class="text-center fw-semibold fs-4 mb-0" id="idxnow">${interview.req_idx}</th>
 										<th scope="col" class="text-center fw-semibold fs-4 mb-0">${interview.req_title}</th>
 										<th scope="col" class="text-center fw-semibold fs-4 mb-0"><span
 											class="badge bg-primary rounded-3 fw-semibold">선수</span></th>
 										<th scope="col" class="text-center fw-semibold fs-4 mb-0">린가드</th>
-										<th scope="col" class="text-center fw-semibold fs-4 mb-0">👍${interview.req_likes}</th>
+										<th scope="col" class="text-center fw-semibold fs-4 mb-0"
+											id="likes">👍${interview.req_likes}</th>
 										<th scope="col" class="text-center fw-semibold fs-4 mb-0">${interview.req_at}</th>
 									</tr>
 								</thead>
@@ -177,13 +178,24 @@
 								</tbody>
 							</table>
 							<div class="text-end">
-								<button class="btn btn-primary">추천하기👍</button>
+								<button class="btn btn-primary" id="likebutton">추천하기👍</button>
 								<a href="interview"><button class="btn btn-primary">게시판으로
 										이동</button></a>
 							</div>
+							
 							<div class="card-body">
 								<h5 class="card-title fw-semibold mb-4">다른 글 보기</h5>
-								<table class="table text-nowrap mb-0 align-middle">
+								<table class="table text-center justify-content-center">
+									<thead>
+										<tr>
+											<th scope="col" class="col-lg-1">글번호</th>
+											<th scope="col" class="col-lg-4">제목</th>
+											<th scope="col" class="col-lg-2">작성자</th>
+											<th scope="col" class="col-lg-1">대상</th>
+											<th scope="col" class="col-lg-1">추천수</th>
+											<th scope="col" class="col-lg-3">작성일</th>
+										</tr>
+									</thead>
 									<tbody>
 										<tr class="r_tr">
 											<td class="req_idx">651</td>
@@ -344,9 +356,11 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="resources/assets/js/interviewDetail.js"></script>
-	<script	src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 	<script src="resources/assets/libs/jquery/dist/jquery.min.js"></script>
-	<script	src="resources/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script
+		src="resources/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="resources/assets/js/sidebarmenu.js"></script>
 	<script src="resources/assets/js/app.min.js"></script>
 	<script src="resources/assets/libs/apexcharts/dist/apexcharts.js"></script>

@@ -12,6 +12,9 @@ const r_writer = document.getElementsByClassName("req_writer");
 const r_viewee = document.getElementsByClassName("req_viewee");
 const r_likes = document.getElementsByClassName("req_likes");
 const r_at = document.getElementsByClassName("req_at");
+const likes = document.getElementById("likes");
+const likebutton = document.getElementById("likebutton");
+let req_idx = Number(document.getElementById("idxnow").innerText);
 let req_IdxList = [];
 let req_TitleList = [];
 let req_WriterList = [];
@@ -41,53 +44,8 @@ for (var i = 0; i < atags.length; i++) {
 			atags[i].addEventListener('click', () => pre_post("post"));
 	}
 }
-//top3
-(() => {
-	$.ajax({
-		url: "likesTop3",
-		type: "get",
-		dataType: "json",
-		success: (data) => {
-			for (var i = 0; i < 3; i++) {
-				if (data.length = 3) {
-					gr_tr[i].setAttribute("onclick", "location.href='interview_detail?idx=" + data[i].req_idx + "'");
-					gr_tr[i].setAttribute("style", "cursor:pointer;");
-					gr_title[i].innerText = data[i].req_title;
-					gr_writer[i].innerText = data[i].mem_email;
-					gr_viewee[i].classList.remove('bg-primary');
-					gr_viewee[i].classList.remove('bg-danger');
-					if (data[i].player_idx != 0) {
-						gr_viewee[i].className += " bg-primary";
-						gr_viewee[i].innerText = "선수";
-					}
-					else {
-						gr_viewee[i].className += " bg-danger";
-						gr_viewee[i].innerText = "구단";
-					}
-					gr_likes[i].innerText = "👍";
-					gr_likes[i].innerText += data[i].req_likes;
-					gr_at.innerText = data[i].req_at;
-				} else {
-					gr_title[i].innerText = "어서 인터뷰 요청 글을 작성해 보세요!💨";
-					gr_writer[i].innerText = "";
-					gr_viewee[i].innerText = "";
-					gr_likes[i].innerText = "";
-					gr_at.innerText = "";
-				}
-			}
-		},
-		error: () => {
-			var date = new Date();
-			for (var i = 0; i < gr_title.length; i++) {
-				gr_title[i].innerText = "💦통신오류!💦";
-				gr_writer[i].innerText = "💦";
-				gr_viewee[i].innerText = "💦";
-				gr_likes[i].innerText = "💥";
-				gr_at[i].innerText = date.getHours() + ":" + date.getMinutes();
-			}
-		}
-	})
-})();
+//top3 x
+
 //그 외 글10개
 getList(true, false, "");
 
@@ -131,15 +89,23 @@ function pre_post(option) {
 function showReqList(startN) {
 	var listnum = 0;
 	var date = new Date();
+	console.log(r_idx[0].innerText);
+	console.log(req_idx);
 	for (var i = startN; i < startN + post_perpage; i++) {
 		r_tr[listnum].classList.remove('bg-onclick');
 		r_tr[listnum].classList.remove('style');
 		r_viewee[listnum].classList.remove('bg-primary');
 		r_viewee[listnum].classList.remove('bg-danger');
 		if (req_IdxList[i] != null) {
+			console.log(req_IdxList[i]);
+			console.log(req_idx);
+			console.log(req_IdxList[i] == req_idx);
 			r_tr[listnum].setAttribute("onclick", "location.href='interview_detail?idx=" + req_IdxList[i] + "'");
 			r_tr[listnum].setAttribute("style", "cursor:pointer;");
 			r_idx[listnum].innerText = req_IdxList[i];
+			if (r_idx[listnum].innerText == req_idx) {
+				r_tr[listnum].setAttribute("style", "background-color: rgb(134, 180, 255);");
+			}
 			r_title[listnum].innerText = req_TitleList[i];
 			r_writer[listnum].innerText = req_WriterList[i];
 			if (req_VieweeList[i] == "선수") {
@@ -228,3 +194,24 @@ function getList(init, isPre, idx) {
 		}
 	})
 }
+likebutton.addEventListener('click', () => {
+	let likecnt = Number(likes.innerText.split("👍")[1]);
+	if (likebutton.classList.contains('active') == false) {
+		likecnt += 1;
+		likebutton.className += " active";
+	} else {
+		likecnt -= 1;
+		likebutton.classList.remove("active");
+	}
+	likes.innerText = "👍" + likecnt;
+	$.ajax({
+		url: "likesUpdate?" + "idx=" + req_idx + "&likes=" + likecnt,
+		type: "get",
+		dataType: 'json',
+		success: () => {
+		}, error: (request, err) => {
+			console.log("통신실패");
+			alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + err);
+		}
+	})
+})

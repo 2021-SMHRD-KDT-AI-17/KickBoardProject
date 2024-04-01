@@ -25,11 +25,14 @@ public class RequestService {
 		return reqMapper.postreqList(range);
 	}
 	public List<Request> findreqList(String keyword) {
-		System.out.println("service"+keyword);
 		return reqMapper.findreqList(keyword);
 	}
 	public Request getInterview(int idx) {
 		return reqMapper.getInterview(idx);
+	}
+	public boolean likesUpdate(int idx, int likes) {
+		byte cnt=(byte)reqMapper.likesUpdate(idx,likes);
+		return cnt>0?true:false;
 	}
 
 }

@@ -27,12 +27,10 @@ public class Rest_Controller {
 	}
 	@GetMapping("/newsPreList")
 	public @ResponseBody List<News> prenewsList(@RequestParam("range") int range){
-		System.out.println(range+"pre");
 		return newsService.prenewsList(range);
 	}
 	@GetMapping("/newsPostList")
 	public @ResponseBody List<News> postnewsList(@RequestParam("range") int range){
-		System.out.println(range+"post");
 		return newsService.postnewsList(range);
 	}
 	//---
@@ -55,8 +53,11 @@ public class Rest_Controller {
 	}
 	@GetMapping("/reqFind")
 	public @ResponseBody List<Request> findreqList(@RequestParam("keyword") String keyword){
-		System.out.println("controller"+keyword);
 		return requestService.findreqList(keyword);
+	}
+	@GetMapping("/likesUpdate")
+	public @ResponseBody boolean likesUpdate(@RequestParam("idx") int idx,@RequestParam("likes") int likes){
+		return requestService.likesUpdate(idx,likes);
 	}
 	//---
 }

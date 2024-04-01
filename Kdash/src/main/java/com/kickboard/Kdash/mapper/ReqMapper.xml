@@ -43,4 +43,7 @@
 		where req_title like CONCAT('%',#{keyword},'%') order by
 		req_idx DESC limit 50
 	</select>
+	<update id="likesUpdate" parameterType="int">
+		update tb_requesttest set req_likes=#{likes} where req_idx=#{idx}
+	</update>
 </mapper>
