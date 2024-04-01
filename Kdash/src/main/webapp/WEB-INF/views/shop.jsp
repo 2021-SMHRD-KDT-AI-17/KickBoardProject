@@ -49,14 +49,7 @@
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">contents</span>
             </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-report-analytics"></i>
-                </span>
-                <span class="hide-menu">analysis</span>
-              </a>
-            </li>
+            
             <li class="sidebar-item">
               <a class="sidebar-link" href="predict" aria-expanded="false">
                 <span>
@@ -143,19 +136,16 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
+                    <p class="mb-0 fs-3 profile-name">님 환영합니다.</p>
                     <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
                     <a href="shop_paycheck" class="d-flex align-items-center gap-2 dropdown-item">
-                      <i class="ti ti-mail fs-6"></i>
+                      <i class="ti ti-shopping-cart fs-6"></i>
                       <p class="mb-0 fs-3">My Cart</p>
                     </a>
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                      <i class="ti ti-list-check fs-6"></i>
-                      <p class="mb-0 fs-3">My Task</p>
-                    </a>
-                    <a href="login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="login" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
@@ -170,7 +160,7 @@
           <div class="col-sm-6 col-xl-3 itemdiv">
             <div class="card overflow-hidden rounded-2">
               <div class="position-relative">
-              <img src="https://shop-phinf.pstatic.net/20240314_23/1710378021976kmPkO_JPEG/37680705852582707_92926538.jpg?type=m510" class="card-img-top rounded-0 itemimg" alt="resources.">
+              <img src="resources/assets/images/backgrounds/k-l.jpg" class="card-img-top rounded-0 itemimg" alt="resources."height="300px" width="300px">
               	<p class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3 itemadd" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart">
               	<i class="ti ti-basket fs-4"></i>
               	</p>
@@ -189,9 +179,7 @@
           <div class="col-sm-6 col-xl-3">
             <div class="card overflow-hidden rounded-2">
               <div class="position-relative">
-<<<<<<< HEAD
-=======
-                <a href="shop_details"><img src="https://shop-phinf.pstatic.net/20240314_23/1710378021976kmPkO_JPEG/37680705852582707_92926538.jpg?type=m510" class="card-img-top rounded-0" alt="resources."></a>
+                <a href="shop_details"><img src="https://shop-phinf.pstatic.net/20240314_23/1710378021976kmPkO_JPEG/37680705852582707_92926538.jpg" class="card-img-top rounded-0" alt="resources." ></a>
                 <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
               <div class="card-body pt-3 p-4">
                 <h6 class="fw-semibold fs-4">${shop_list[0].goods_name}</h6>
@@ -204,21 +192,6 @@
           
          
           
-          <%-- <div class="col-sm-6 col-xl-3">
-            <div class="card overflow-hidden rounded-2">
-              <div class="position-relative">
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject.git
-                <a href="javascript:void(0)"><img src="resources/assets/images/products/s5.jpg" class="card-img-top rounded-0" alt="resources."></a>
-                <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
-              <div class="card-body pt-3 p-4">
-                <h6 class="fw-semibold fs-4">${shop_list[0].goods_name}</h6>
-                <div class="d-flex align-items-center justify-content-between">
-                  <h6 class="fw-semibold fs-4 mb-0">$${shop_list[0].goods_price} <span class="ms-2 fw-normal text-muted fs-3"><del>$900</del></span></h6>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="col-sm-6 col-xl-3">
             <div class="card overflow-hidden rounded-2">
               <div class="position-relative">

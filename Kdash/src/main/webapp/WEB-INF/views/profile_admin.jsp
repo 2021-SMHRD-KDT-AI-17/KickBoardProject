@@ -48,14 +48,7 @@
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">contents</span>
             </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-report-analytics"></i>
-                </span>
-                <span class="hide-menu">analysis</span>
-              </a>
-            </li>
+            
             <li class="sidebar-item">
               <a class="sidebar-link" href="predict" aria-expanded="false">
                 <span>
@@ -142,19 +135,16 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
+                   <p class="mb-0 fs-3 profile-name">님 환영합니다.</p>
                     <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
-                   <a href="shop_paycheck" class="d-flex align-items-center gap-2 dropdown-item">
-                      <i class="ti ti-mail fs-6"></i>
+                    <a href="shop_paycheck" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-shopping-cart fs-6"></i>
                       <p class="mb-0 fs-3">My Cart</p>
                     </a>
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                      <i class="ti ti-list-check fs-6"></i>
-                      <p class="mb-0 fs-3">My Task</p>
-                    </a>
-                    <a href="login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="login" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
