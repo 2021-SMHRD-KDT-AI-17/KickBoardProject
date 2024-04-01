@@ -31,7 +31,7 @@
           </div>
         </div>
         <!-- Sidebar navigation-->
-                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
@@ -50,7 +50,7 @@
               <span class="hide-menu">contents</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+              <a class="sidebar-link" href="#" aria-expanded="false">
                 <span>
                   <i class="ti ti-report-analytics"></i>
                 </span>
@@ -107,7 +107,7 @@
                 </span>
                 <span class="hide-menu">Register</span>
               </a>
-              <a class="sidebar-link" href="#" aria-expanded="false">
+              <a class="sidebar-link" href="logout" aria-expanded="false">
                 <span>
                   <i class="ti ti-logout"></i>
                 </span>
@@ -541,26 +541,28 @@
             </div>
           </div>
           <!-- 채팅방 (lg-4) -->
-					<div class="col-lg-4 mb-4">
+          <div class="col-lg-4 mb-4">
             <div class="card predict-box">
-              <div class="card-body d-flex flex-column wrapper">
+              <div class="card-body d-flex flex-column">
                 <!-- 채팅방 내용 -->
                 <h5 class="card-title fw-semibold mb-4">Chat Room</h5>
                 <!-- 채팅 메시지 -->
-                <div class="chat-box flex-grow-1 d-flex flex-column ">
+                <div class="chat-box flex-grow-1 d-flex flex-column">
                   <!-- 채팅 내용 표시 -->
-                  <div id="chat_box" class="chat-message bg-white rounded p-2 mb-2 display-container">
-                    <!-- <p class="mb-0"><strong>User1:</strong> Hello, any predictions?</p> -->
+                  <div class="chat-message bg-white rounded p-2 mb-2">
+                    <p class="mb-0"><strong>User1:</strong> Hello, any predictions?</p>
                   </div>
-                  
+                  <div class="chat-message bg-white rounded p-2 mb-2">
+                    <p class="mb-0"><strong>User2:</strong> I think Team A will win.</p>
+                  </div>
                   <!-- 채팅 입력 -->
-                  
+                  <form class="mt-auto">
                     <div class="mb-3">
                       <label class="form-label">Your Message</label>
-                      <input type="text" id="msg" class="form-control">
+                      <input type="text" class="form-control">
                     </div>
-                    <button id="msg_process" class="btn btn-primary w-100">Send</button>
-                  
+                    <button type="submit" class="btn btn-primary w-100">Send</button>
+                  </form>
                 </div>
               </div>
             </div>

@@ -25,17 +25,16 @@
                 <a href="home" class="text-nowrap logo-img text-center d-block py-3 w-100">
                   <img src="resources/assets/images/logos/kick_logo.png" width="300" alt="">
                 </a>
-                <form>
+                <form action="/login" method="post">
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Username</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1"  class="form-label">UserEmail</label>
+                    <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                   </div>
                   <div class="mb-4">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <label for="exampleInputPassword1"  class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                   </div>
                   <a href="http://kauth.kakao.com/oauth/authorize?client_id=094ab7e7162ef731539c15a485e3357b&redirect_uri=http://localhost:8084/DBTest/register&response_type=code" >
-                  <img src="resources/assets/images/logos/kakao_login_medium.png">
                   </a>
                   <a href="home" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</a>
                   <div class="d-flex align-items-center justify-content-center">

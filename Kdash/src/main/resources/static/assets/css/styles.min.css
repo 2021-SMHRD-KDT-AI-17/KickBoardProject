@@ -20230,7 +20230,7 @@ ul {
     max-height: 120px;
 }
 .bg-img{
-    background-image: url(/연습/assets/images/backgrounds/bg4.jpg);
+    background-image: url(/resources/assets/images/backgrounds/bg4.jpg);
     background-size: cover;
     background-position: center;
     max-height: 100%;
@@ -20258,7 +20258,7 @@ ul {
     border-radius: 10%;
 }
 .field-img{
-    background-image: url('/연습/assets/images/products/filed1.jpg');
+    background-image: url('/resources/assets/images/products/filed1.jpg');
     background-size: cover;
 }
 .text-end-sub{
@@ -20293,7 +20293,7 @@ ul {
     transform: translate(-50%, -50%);
 }
 .table-img {
-    background-image: url('/연습/assets/images/products/green.jpg');
+    background-image: url('/resources/assets/images/products/green.jpg');
     background-position: center;
     background-size: cover;
     max-width: 100%;

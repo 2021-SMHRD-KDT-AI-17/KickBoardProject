@@ -49,7 +49,7 @@
               <span class="hide-menu">contents</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+              <a class="sidebar-link" href="#" aria-expanded="false">
                 <span>
                   <i class="ti ti-report-analytics"></i>
                 </span>
@@ -106,7 +106,7 @@
                 </span>
                 <span class="hide-menu">Register</span>
               </a>
-              <a class="sidebar-link" href="#" aria-expanded="false">
+              <a class="sidebar-link" href="logout" aria-expanded="false">
                 <span>
                   <i class="ti ti-logout"></i>
                 </span>
@@ -155,9 +155,10 @@
                     </a>
                     <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-list-check fs-6"></i>
+
                       <p class="mb-0 fs-3">My Task</p>
                     </a>
-                    <a href="login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="logout" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
