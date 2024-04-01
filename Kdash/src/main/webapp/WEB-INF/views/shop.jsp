@@ -169,12 +169,12 @@
           <div class="col-sm-6 col-xl-3">
             <div class="card overflow-hidden rounded-2">
               <div class="position-relative">
-                <a href="javascript:void(0)"><img src="resources/assets/images/products/s4.jpg" class="card-img-top rounded-0" alt="resources."></a>
+                <a href="shop_details"><img src="https://shop-phinf.pstatic.net/20240314_23/1710378021976kmPkO_JPEG/37680705852582707_92926538.jpg?type=m510" class="card-img-top rounded-0" alt="resources."></a>
                 <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
               <div class="card-body pt-3 p-4">
-                <h6 class="fw-semibold fs-4">Boat Headphone</h6>
+                <h6 class="fw-semibold fs-4">K리그 머플러</h6>
                 <div class="d-flex align-items-center justify-content-between">
-                  <h6 class="fw-semibold fs-4 mb-0">$50 <span class="ms-2 fw-normal text-muted fs-3"><del>$65</del></span></h6>
+                  <h6 class="fw-semibold fs-4 mb-0">23,000원 <span class="ms-2 fw-normal text-muted fs-3"><del>23,000</del></span><span>원</span></h6>
                 </div>
               </div>
             </div>
