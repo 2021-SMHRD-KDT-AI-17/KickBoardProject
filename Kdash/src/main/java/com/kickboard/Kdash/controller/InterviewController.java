@@ -14,6 +14,10 @@ public class InterviewController {
 	
 	
 	
+	@GetMapping("/interview_detail")
+	public String interview_detail() {
+		return "interview_detail";
+	}
 	@GetMapping("/interview_write")
 	public String interview_write() {
 		return "interview_write";
