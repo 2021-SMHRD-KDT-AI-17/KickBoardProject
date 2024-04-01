@@ -169,12 +169,12 @@
                 <h5 class="card-title fw-semibold mb-4"><i class="ti ti-home"></i> Product Title</h5>
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="https://via.placeholder.com/400" class="img-fluid mb-4" alt="Product Image">
+                        <img src="https://shop-phinf.pstatic.net/20240314_23/1710378021976kmPkO_JPEG/37680705852582707_92926538.jpg?type=m510" class="img-fluid mb-4" alt="Product Image">
                     </div>
                     <div class="col-md-6">
-                        <h4 class="mb-3">Product name:</h4>
-                        <h5 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac sapien aliquet, placerat nunc in, fermentum turpis. Vivamus sodales vehicula ex.</h5>
-                        <h4 class="fw-bold mb-3">Price: $99.99</h4>
+                        <h4 class="mb-3">Product name: <span>K리그 머플러</span></h4>
+                        <h5 class="mb-4">K리그 머플러</h5>
+                        <h4 class="fw-bold mb-3">Price: <span>23,000 원</span></h4>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Quantity</span>
                             <input type="number" class="form-control" value="1" min="1">

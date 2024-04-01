@@ -17,14 +17,14 @@ public class MainController {
 	public String predict() {
 		return "predict";
 	}
-	@GetMapping("/login")
-	public String login() {
-		return "login";
-	}
-	@GetMapping("/register")
-	public String register() {
-		return "register";
-	}
+//	@GetMapping("/login")
+//	public String login() {
+//		return "login";
+//	}
+//	@GetMapping("/register")
+//	public String register() {
+//		return "register";
+//	}
 	@GetMapping("/register2")
 	public String register2() {
 		return "register2";
@@ -40,5 +40,13 @@ public class MainController {
 	@GetMapping("/shop")
 	public String shop() {
 		return "shop";
+	}
+	@GetMapping("/shop_details")
+	public String shop_details() {
+		return "shop_details";
+	}
+	@GetMapping("/shop_paycheck")
+	public String shop_paycheck() {
+		return "shop_paycheck";
 	}
 }
