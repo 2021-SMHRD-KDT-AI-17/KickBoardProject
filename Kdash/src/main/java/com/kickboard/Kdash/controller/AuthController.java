@@ -76,5 +76,13 @@ public class AuthController {
 		// 이때 회원가입이 성공하였다는 메시지 출력 후 로그인페이지 이동
 		return Script.locationMsg("/login", "회원가입에 성공하였습니다", model);
 	}
+	
+//	@GetMapping("/login")
+//	public String loginSelect(Member member, HttpSession session) {
+//		System.out.println(member.toString()); // 회원 정보 확인
+//		Member loginMember = authMapper.loginSelect(member);
+//		session.setAttribute("loginMember", loginMember);
+//		return "Home";
+//	}
 
 }

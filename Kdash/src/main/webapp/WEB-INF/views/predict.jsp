@@ -31,7 +31,7 @@
           </div>
         </div>
         <!-- Sidebar navigation-->
-                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
@@ -50,7 +50,7 @@
               <span class="hide-menu">contents</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+              <a class="sidebar-link" href="#" aria-expanded="false">
                 <span>
                   <i class="ti ti-report-analytics"></i>
                 </span>
@@ -107,7 +107,7 @@
                 </span>
                 <span class="hide-menu">Register</span>
               </a>
-              <a class="sidebar-link" href="#" aria-expanded="false">
+              <a class="sidebar-link" href="logout" aria-expanded="false">
                 <span>
                   <i class="ti ti-logout"></i>
                 </span>
@@ -171,15 +171,15 @@
             <div class="card predict-box">
               <div class="card-body">
                 <h5 class="card-title fw-semibold mb-4 text-center">
-                  <span><img src="/연습/assets/images/logos/ball_logo.png" class="field-logo">Gwangju </span>
+                  <span><img src="resources/assets/images/logos/ball_logo.png" class="field-logo">Gwangju </span>
                   vs
-                  <span> seoul</span><img src="/연습/assets/images/logos/ball_logo.png" class="field-logo"></h5>
+                  <span> seoul</span><img src="resources/assets/images/logos/ball_logo.png" class="field-logo"></h5>
                 <!-- card -->
                 <div class="row">
                   <div class="col-lg-12 player-card">
                     <div class="card">
                       <div class="card-body">
-                        <img src="/연습/assets/images/products/filed1.jpg" class="mx100-mh100">
+                        <img src="resources/assets/images/products/filed1.jpg" class="mx100-mh100">
                         <div class="card-body team-lineup-a rounded p-3">
                           <table class="table-sm table-img text-center table-text-color " style="width: 180px;">
                             <tr class="team-name-row">
@@ -541,26 +541,28 @@
             </div>
           </div>
           <!-- 채팅방 (lg-4) -->
-					<div class="col-lg-4 mb-4">
+          <div class="col-lg-4 mb-4">
             <div class="card predict-box">
-              <div class="card-body d-flex flex-column wrapper">
+              <div class="card-body d-flex flex-column">
                 <!-- 채팅방 내용 -->
                 <h5 class="card-title fw-semibold mb-4">Chat Room</h5>
                 <!-- 채팅 메시지 -->
-                <div class="chat-box flex-grow-1 d-flex flex-column ">
+                <div class="chat-box flex-grow-1 d-flex flex-column">
                   <!-- 채팅 내용 표시 -->
-                  <div id="chat_box" class="chat-message bg-white rounded p-2 mb-2 display-container">
-                    <!-- <p class="mb-0"><strong>User1:</strong> Hello, any predictions?</p> -->
+                  <div class="chat-message bg-white rounded p-2 mb-2">
+                    <p class="mb-0"><strong>User1:</strong> Hello, any predictions?</p>
                   </div>
-                  
+                  <div class="chat-message bg-white rounded p-2 mb-2">
+                    <p class="mb-0"><strong>User2:</strong> I think Team A will win.</p>
+                  </div>
                   <!-- 채팅 입력 -->
-                  
+                  <form class="mt-auto">
                     <div class="mb-3">
                       <label class="form-label">Your Message</label>
-                      <input type="text" id="msg" class="form-control">
+                      <input type="text" class="form-control">
                     </div>
-                    <button id="msg_process" class="btn btn-primary w-100">Send</button>
-                  
+                    <button type="submit" class="btn btn-primary w-100">Send</button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -575,9 +577,9 @@
                 <div class="text-center mb-3">
                   <h6 class="mb-0">2024.01.01</h6>
                   <p class="mb-0 fw-bold">
-                    <span><img src="/연습/assets/images/logos/ball_logo.png" class="small-logo">광주 fc </span>
+                    <span><img src="resources/assets/images/logos/ball_logo.png" class="small-logo">광주 fc </span>
                     vs
-                    <span>서울 fc<img src="/연습/assets/images/logos/ball_logo.png" class="small-logo"></span></p>
+                    <span>서울 fc<img src="resources/assets/images/logos/ball_logo.png" class="small-logo"></span></p>
                 </div>
                 <div class="progress mb-3">
                   <div class="progress-bar bg-success" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">승: 40%</div>
@@ -678,40 +680,7 @@
   <script src="resources/assets/libs/apexcharts/dist/apexcharts.js"></script>
   <script src="resources/assets/libs/simplebar/dist/simplebar.js"></script>
   <script src="resources/assets/js/dashboard.js"></script>
-  <script src="http://localhost:82/socket.io/socket.io.js"></script>
-	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-	<script>
-		$(document).ready(function() {
-			var socket = io("http://localhost:82");
-
-			//msg에서 키를 누를떄
-			$("#msg").keydown(function(key) {
-				//해당하는 키가 엔터키(13) 일떄
-				if (key.keyCode == 13) {
-					//msg_process를 클릭해준다.
-					msg_process.click();
-				}
-			});
-
-			//msg_process를 클릭할 때
-			$("#msg_process").click(function() {
-				//소켓에 send_msg라는 이벤트로 input에 #msg의 벨류를 담고 보내준다.
-				socket.emit("send_msg", $("#msg").val());
-				//#msg에 벨류값을 비워준다.
-				$("#msg").val("");
-			});
-
-			//소켓 서버로 부터 send_msg를 통해 이벤트를 받을 경우 
-			socket.on('send_msg', function(msg) {
-				//div 태그를 만들어 텍스트를 msg로 지정을 한뒤 #chat_box에 추가를 시켜준다.
-				$('<div class="chat-message bg-white rounded p-2 mb-2"></div>').text(msg).appendTo("#chat_box");
-				//스크롤 내리기
-				$('#chat_box').scrollTop($('#chat_box')[0].scrollHeight+20);
-			});
-		});
-		
-		
-	</script>
+  
 </body>
 
 </html>

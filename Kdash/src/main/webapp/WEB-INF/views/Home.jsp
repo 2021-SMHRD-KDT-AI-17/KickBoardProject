@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>메인</title>
+  <title>main</title>
   <!-- tabler 아이콘 사용 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
   <link rel="shortcut icon" type="image/png" href="resources/assets/images/logos/ball_logo.png" />
@@ -49,7 +49,7 @@
               <span class="hide-menu">contents</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+              <a class="sidebar-link" href="#" aria-expanded="false">
                 <span>
                   <i class="ti ti-report-analytics"></i>
                 </span>
@@ -106,7 +106,7 @@
                 </span>
                 <span class="hide-menu">Register</span>
               </a>
-              <a class="sidebar-link" href="#" aria-expanded="false">
+              <a class="sidebar-link" href="logout" aria-expanded="false">
                 <span>
                   <i class="ti ti-logout"></i>
                 </span>
@@ -150,11 +150,11 @@
                       <i class="ti ti-mail fs-6"></i>
                       <p class="mb-0 fs-3">My Account</p>
                     </a>
-                    <a href="shop_paycheck" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-list-check fs-6"></i>
-                      <p class="mb-0 fs-3">My Basket</p>
+                      <p class="mb-0 fs-3">My Cart</p>
                     </a>
-                    <a href="login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="logout" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
@@ -164,351 +164,216 @@
       </header>
       <!--  Header End -->
       <div class="container-fluid">
-        <!--  팀 분석 -->
-        <div class="row">
-          <div class="col-lg-8 d-flex align-items-strech">
-            <div class="card w-100">
-              <div class="card-body">
-                <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
-                  <div class="mb-3 mb-sm-0">
-                    <h5 class="card-title fw-semibold">팀 분석</h5>
-                  </div>
-                  <div>
-                    <select class="form-select">
-                      <option value="1">March 2023</option>
-                      <option value="2">April 2023</option>
-                      <option value="3">May 2023</option>
-                      <option value="4">June 2023</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row justify-content-between">
-                  <div class="col-sm-6 card-body" id="div1"  style="position: relative;">
-                    <!-- 여기에 축구장 -->
-                    <img src="resources/assets/images/products/1137.jpg" alt="축구장 이미지">
-                    <div style="position: absolute; top: 25%; left: 35%; text-align: center;">
-                      <img src="resources/assets/images/profile/user-1.jpg" class="formation-img">
-                      <p>공격수</p>
-                    </div>
-              
-                  <!-- 공격수 2 -->
-                    <div style="position: absolute; top: 25%; left: 65%; text-align: center;">
-                      <img src="resources/assets/images/profile/user-1.jpg" class="formation-img">
-                      <p>공격수</p>
-                    </div>
-              
-                  <!-- 김빵빵 1 -->
-                    <div style="position: absolute; top: 40%; left: 20%; text-align: center;">
-                      <img src="resources/assets/images/profile/user-1.jpg" class="formation-img">
-                      <p>김빵빵</p>
-                    </div>
-              
-                  <!-- 김빵빵 2 -->
-                    <div style="position: absolute; top: 40%; left: 40%; text-align: center;">
-                      <img src="resources/assets/images/profile/user-1.jpg" class="formation-img">
-                      <p>김빵빵</p>
-                    </div>
-              
-                  <!-- 김빵빵 3 -->
-                    <div style="position: absolute; top: 40%; left: 60%; text-align: center;">
-                      <img src="resources/assets/images/profile/user-1.jpg" class="formation-img">
-                      <p>김빵빵</p>
-                    </div>
-              
-                  <!-- 김빵빵 4 -->
-                    <div style="position: absolute; top: 40%; left: 80%; text-align: center;">
-                      <img src="resources/assets/images/profile/user-1.jpg" class="formation-img">
-                      <p>김빵빵</p>
-                    </div>
-              
-                  <!-- 수비수 1 -->
-                    <div style="position: absolute; top: 55%; left: 20%; text-align: center;">
-                      <img src="resources/assets/images/profile/user-1.jpg" class="formation-img">
-                      <p>수비수</p>
-                    </div>
-              
-                  <!-- 수비수 2 -->
-                    <div style="position: absolute; top: 55%; left: 40%; text-align: center;">
-                      <img src="resources/assets/images/profile/user-1.jpg" class="formation-img">
-                      <p>수비수</p>
-                    </div>
-              
-                  <!-- 수비수 3 -->
-                    <div style="position: absolute; top: 55%; left: 60%; text-align: center;">
-                      <img src="resources/assets/images/profile/user-1.jpg" class="formation-img">
-                      <p>수비수</p>
-                    </div>
-              
-                  <!-- 수비수 4 -->
-                    <div style="position: absolute; top: 55%; left: 80%; text-align: center;">
-                      <img src="resources/assets/images/profile/user-1.jpg" class="formation-img">
-                      <p>수비수</p>
-                    </div>
-              
-                  <!-- 골키퍼 -->
-                    <div style="position: absolute; top: 70%; left: 50%; text-align: center;">
-                      <img src="resources/assets/images/profile/user-1.jpg" class="formation-img">
-                      <p class="player-info">
-                        <span class="jersey-number">1.</span> <!-- 등번호 -->
-                        <span class="player-name">공격수</span> <!-- 선수 이름 -->
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 card-body" id="div2">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <!-- 여기에 최근 승무패 -->
-                        <table class="table">
-                          <thead>
-                              <tr>
-                                  <th>경기</th>
-                                  <th>결과</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                  <td><span>2024.01.01</span><br>
-                                    <span>광주 VS 서울</span></td>
-                                  <td>승</td>
-                              </tr>
-                              <tr>
-                                  <td>2</td>
-                                  <td>무</td>
-                              </tr>
-                              <!-- 나머지 경기들도 동일하게 추가 -->
-                              <tr>
-                                <td>2</td>
-                                <td>무</td>
-                              </tr>
-                          </tbody>
-                      </table>
+        <div class="card">
+          <div class="card-body">
+            <!-- 여기부터 -->
+            <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+              <div class="mb-3 mb-sm-0">
+              </div>
+              <div>
+                <select class="form-select">
+                  <option value="1">울산 HD</option>
+                  <option value="2">포항</option>
+                  <option value="3">광주</option>
+                  <option value="4">전북 현대</option>
+                  <option value="1">인천 utd</option>
+                  <option value="2">대구</option>
+                  <option value="3">서울</option>
+                  <option value="4">대전 하나</option>
+                  <option value="1">제주 utd</option>
+                  <option value="2">강원</option>
+                  <option value="3">수원 FC</option>
+                  <option value="4">김천 상무</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 d-flex align-items-strech">
+                <div class="card w-100">
+                  <div class="card-body">
+                    <!-- style="background-color:#004098;" -->
+                    <div class="club-title-box">
+                      <div class="club-title-teamBox text-center mb-3">
+                        <img src="resources/assets/images/logos/ball_logo.png" class="img-emble">
+                        <ul class="">
+                          <li class="club-list">울산 현대</li>
+                          <li class="club-list">GANGWON FC</li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <!-- 여기에 구단 최다 득점 어시자 -->
-                        <table class="table">
-                          <thead>
-                              <tr>
-                                  <th>구단 최다 득점</th>
-                                  <th>어시스트자</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                  <td>구단1</td>
-                                  <td>어시스트자1</td>
-                              </tr>
-                              <!-- 다른 구단 및 어시스트자도 동일하게 추가 -->
-                              <tr>
-                                <td>구단1</td>
-                                <td>어시스트자1</td>
-                              </tr>
-                              <tr>
-                                <td>구단1</td>
-                                <td>어시스트자1</td>
-                              </tr>
-                          </tbody>
-                        </table>
+                    <div class="row justify-content-center align-items-center mb-2">
+                      <div class="col-lg-6">
+                        <div class="card">
+                            <img src="resources/assets/images/backgrounds/bg1.jpg " class="w-100 formation-img">
+                        </div>
                       </div>
-                    </div>
+                      <div class="col-lg-6">
+                        <!-- 테이블 영역 -->
+                        <div class="card">
+                          <table class="table table-sm text-center mb-0">
+                           <!-- 테이블 헤더 -->
+                           <thead class="table-head">
+                            <tr>
+                             <th colspan="3">득점 순위</th>
+                            </tr>
+                          </thead>
+                           <!-- 테이블 바디 -->
+                           <tbody>
+                            <tr class="table-head-2">
+                              <th scope="col">순위</th>
+                              <th scope="col">도움 수</th>
+                              <th scope="col">선수</th>
+                             </tr>
+                            <tr>
+                             <td>1</td>
+                             <td>3</td>
+                             <td>제갈제니</td>
+                            </tr>
+                            <tr>
+                             <td>2</td>
+                             <td>2</td>
+                             <td>김옥지</td>
+                            </tr>
+                            <tr>
+                             <td>3</td>
+                             <td>1</td>
+                             <td>김빵빵</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                          <table class="table table-sm text-center mb-0">
+                            <!-- 테이블 헤더 -->
+                            <thead class="table-head">
+                              <tr>
+                               <th colspan="3">도움 순위</th>
+                              </tr>
+                            </thead>
+                            <!-- 테이블 바디 -->
+                            <tbody>
+                              <tr class="table-head-2">
+                                <th scope="col">순위</th>
+                                <th scope="col">도움 수</th>
+                                <th scope="col">선수</th>
+                               </tr>
+                              <tr>
+                               <td>1</td>
+                               <td>3</td>
+                               <td>제갈제니</td>
+                              </tr>
+                              <tr>
+                               <td>2</td>
+                               <td>2</td>
+                               <td>김옥지</td>
+                              </tr>
+                              <tr>
+                               <td>3</td>
+                               <td>1</td>
+                               <td>김빵빵</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                      </div>
+
+                     </div>
+                     <div id="rank-5"></div>
+
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <!-- 선수 분석 -->
-          <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="card w-100">
-              <div class="card-body p-4">
-                <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
-                  <div class="mb-3 mb-sm-0">
-                    <h5 class="card-title fw-semibold">선수 분석</h5>
-                  </div>
-                  <div>
-                    <select class="form-select" onchange="showPlayerInfo(this)">
-                      <option value="default">기본 선수</option>
-                      <option value="player1">선호 선수 1</option>
-                      <option value="player2">선호 선수 2</option>
-                    </select>
-                  </div>
-                </div>
-                <div id="playerInfo">
-                  <!-- 선수 정보가 여기에 표시됩니다 -->
-                  <div class="card">
-                    <div class="row align-items-center">
-                      <div class="col-6">
-                        <img id="playerImage" src="resources/assets/images/profile/user-1.jpg" class="img-fluid" alt="프로필 이미지">
-                      </div>
-                      <div class="col-6">
-                        <div class="text-center">
-                          <h5 id="playerName" class="mt-3"><strong>김옥지</strong></h5>
-                          <p id="teamName">FC Seoul</p>
-                          <p id="jerseyNumber">등번호 : 10</p>
-                          <p id="position">포지션: 공격수</p>
-                          <p id="birthdate">1990년 5월 15일</p>
+              <div class="col-lg-4">
+                <div class="row">
+                    <!-- Yearly Breakup -->
+                    <div class="card overflow-hidden">
+                      <div class="card-body p-4">
+                        <h5 class="card-title mb-9 fw-semibold text-b justify-content-between">올 시즌 전적</h5>
+                        <div class="row align-items-center">
+                          <div class="col-8">
+                            <h5 class="fw-semibold mb-3">현재 순위 : <span>1위</span></h5>
+                            <div class="d-flex align-items-center mb-3">
+                              <p class="text-dark me-1 fs-3 mb-0">최근 5경기 전적</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                              <div class="me-4">
+                                <div id="teamA" class="d-flex flex-wrap mr-3 mb-2">
+                                  <span class="result draw">무</span>
+                                  <span class="result lose">패</span>
+                                  <span class="result draw">무</span>
+                                  <span class="result lose">패</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="d-flex justify-content-center">
+                              <div id="record"></div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <canvas id="player-chart"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- 채팅 -->
-          <div class="row">
-            <!-- 왼쪽에 채팅 -->
-            <div class="col-lg-4 d-flex align-items-stretch">
-              <div class="card w-100">
-                <div class="card-body p-4 d-flex flex-column">
-                  <div class="mb-4">
-                    <h5 class="card-title fw-semibold">채팅</h5>
-                  </div>
-            
-                  <!-- 채팅 내용을 표시하는 부분 -->
-                  <div class="chat-box flex-grow-1 overflow-auto mb-4" style="max-height: 340px;">
-                    <div class="message">
-                      <span class="message-sender">사용자1 :</span>
-                      <span class="message-content">안녕하세요!</span>
-                    </div>
-                    <!-- 추가적인 채팅 메시지들을 이어서 표시할 수 있습니다. -->
-                  </div>
-            
-                  <!-- 메시지 입력창 -->
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="메시지를 입력하세요...">
-                    <button class="btn btn-primary" type="button">전송</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- 오른쪽에 일정과 퀴즈 -->
-            <div class="col-lg-8">
-              <div class="row">
-                <!-- 일정 -->
-                <div class="col-lg-12 d-flex align-items-stretch">
-                  <div class="card w-100">
-                    <div class="card-body">
-                      <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
-                        <div class="mb-3 mb-sm-0">
+                    <!-- Monthly Earnings -->
+                    <div class="card w-100">
+                      <div class="card-body p-4">
+                        <div class="mb-4">
                           <h5 class="card-title fw-semibold">일정</h5>
                         </div>
+                        <ul class="timeline-widget mb-0 position-relative mb-n5">
+                          <li class="timeline-item d-flex position-relative overflow-hidden">
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                              <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                              <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                            </div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>광주</span>VS<span>서울</span></div>
+                          </li>
+                          <li class="timeline-item d-flex position-relative overflow-hidden">
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                              <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                              <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                            </div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>광주</span>VS<span>서울</span></div>
+                          </li>
+                          <li class="timeline-item d-flex position-relative overflow-hidden">
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                              <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                              <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                            </div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>광주</span>VS<span>서울fc</span></div>
+                          </li>
+                          <li class="timeline-item d-flex position-relative overflow-hidden">
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                              <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                              <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                            </div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">광주fc vs 전북 현대 모터스</div>
+                          </li>
+                          <li class="timeline-item d-flex position-relative overflow-hidden">
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                              <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                            </div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">전북 현대 모터스 vs 서울fc</div>
+                          </li>
+                        </ul>
                       </div>
-                      <div class="row justify-content-between">
-                          <div class="card col-lg-2 text-center border">
-                            <div class="mt-3">
-                              <img src="resources/assets/images/logos/ball_logo.png" class="logo-size">
-                              <span>VS</span>
-                              <img src="resources/assets/images/logos/ball_logo.png" class="logo-size"></div><br>
-                            <div>광주 VS 서울</div>
-                            <div class="mb-3">2024/01/01</div>
-                          </div>
-                          <div class="card col-lg-2 text-center border">
-                            <div class="mt-3">일정1</div><br>
-                            <div>광주 VS 서울</div>
-                            <div class="mb-3">2024/01/01</div>
-                          </div>
-                          <div class="card col-lg-2 text-center border">
-                            <div class="mt-3">일정1</div><br>
-                            <div>광주 VS 서울</div>
-                            <div class="mb-3">2024/01/01</div>
-                          </div>
-                          <div class="card col-lg-2 text-center border">
-                            <div class="mt-3">일정1</div><br>
-                            <div>광주 VS 서울</div>
-                            <div class="mb-3">2024/01/01</div>
-                          </div>
-                          <div class="card col-lg-2 text-center border">
-                            <div class="mt-3">일정1</div><br>
-                            <div>광주 VS 서울</div>
-                            <div class="mb-3">2024/01/01</div>
-                          </div>
+                    </div>
+                    <div class="card overflow-hidden">
+                      <div class="card-body p-4 align-items-center">
+                        <div>
+                            <h5 class="card-title mb-3 fw-semibold">Follow</h5>
+                            <p class="mb-3">해당 구단을 팔로우 하려면 버튼을 눌러주세요.</p>
+                            <div class="d-flex justify-content-end">
+                              <button type="button" class="btn btn-outline-primary"><i class="ti ti-bell"></i>팔로우</button>
+                            </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <!-- 퀴즈 -->
-                <div class="col-lg-12 d-flex align-items-stretch mt-3">
-                  <div class="card w-100">
-                    <div class="card-body">
-                      <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
-                        <div class="mb-3 mb-sm-0">
-                          <h5 class="card-title fw-semibold">퀴즈</h5>
-                        </div>
-                      </div>
-                      <div id="quiz">
-                        <p class="text-center fw-semibold">다음 중 가장 높은 산은 어디인가요?</p>
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="정답을 입력하세요" id="answer">
-                            <button class="btn btn-success" type="button" onclick="checkAnswer()">입력</button>
-                          </div>
-                        <p id="result"></p>
-                      </div>
-                    </div>  
-                  </div>  
-                </div>
-              </div>
-            </div>
-            <div class="card h-400">
-              <div class="card-body">
-                <h5 class="card-title fw-semibold mb-4">뉴스</h5>
-                <!-- 카드 4개 시작 -->
-                <div class="row">
-                  <!-- 카드 1 -->
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="resources/assets/images/logos/kick_logo.png" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                          the
-                          card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- 카드 2 -->
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="resources/assets/images/logos/kick_logo.png" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                          the
-                          card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- 카드 3 -->
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="resources/assets/images/logos/kick_logo.png" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                          the
-                          card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- 카드 4 -->
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="resources/assets/images/logos/kick_logo.png" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                          the
-                          card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -518,7 +383,6 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
-  <script src="resources/js/js.js"></script>
   <script src="resources/assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="resources/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="resources/assets/js/sidebarmenu.js"></script>

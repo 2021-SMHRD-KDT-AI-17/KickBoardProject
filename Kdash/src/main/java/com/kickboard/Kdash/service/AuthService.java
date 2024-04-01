@@ -1,5 +1,6 @@
 package com.kickboard.Kdash.service;
 
+import java.lang.reflect.Member;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,4 +42,8 @@ public class AuthService {
 	public void signup(SignupDto signupDto) {
 		authMapper.signup(signupDto);
 	}
+	
+//	public String loginSelect(Member member) {
+//		
+//	}
 }
