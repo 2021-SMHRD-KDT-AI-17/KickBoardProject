@@ -20,9 +20,9 @@
     <!-- Sidebar Start -->
     <aside class="left-sidebar">
       <!-- Sidebar scroll-->
-      <div>
+     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.html" class="text-nowrap logo-img">
+          <a href="home" class="text-nowrap logo-img">
             <img src="resources/assets/images/logos/kick_logo.png" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -30,14 +30,14 @@
           </div>
         </div>
         <!-- Sidebar navigation-->
-        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="home" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -57,7 +57,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
+              <a class="sidebar-link" href="predict" aria-expanded="false">
                 <span>
                   <i class="ti ti-current-location"></i>
                 </span>
@@ -65,7 +65,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
+              <a class="sidebar-link" href="news" aria-expanded="false">
                 <span>
                   <i class="ti ti-news"></i>
                 </span>
@@ -73,14 +73,14 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
+              <a class="sidebar-link" href="interview" aria-expanded="false">
                 <span>
                   <i class="ti ti-ad-2"></i>
                 </span>
                 <span class="hide-menu">interview</span>
               </a>
               <li class="sidebar-item">
-                <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
+                <a class="sidebar-link" href="shop" aria-expanded="false">
                   <span>
                     <i class="ti ti-shopping-bag"></i>
                   </span>
@@ -92,7 +92,7 @@
               <span class="hide-menu">profile</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="login.html" aria-expanded="false">
+              <a class="sidebar-link" href="login" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
                 </span>
@@ -100,13 +100,13 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+              <a class="sidebar-link" href="register" aria-expanded="false">
                 <span>
                   <i class="ti ti-user-plus"></i>
                 </span>
                 <span class="hide-menu">Register</span>
               </a>
-              <a class="sidebar-link" href="login.html" aria-expanded="false">
+              <a class="sidebar-link" href="#" aria-expanded="false">
                 <span>
                   <i class="ti ti-logout"></i>
                 </span>
