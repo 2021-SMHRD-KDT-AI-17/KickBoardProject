@@ -31,7 +31,7 @@
           </div>
         </div>
         <!-- Sidebar navigation-->
-                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
@@ -50,7 +50,7 @@
               <span class="hide-menu">contents</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+              <a class="sidebar-link" href="#" aria-expanded="false">
                 <span>
                   <i class="ti ti-report-analytics"></i>
                 </span>
@@ -107,7 +107,7 @@
                 </span>
                 <span class="hide-menu">Register</span>
               </a>
-              <a class="sidebar-link" href="#" aria-expanded="false">
+              <a class="sidebar-link" href="logout" aria-expanded="false">
                 <span>
                   <i class="ti ti-logout"></i>
                 </span>
@@ -143,13 +143,13 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                   <a href="shop_paycheck" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-mail fs-6"></i>
-                      <p class="mb-0 fs-3">My Account</p>
+                      <p class="mb-0 fs-3">My Cart</p>
                     </a>
                     <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-list-check fs-6"></i>
@@ -171,15 +171,15 @@
             <div class="card predict-box">
               <div class="card-body">
                 <h5 class="card-title fw-semibold mb-4 text-center">
-                  <span><img src="/연습/assets/images/logos/ball_logo.png" class="field-logo">Gwangju </span>
+                  <span><img src="resources/assets/images/logos/ball_logo.png" class="field-logo">Gwangju </span>
                   vs
-                  <span> seoul</span><img src="/연습/assets/images/logos/ball_logo.png" class="field-logo"></h5>
+                  <span> seoul</span><img src="resources/assets/images/logos/ball_logo.png" class="field-logo"></h5>
                 <!-- card -->
                 <div class="row">
                   <div class="col-lg-12 player-card">
                     <div class="card">
                       <div class="card-body">
-                        <img src="/연습/assets/images/products/filed1.jpg" class="mx100-mh100">
+                        <img src="resources/assets/images/products/filed1.jpg" class="mx100-mh100">
                         <div class="card-body team-lineup-a rounded p-3">
                           <table class="table-sm table-img text-center table-text-color " style="width: 180px;">
                             <tr class="team-name-row">
@@ -541,26 +541,28 @@
             </div>
           </div>
           <!-- 채팅방 (lg-4) -->
-					<div class="col-lg-4 mb-4">
+          <div class="col-lg-4 mb-4">
             <div class="card predict-box">
-              <div class="card-body d-flex flex-column wrapper">
+              <div class="card-body d-flex flex-column">
                 <!-- 채팅방 내용 -->
                 <h5 class="card-title fw-semibold mb-4">Chat Room</h5>
                 <!-- 채팅 메시지 -->
-                <div class="chat-box flex-grow-1 d-flex flex-column ">
+                <div class="chat-box flex-grow-1 d-flex flex-column">
                   <!-- 채팅 내용 표시 -->
-                  <div id="chat_box" class="chat-message bg-white rounded p-2 mb-2 display-container">
-                    <!-- <p class="mb-0"><strong>User1:</strong> Hello, any predictions?</p> -->
+                  <div class="chat-message bg-white rounded p-2 mb-2">
+                    <p class="mb-0"><strong>User1:</strong> Hello, any predictions?</p>
                   </div>
-                  
+                  <div class="chat-message bg-white rounded p-2 mb-2">
+                    <p class="mb-0"><strong>User2:</strong> I think Team A will win.</p>
+                  </div>
                   <!-- 채팅 입력 -->
-                  
+                  <form class="mt-auto">
                     <div class="mb-3">
                       <label class="form-label">Your Message</label>
-                      <input type="text" id="msg" class="form-control">
+                      <input type="text" class="form-control">
                     </div>
-                    <button id="msg_process" class="btn btn-primary w-100">Send</button>
-                  
+                    <button type="submit" class="btn btn-primary w-100">Send</button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -575,9 +577,9 @@
                 <div class="text-center mb-3">
                   <h6 class="mb-0">2024.01.01</h6>
                   <p class="mb-0 fw-bold">
-                    <span><img src="/연습/assets/images/logos/ball_logo.png" class="small-logo">광주 fc </span>
+                    <span><img src="resources/assets/images/logos/ball_logo.png" class="small-logo">광주 fc </span>
                     vs
-                    <span>서울 fc<img src="/연습/assets/images/logos/ball_logo.png" class="small-logo"></span></p>
+                    <span>서울 fc<img src="resources/assets/images/logos/ball_logo.png" class="small-logo"></span></p>
                 </div>
                 <div class="progress mb-3">
                   <div class="progress-bar bg-success" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">승: 40%</div>

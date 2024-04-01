@@ -49,4 +49,8 @@ public class MainController {
 	public String shop_paycheck() {
 		return "shop_paycheck";
 	}
+	@GetMapping("/profile")
+	public String profile() {
+		return "profile";
+	}
 }

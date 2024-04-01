@@ -10,4 +10,7 @@
 		INSERT INTO tb_member (mem_email, mem_pw, mem_nick, mem_point, joined_at, mem_chatt_yn) VALUES (#{email}, #{password}, #{nickname}, 0, NOW(), 0 );
 	</insert>
 
+	<select id="getUser" resultType="com.kickboard.Kdash.config.auth.CustomUserDetails">
+		SELECT * FROM tb_member WHERE mem_eamil = #{email}
+	</select>
 </mapper>
