@@ -135,6 +135,5 @@ function getList(init, isPre, idx) {
             console.log("통신실패");
         }
     })
-}
-//
 
+}

@@ -142,7 +142,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
@@ -192,7 +192,7 @@
             </table>
             <div class="text-end">
              <button class="btn btn-primary">추천하기👍</button>
-             <button class="btn btn-primary">게시판으로 이동</button>
+             <a href="interview"><button class="btn btn-primary">게시판으로 이동</button></a>
             </div>
             <div class="card-body">
               <h5 class="card-title fw-semibold mb-4">다른 글 보기</h5>

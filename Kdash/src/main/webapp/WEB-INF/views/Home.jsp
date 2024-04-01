@@ -20,7 +20,7 @@
     <!-- Sidebar Start -->
     <aside class="left-sidebar">
       <!-- Sidebar scroll-->
-      <div>
+     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="home" class="text-nowrap logo-img">
             <img src="resources/assets/images/logos/kick_logo.png" width="180" alt="" />
@@ -30,7 +30,7 @@
           </div>
         </div>
         <!-- Sidebar navigation-->
-        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
@@ -152,7 +152,8 @@
                     </a>
                     <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-list-check fs-6"></i>
-                      <p class="mb-0 fs-3">My Cart</p>
+
+                      <p class="mb-0 fs-3">My Task</p>
                     </a>
                     <a href="logout" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>

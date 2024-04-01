@@ -143,7 +143,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
@@ -680,7 +680,42 @@
   <script src="resources/assets/libs/apexcharts/dist/apexcharts.js"></script>
   <script src="resources/assets/libs/simplebar/dist/simplebar.js"></script>
   <script src="resources/assets/js/dashboard.js"></script>
-  
+  <script src="http://220.93.229.178:82/socket.io/socket.io.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	
+	
+	<script>
+		$(document).ready(function() {
+			var socket = io("http://220.93.229.178:82");
+
+			//msg에서 키를 누를떄
+			$("#msg").keydown(function(key) {
+				//해당하는 키가 엔터키(13) 일떄
+				if (key.keyCode == 13) {
+					//msg_process를 클릭해준다.
+					msg_process.click();
+				}
+			});
+
+			//msg_process를 클릭할 때
+			$("#msg_process").click(function() {
+				//소켓에 send_msg라는 이벤트로 input에 #msg의 벨류를 담고 보내준다.
+				socket.emit("send_msg", $("#msg").val());
+				//#msg에 벨류값을 비워준다.
+				$("#msg").val("");
+			});
+
+			//소켓 서버로 부터 send_msg를 통해 이벤트를 받을 경우 
+			socket.on('send_msg', function(msg) {
+				//div 태그를 만들어 텍스트를 msg로 지정을 한뒤 #chat_box에 추가를 시켜준다.
+				$('<div class="chat-message bg-white rounded p-2 mb-2"></div>').text(msg).appendTo("#chat_box");
+				//스크롤 내리기
+				$('#chat_box').scrollTop($('#chat_box')[0].scrollHeight+20);
+			});
+		});
+		
+		
+	</script>
 </body>
 
 </html>

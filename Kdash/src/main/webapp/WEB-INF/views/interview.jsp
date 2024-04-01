@@ -113,6 +113,7 @@
                 <span class="hide-menu">logout</span>
               </a>
             </li>
+            </li>
           </ul>
         </nav>
         <!-- End Sidebar navigation -->
@@ -141,7 +142,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
@@ -563,8 +564,10 @@
 	            var num = Number(req_pageNow * (idx_count));
 	            atags[i].innerText = num - (idx_count - i);
 	        }
+	        console.log(req_IdxList +"success");
 	    }else{
-	        alert("통신실패");
+	    	console.log(req_IdxList +"fail");
+	        alert("통신실패..");
 	    }
 	}
   function showReqList(startN) {
@@ -630,7 +633,6 @@
 	        url: u,
 	        type: "get",
 	        dataType: 'json',
-	        async :false,
 	        success: (data) => {
 	            req_IdxList = [];
 	            req_TitleList = [];
@@ -661,7 +663,7 @@
 	            showReqList(0);
 	            pagebuttonShow(data.length, req_lastIdx);
 	            return true;
-	        }, error: () => {
+	        }, error: (err) => {
 	            console.log("통신실패");
 	            return false;
 	        }
