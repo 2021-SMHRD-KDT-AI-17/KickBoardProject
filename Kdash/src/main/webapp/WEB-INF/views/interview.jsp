@@ -113,6 +113,7 @@
                 <span class="hide-menu">logout</span>
               </a>
             </li>
+            </li>
           </ul>
         </nav>
         <!-- End Sidebar navigation -->
@@ -196,12 +197,7 @@
                    <tr class="g_tr">
                       <td class="border-bottom-0"><h6 class="fw-semibold mb-0">1</h6></td>
                       <td class="border-bottom-0">
-<<<<<<< HEAD
-                          <a href="interview_detail">
-                            <h6 class="fw-semibold mb-1 goodreq_title">추천 인터뷰 제목</h6></a>                     
-=======
                             <h6 class="fw-semibold mb-1 goodreq_title">추천 인터뷰 제목</h6>                    
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject.git
                       </td>
                       <td class="border-bottom-0">
                         <p class="mb-0 fw-normal goodreq_writer">제갈제니</p>
@@ -568,7 +564,9 @@
 	            var num = Number(req_pageNow * (idx_count));
 	            atags[i].innerText = num - (idx_count - i);
 	        }
+	        console.log(req_IdxList +"success");
 	    }else{
+	    	console.log(req_IdxList +"fail");
 	        alert("통신실패");
 	    }
 	}
@@ -635,7 +633,6 @@
 	        url: u,
 	        type: "get",
 	        dataType: 'json',
-	        async :false,
 	        success: (data) => {
 	            req_IdxList = [];
 	            req_TitleList = [];
@@ -666,7 +663,7 @@
 	            showReqList(0);
 	            pagebuttonShow(data.length, req_lastIdx);
 	            return true;
-	        }, error: () => {
+	        }, error: (err) => {
 	            console.log("통신실패");
 	            return false;
 	        }

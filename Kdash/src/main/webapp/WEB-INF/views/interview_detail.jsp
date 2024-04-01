@@ -171,13 +171,8 @@
             <table class="table">
               <thead>
                 <tr>
-<<<<<<< HEAD
-                  <th scope="col" class="text-center fw-semibold fs-4 mb-0">651번</th>
-                  <th scope="col" class="text-center fw-semibold fs-4 mb-0">제목</th>
-=======
                   <th scope="col" class="text-center fw-semibold fs-4 mb-0">${interview.req_idx}</th>
                   <th scope="col" class="text-center fw-semibold fs-4 mb-0">${interview.req_title}</th>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject.git
                   <th scope="col" class="text-center fw-semibold fs-4 mb-0"><span class="badge bg-primary rounded-3 fw-semibold">선수</span></th>
                   <th scope="col" class="text-center fw-semibold fs-4 mb-0">린가드</th>
                   <th scope="col" class="text-center fw-semibold fs-4 mb-0">👍${interview.req_likes}</th>
@@ -188,12 +183,8 @@
                 <tr>
                   <td colspan="7">
                     <div class="card-body pt-3 p-4">
-<<<<<<< HEAD
-                      <h5 class="fw-semibold fs-4">집가고싶다</h5>
-=======
                       <h5 class="fw-semibold fs-4">${interview.req_content}</h5>
 <!--                       <h5 class="fw-semibold fs-4">집가고싶다.&ensp;비가오는&ensp;날엔&ensp;축구✔&ensp;긴글&ensp;테스트&ensp;글&ensp;짤리나&ensp;테스트&ensp;내일점심&ensp;뭐먹지?????????????????????&ensp;시~~~~~~~~~~~~~~~~~~작&ensp;아아~~~~~~~~~~악</h5> -->
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject.git
                     </div>
                   </td>
                 </tr>
