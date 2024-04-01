@@ -8,9 +8,7 @@ import com.kickboard.Kdash.entity.News;
 
 @Mapper
 public interface NewsMapper {
-
-	public List<News> newsFirstList();
-	public List<News> newsPreList(int range);
-	public List<News> newsPostList(int range);
-
+	public List<News> newsList();
+	public List<News> prenewsList(int range);
+	public List<News> postnewsList(int range);
 }

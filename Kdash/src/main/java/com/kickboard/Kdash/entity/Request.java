@@ -3,10 +3,16 @@ package com.kickboard.Kdash.entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@RequiredArgsConstructor
+@ToString
+
 public class Request {
     // 질문글 식별자 
     private int req_idx;
@@ -17,8 +23,10 @@ public class Request {
     // 구단 식별자 
     private int club_idx;
     // 질문 제목 
+	@NonNull
     private String req_title;
     // 질문 내용 
+	@NonNull
     private String req_content;
     // 좋아요 수 
     private Integer req_likes;
