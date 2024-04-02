@@ -146,7 +146,7 @@
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
                                     aria-labelledby="drop2">
                                     <div class="message-body">
-                                    <p class="mb-0 fs-3 profile-name">님 환영합니다.</p>
+                                    <p class="mb-0 fs-3 profile-name"><%=useremail %>님 환영합니다.</p>
                                         <a href="profile"
                                             class="d-flex align-items-center gap-2 dropdown-item">
                                             <i class="ti ti-user fs-6"></i>

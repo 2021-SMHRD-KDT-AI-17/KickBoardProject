@@ -127,7 +127,7 @@
 									class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
 									aria-labelledby="drop2">
 									<div class="message-body">
-										<p class="mb-0 fs-3 profile-name">님 환영합니다.</p>
+										<p class="mb-0 fs-3 profile-name"><%=useremail %>님 환영합니다.</p>
                     <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
@@ -154,6 +154,11 @@
 							<div
 								class="col-md-6 d-flex justify-content-center align-items-center">
 								<div class="text-center">
+								
+								<!-- 세션에 저장된 이메일! -->
+								
+									<input type="hidden" name="email" value="<%=useremail %>">
+									
 									<div class="alert alert-secondary" role="alert"><%=useremail %>님
 										환영합니다!</div>
 									<img src="https://via.placeholder.com/400"
@@ -167,12 +172,12 @@
 
 								<div class="input-group mb-3">
 									<span class="input-group-text" style="width: 100px;">Nickname</span>
-									<input type="text" class="form-control"
+									<input name="nickname" type="text" class="form-control"
 										placeholder="닉?">
 								</div>
 								<div class="input-group mb-3">
 									<span class="input-group-text" style="width: 100px;">Password</span>
-									<input type="text" class="form-control"
+									<input name="password" type="text" class="form-control"
 										placeholder="비밀번호를 입력해 주세요."><br>
 								</div>
 								<form>

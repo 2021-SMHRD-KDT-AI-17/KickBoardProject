@@ -7,6 +7,8 @@ import com.kickboard.Kdash.entity.SignupDto;
 @Mapper
 public interface ProfileMapper {
 
-	public void profile_update(String user);
+	public void profile_update(SignupDto sign);
+
+	
 
 }

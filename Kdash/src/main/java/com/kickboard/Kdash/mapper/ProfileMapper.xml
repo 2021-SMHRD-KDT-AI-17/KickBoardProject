@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kickboard.Kdash.mapper.ProfileMapper">
-	<update id="profile_update" parameterType="String">
-		update tb_member set mem_nick=#{nick} where mem_email=#{mem_email}
+	<update id="profile_update" parameterType="com.kickboard.Kdash.entity.SignupDto">
+		update tb_member set mem_nick=#{nickname} where mem_email=#{email}
 	</update>
 </mapper>
