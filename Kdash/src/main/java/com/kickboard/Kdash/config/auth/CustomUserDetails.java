@@ -20,6 +20,7 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+    	// DB에 ROLE_ 항목을 만들어서 default로 user을 넣어주고 admin 계정을 만들어야 admin과 user를 나눌 수 있음
 //		return Collections.singletonList(new SimpleGrantedAuthority(this.role));
 		return Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
 	}

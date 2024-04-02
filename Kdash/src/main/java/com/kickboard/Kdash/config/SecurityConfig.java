@@ -50,23 +50,15 @@ public class SecurityConfig{
                 .successHandler(new AuthenticationSuccessHandler() {
                     @Override
                     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-
+                    		
+                    		
+                    		System.out.println("로그인 성공");
                             System.out.println("authentication" + authentication.getName());
 
-                            response.sendRedirect("/");
+                            response.sendRedirect("/test");
                     }
                 })
-                .failureHandler(new AuthenticationFailureHandler() {
-					
-					@Override
-					public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
-							AuthenticationException exception) throws IOException, ServletException {
-
-							exception.printStackTrace();
-							
-						
-					}
-				})
+      
                 
         )
 	        .logout(logout -> logout

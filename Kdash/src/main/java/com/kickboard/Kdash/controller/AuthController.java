@@ -1,5 +1,6 @@
 package com.kickboard.Kdash.controller;
 
+import java.security.Principal;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -96,6 +97,11 @@ public class AuthController {
 
 		// 이때 회원가입이 성공하였다는 메시지 출력 후 로그인페이지 이동
 		return Script.locationMsg("/login", "회원가입에 성공하였습니다", model);
+	}
+	
+	@GetMapping("/test")
+	public String testPage() {
+		return "test";
 	}
 
 }
