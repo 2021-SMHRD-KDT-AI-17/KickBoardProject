@@ -1,3 +1,7 @@
+<%@page import="org.springframework.security.core.Authentication"%>
+<%@page import="com.kickboard.Kdash.config.auth.CustomUserDetails"%>
+<%@page import="org.springframework.security.core.context.SecurityContextHolder"%>
+<%@page import="java.security.Principal"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
@@ -13,6 +17,11 @@
 </head>
 
 <body>
+<% 
+	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	CustomUserDetails user = (CustomUserDetails)authentication.getPrincipal();
+	String useremail = authentication.getName();
+	%>
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
