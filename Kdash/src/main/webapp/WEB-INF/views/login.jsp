@@ -34,7 +34,7 @@
                     <label for="exampleInputPassword1"  class="form-label">Password</label>
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <a href="http://kauth.kakao.com/oauth/authorize?client_id=fcfe48814f7dfaa68e95df43c81f9257&redirect_uri=https://localhost:8084/kakao/callback&response_type=code"
+                  <a href="http://kauth.kakao.com/oauth/authorize?client_id=fcfe48814f7dfaa68e95df43c81f9257&redirect_uri=http://localhost:8084/login/oauth2/code/kakao&response_type=code"
                   class="btn btn-warning w-100 py-8 fs-4 mb-4 rounded-2" > Kakao Login
                   </a>
                   <input type="submit" value="Sign In" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">

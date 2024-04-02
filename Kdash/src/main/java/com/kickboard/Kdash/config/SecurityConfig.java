@@ -15,6 +15,8 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
+import com.kickboard.Kdash.config.auth.OAuth2DetailsService;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -23,6 +25,9 @@ import jakarta.servlet.http.HttpServletResponse;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig{
+	
+	@Autowired
+	OAuth2DetailsService oAuth2DetailsService;
 	
 	@Bean
 	public BCryptPasswordEncoder encode() {
@@ -67,20 +72,19 @@ public class SecurityConfig{
 	                .invalidateHttpSession(true) // HTTP 세션 무효화 여부
 	                .deleteCookies("JSESSIONID") // 로그아웃 시 삭제할 쿠키 설정, 여러 개일 경우 여러 번 호출
 	                .permitAll()) // 로그아웃 페이지 접근 권한 설정
-	        .oauth2Login(oauth2Login -> oauth2Login
+	        .oauth2Login(oAuth -> oAuth
 	        		.loginPage("/login")
-	        		.successHandler(new AuthenticationSuccessHandler() {
-	                    @Override
-	                    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-	                    		
-	                    		
-//	                    		System.out.println("로그인 성공");
-//	                            System.out.println("authentication" + authentication.getName());
-
-	                            response.sendRedirect("/");
-	                    }
-	                })
-	        		.userService(oAuth2DetailsService)
+	        		.defaultSuccessUrl("/")
+	        		.failureUrl("/failed")
+	        		.failureHandler(new AuthenticationFailureHandler() {
+						
+						@Override
+						public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
+								AuthenticationException exception) throws IOException, ServletException {
+							System.out.println("exception" + exception.getMessage());
+						}
+					})
+	        		.userInfoEndpoint(userInfo -> userInfo.userService(oAuth2DetailsService))
 	        		);
 	    	
 	        
