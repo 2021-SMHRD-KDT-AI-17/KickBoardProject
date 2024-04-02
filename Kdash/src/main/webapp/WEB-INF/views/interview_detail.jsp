@@ -24,7 +24,6 @@
 	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 	String useremail = authentication.getName();
 	%>
-<<<<<<< HEAD
 	<!--  Body Wrapper -->
 	<div class="page-wrapper" id="main-wrapper" data-layout="vertical"
 		data-navbarbg="skin6" data-sidebartype="full"

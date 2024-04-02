@@ -52,17 +52,21 @@ public class SecurityConfig{
                     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
                     		
                     		
-                    		System.out.println("로그인 성공");
-                            System.out.println("authentication" + authentication.getName());
+//                    		System.out.println("로그인 성공");
+//                            System.out.println("authentication" + authentication.getName());
 
-                            response.sendRedirect("/test");
+                            response.sendRedirect("/");
                     }
                 })
       
                 
         )
 	        .logout(logout -> logout
-                    .permitAll());
+	                .logoutUrl("/logout") // 로그아웃 요청 URL 설정, 기본값은 "/logout"
+	                .logoutSuccessUrl("/login") // 로그아웃 성공 시 이동할 URL
+	                .invalidateHttpSession(true) // HTTP 세션 무효화 여부
+	                .deleteCookies("JSESSIONID") // 로그아웃 시 삭제할 쿠키 설정, 여러 개일 경우 여러 번 호출
+	                .permitAll()); // 로그아웃 페이지 접근 권한 설정
 	        
 	        
 	    return http.build();

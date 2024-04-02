@@ -418,9 +418,7 @@
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<<<<<<< HEAD
   <script src="resources/assets/js/inverviewMain.js"></script>
-=======
   <script type="text/javascript">
   const gr_tr = document.getElementsByClassName("g_tr");
   const gr_title = document.getElementsByClassName("goodreq_title");
@@ -670,7 +668,6 @@
 	    })
 	}
   </script>
->>>>>>> refs/remotes/origin/master
   <script src="resources/assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="resources/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="resources/assets/js/sidebarmenu.js"></script>
