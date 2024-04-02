@@ -16,7 +16,7 @@ import java.util.Set;
 @Data
 public class CustomUserDetails implements UserDetails, OAuth2User {
 
-    private String role;
+//    private String role;
     private String mem_email;
     private String mem_pw;
     private String mem_nick;

@@ -35,7 +35,7 @@ public class OAuth2DetailsService extends DefaultOAuth2UserService {
 
 		case "kakao":
 			Map<String, Object> kakaoAccount = oauth2User.getAttribute("kakao_account");
-			username = "kakao_" + userInfo.get("id");
+			username = "kakao_" +userInfo.get("id");
 			email = (String) kakaoAccount.get("email");
 			break;
 		}
@@ -43,8 +43,9 @@ public class OAuth2DetailsService extends DefaultOAuth2UserService {
 		if(authMapper.userEmailChk(username) == null) {
 			SignupDto signupDto = new SignupDto();
 			signupDto.setEmail(email);
-			signupDto.setNickname(username);
 			signupDto.setPassword(password);
+			signupDto.setNickname(username);
+			authMapper.signup(signupDto);
 		}
 		
 		CustomUserDetails principal = authMapper.getUser(email);

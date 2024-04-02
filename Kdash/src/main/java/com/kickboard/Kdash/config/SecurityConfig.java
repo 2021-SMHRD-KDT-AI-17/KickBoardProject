@@ -81,7 +81,7 @@ public class SecurityConfig{
 						@Override
 						public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
 								AuthenticationException exception) throws IOException, ServletException {
-							System.out.println("exception" + exception.getMessage());
+							System.out.println("exception: " + exception.getMessage() +" | "+ exception.toString());
 						}
 					})
 	        		.userInfoEndpoint(userInfo -> userInfo.userService(oAuth2DetailsService))
