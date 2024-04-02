@@ -27,29 +27,34 @@ public class OAuth2DetailsService extends DefaultOAuth2UserService {
 		String provider = userRequest.getClientRegistration().getRegistrationId();
 		Map<String, Object> userInfo = oauth2User.getAttributes();
 
+		System.out.println("Provider: " + provider);
+		System.out.println("User Info: " + userInfo);
+
 		String username = "";
 		String password = new BCryptPasswordEncoder().encode(UUID.randomUUID().toString());
 		String email = "";
 
 		switch (provider) {
-
 		case "kakao":
 			Map<String, Object> kakaoAccount = oauth2User.getAttribute("kakao_account");
-			username = "kakao_" +userInfo.get("id");
+			username = "kakao_" + userInfo.get("id");
 			email = (String) kakaoAccount.get("email");
 			break;
+
+		default:
+			break;
 		}
-		
-		if(authMapper.userEmailChk(username) == null) {
+
+		if (authMapper.userEmailChk(username) == null) {
 			SignupDto signupDto = new SignupDto();
 			signupDto.setEmail(email);
 			signupDto.setPassword(password);
 			signupDto.setNickname(username);
 			authMapper.signup(signupDto);
 		}
-		
-		CustomUserDetails principal = authMapper.getUser(email);
-		
+
+		CustomUserDetails principal = authMapper.getUser(username);
+
 		return principal;
 
 	}

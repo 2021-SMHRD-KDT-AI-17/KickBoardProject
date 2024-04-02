@@ -118,7 +118,6 @@
                 <span class="hide-menu">logout</span>
               </a>
             </li>
-            </li>
           </ul>
         </nav>
         <!-- End Sidebar navigation -->

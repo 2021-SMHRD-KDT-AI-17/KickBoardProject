@@ -16,6 +16,8 @@ import java.util.Set;
 @Data
 public class CustomUserDetails implements UserDetails, OAuth2User {
 
+	private static final long serialVersionUID = 1L;
+	
 //    private String role;
     private String mem_email;
     private String mem_pw;

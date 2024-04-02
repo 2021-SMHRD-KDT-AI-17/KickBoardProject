@@ -81,6 +81,9 @@ public class SecurityConfig{
 						@Override
 						public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
 								AuthenticationException exception) throws IOException, ServletException {
+							System.out.println(request.getParameter("username"));
+							System.out.println(request.getParameter("userEmail"));
+							System.out.println(request.getParameter("password"));
 							System.out.println("exception: " + exception.getMessage() +" | "+ exception.toString());
 						}
 					})
