@@ -16,7 +16,7 @@ public class ProfileController {
 	
 	@RequestMapping("/profile_update")
 	public String profile_update(SignupDto sign, HttpSession session) {
-		System.out.println(sign);
+		
 		profileMapper.profile_update(sign);
 		return"Home";
 	}
