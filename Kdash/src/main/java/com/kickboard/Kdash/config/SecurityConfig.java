@@ -66,7 +66,23 @@ public class SecurityConfig{
 	                .logoutSuccessUrl("/login") // 로그아웃 성공 시 이동할 URL
 	                .invalidateHttpSession(true) // HTTP 세션 무효화 여부
 	                .deleteCookies("JSESSIONID") // 로그아웃 시 삭제할 쿠키 설정, 여러 개일 경우 여러 번 호출
-	                .permitAll()); // 로그아웃 페이지 접근 권한 설정
+	                .permitAll()) // 로그아웃 페이지 접근 권한 설정
+	        .oauth2Login(oauth2Login -> oauth2Login
+	        		.loginPage("/login")
+	        		.successHandler(new AuthenticationSuccessHandler() {
+	                    @Override
+	                    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+	                    		
+	                    		
+//	                    		System.out.println("로그인 성공");
+//	                            System.out.println("authentication" + authentication.getName());
+
+	                            response.sendRedirect("/");
+	                    }
+	                })
+	        		.userService(oAuth2DetailsService)
+	        		);
+	    	
 	        
 	        
 	    return http.build();
