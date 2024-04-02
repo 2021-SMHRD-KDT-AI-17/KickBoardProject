@@ -198,9 +198,11 @@ likebutton.addEventListener('click', () => {
 	let likecnt = Number(likes.innerText.split("👍")[1]);
 	if (likebutton.classList.contains('active') == false) {
 		likecnt += 1;
+		likebutton.innerText="추천취소🖐"
 		likebutton.className += " active";
 	} else {
 		likecnt -= 1;
+		likebutton.innerText="추천하기👍"
 		likebutton.classList.remove("active");
 	}
 	likes.innerText = "👍" + likecnt;
