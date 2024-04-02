@@ -17,5 +17,9 @@
 	String useremail = authentication.getName();
 	%>
 	<%= useremail %>
+<<<<<<< HEAD
+	
+=======
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject.git
 </body>
 </html>

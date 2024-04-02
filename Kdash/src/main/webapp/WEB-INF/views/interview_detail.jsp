@@ -22,7 +22,6 @@
 <body>
 <% 
 	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-	CustomUserDetails user = (CustomUserDetails)authentication.getPrincipal();
 	String useremail = authentication.getName();
 	%>
 	<!--  Body Wrapper -->
