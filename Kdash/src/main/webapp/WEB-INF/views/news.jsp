@@ -30,6 +30,9 @@
           </div>
         </div>
         <!-- Sidebar navigation-->
+
+        
+        
         <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
@@ -48,7 +51,6 @@
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">contents</span>
             </li>
-            
             <li class="sidebar-item">
               <a class="sidebar-link" href="predict" aria-expanded="false">
                 <span>
@@ -99,13 +101,14 @@
                 </span>
                 <span class="hide-menu">Register</span>
               </a>
-              <a class="sidebar-link" href="#" aria-expanded="false">
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="login" aria-expanded="false">
                 <span>
                   <i class="ti ti-logout"></i>
                 </span>
                 <span class="hide-menu">logout</span>
               </a>
-            </li>
             </li>
           </ul>
         </nav>
@@ -160,65 +163,66 @@
             <!-- <h5 class="card-title fw-semibold mb-4">Sample Page</h5> -->
             <div>
 				<div class="card">
-				<div class="card-body row align-items-center justify-content-center">
+				<div class="card-body row align-items-center justify-content-center card-link">
 				<div class="col-3">
 					<img src="resources/assets/images/logos/ball_logo.png" class="news-img">
 				</div>
 				<div class="col-8">
 				    <h2 class="card-text">기사제목</h2>
-                    <a href="#" class="card-link">해당 기사로 이동하기</a>
+                    <!-- <a href="#" class="card-link">해당 기사로 이동하기</a> -->
 				</div>
 				</div>
 				</div>
             </div>
+            
             <div>
 				<div class="card">
-				<div class="card-body row align-items-center justify-content-center">
+				<div class="card-body row align-items-center justify-content-center card-link">
 				<div class="col-3">
 					<img src="resources/assets/images/logos/ball_logo.png" class="news-img">
 				</div>
 				<div class="col-8">
 				    <h2 class="card-text">기사제목</h2>
-                    <a href="#" class="card-link">해당 기사로 이동하기</a>
+                    <!-- <a href="#" class="card-link">해당 기사로 이동하기</a> -->
 				</div>
 				</div>
 				</div>
             </div>
-            <div>
+                        <div>
 				<div class="card">
-				<div class="card-body row align-items-center justify-content-center">
+				<div class="card-body row align-items-center justify-content-center card-link">
 				<div class="col-3">
 					<img src="resources/assets/images/logos/ball_logo.png" class="news-img">
 				</div>
 				<div class="col-8">
 				    <h2 class="card-text">기사제목</h2>
-                    <a href="#" class="card-link">해당 기사로 이동하기</a>
+                    <!-- <a href="#" class="card-link">해당 기사로 이동하기</a> -->
 				</div>
 				</div>
 				</div>
             </div>
-            <div>
+                        <div>
 				<div class="card">
-				<div class="card-body row align-items-center justify-content-center">
+				<div class="card-body row align-items-center justify-content-center card-link">
 				<div class="col-3">
 					<img src="resources/assets/images/logos/ball_logo.png" class="news-img">
 				</div>
 				<div class="col-8">
 				    <h2 class="card-text">기사제목</h2>
-                    <a href="#" class="card-link">해당 기사로 이동하기</a>
+                    <!-- <a href="#" class="card-link">해당 기사로 이동하기</a> -->
 				</div>
 				</div>
 				</div>
             </div>
-            <div>
+                        <div>
 				<div class="card">
-				<div class="card-body row align-items-center justify-content-center">
+				<div class="card-body row align-items-center justify-content-center card-link">
 				<div class="col-3">
 					<img src="resources/assets/images/logos/ball_logo.png" class="news-img">
 				</div>
 				<div class="col-8">
 				    <h2 class="card-text">기사제목</h2>
-                    <a href="#" class="card-link">해당 기사로 이동하기</a>
+                    <!-- <a href="#" class="card-link">해당 기사로 이동하기</a> -->
 				</div>
 				</div>
 				</div>

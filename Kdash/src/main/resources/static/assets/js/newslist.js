@@ -74,11 +74,13 @@ function showNewsList(startN) {
         if (news_imgList[i] != null) {
             imgs[listnum].setAttribute('src', news_imgList[i]);
             titles[listnum].innerText = news_titleList[i];
-            links[listnum].innerText = news_linkList[i];
+            links[listnum].setAttribute("onclick", "location.href='" + news_linkList[i] + "'");
+            links[listnum].setAttribute("style", "cursor:pointer;");
         } else {
             imgs[listnum].setAttribute('src', "resources/assets/images/logos/ball_logo.png");
             titles[listnum].innerText = "아직 기사를 덜 수집했습니다 기다려 주세요";
-            links[listnum].innerText = "";
+            links[listnum].classList.remove('bg-onclick');
+            links[listnum].classList.remove('style');
         }
         listnum++;
     }

@@ -51,7 +51,7 @@ for (var i = 0; i < atags.length; i++) {
 		dataType: "json",
 		success: (data) => {
 			for (var i = 0; i < 3; i++) {
-				if (data.length = 3) {
+				if (data[i] != null) {
 					gr_tr[i].setAttribute("onclick", "location.href='interview_detail?idx=" + data[i].req_idx + "'");
 					gr_tr[i].setAttribute("style", "cursor:pointer;");
 					gr_title[i].innerText = data[i].req_title;
@@ -70,6 +70,8 @@ for (var i = 0; i < atags.length; i++) {
 					gr_likes[i].innerText += data[i].req_likes;
 					gr_at.innerText = data[i].req_at;
 				} else {
+					gr_tr[listnum].classList.remove('bg-onclick');
+					gr_tr[listnum].classList.remove('style');
 					gr_title[i].innerText = "어서 인터뷰 요청 글을 작성해 보세요!💨";
 					gr_writer[i].innerText = "";
 					gr_viewee[i].innerText = "";
