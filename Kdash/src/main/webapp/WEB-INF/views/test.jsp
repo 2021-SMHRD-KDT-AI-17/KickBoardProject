@@ -1,3 +1,4 @@
+<%@page import="org.springframework.security.core.Authentication"%>
 <%@page import="com.kickboard.Kdash.config.auth.CustomUserDetails"%>
 <%@page import="org.springframework.security.core.context.SecurityContextHolder"%>
 <%@page import="java.security.Principal"%>
@@ -12,10 +13,11 @@
 <body>
 	<h1>Test</h1>
 	<% 
-	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal(); 
-	CustomUserDetails userDetails = (CustomUserDetails)principal; 
-	String username = principal.toString();
+	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	CustomUserDetails user = (CustomUserDetails)authentication.getPrincipal();
+	String useremail = authentication.getName();
 	%>
-	<%= username %>
+	<%= useremail %>
+	<%= user.getMem_email() %>
 </body>
 </html>
