@@ -53,4 +53,5 @@ public class MainController {
 	public String profile() {
 		return "profile";
 	}
+	
 }

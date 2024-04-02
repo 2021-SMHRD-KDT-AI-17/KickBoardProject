@@ -575,7 +575,8 @@
                 <div class="text-center mb-3">
                   <h6 class="mb-0">2024.01.01</h6>
                   <p class="mb-0 fw-bold">
-                    <span><img src="resources/assets/images/logos/ball_logo.png" class="small-logo">광주 fc </span>
+                  
+                    <span ><img src="resources/assets/images/logos/ball_logo.png" class="small-logo">광주 fc </span>
                     vs
                     <span>서울 fc<img src="resources/assets/images/logos/ball_logo.png" class="small-logo"></span></p>
                 </div>
@@ -584,23 +585,23 @@
                   <div class="progress-bar bg-secondary" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">무: 30%</div>
                   <div class="progress-bar bg-danger" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">패: 30%</div>
                 </div>
-                <form class="d-flex justify-content-center">
+                <form action="quiz" class="d-flex justify-content-center">
+                <input type="hidden" name="question" value="서울vs광주">
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="result" id="win" value="win">
-                    <label class="form-check-label fw-normal" for="win">승</label>
+                    <input class="form-check-input mt-1" type="radio" name="result" id="win" value="win">
+                    <label class="form-check-label fw-normal mt-1" for="win">승</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="result" id="draw" value="draw">
-                    <label class="form-check-label fw-normal" for="draw">무</label>
+                    <input class="form-check-input mt-1" type="radio" name="result" id="draw" value="draw">
+                    <label class="form-check-label fw-normal mt-1" for="draw">무</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="result" id="lose" value="lose">
-                    <label class="form-check-label fw-normal" for="lose">패</label>
+                    <input class="form-check-input mt-1" type="radio" name="result" id="lose" value="lose">
+                    <label class="form-check-label fw-normal mt-1" for="lose">패</label>
                   </div>
+                  <!-- 버튼을 form 요소 안에 추가 -->
+                  <button type="submit" class="btn btn-sm btn-outline-success">전송</button>
                 </form>
-                <div class=" text-center mt-3">
-                  <button type="submit" class="btn btn-outline-success w-75">전송</button>
-                </div>
               </div>
             </div>
           </div>
