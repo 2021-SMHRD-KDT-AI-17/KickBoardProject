@@ -6,11 +6,6 @@
     pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
-<% 
-	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-	CustomUserDetails user = (CustomUserDetails)authentication.getPrincipal();
-	String useremail = authentication.getName();
-	%>
 
 <head>
   <meta charset="utf-8">
@@ -23,6 +18,10 @@
 </head>
 
 <body>
+<% 
+	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	String useremail = authentication.getName();
+	%>
 	
 
   <!--  Body Wrapper -->
@@ -150,7 +149,7 @@
                 	
                   <div class="message-body">
                   
-                  <p class="mb-0 fs-3 profile-name"><%=user.getMem_email() %>님 환영합니다.</p>
+                  <p class="mb-0 fs-3 profile-name"><%=useremail %>님 환영합니다.</p>
                     <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>

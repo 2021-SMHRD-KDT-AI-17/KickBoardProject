@@ -14,10 +14,8 @@
 	<h1>Test</h1>
 	<% 
 	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-	CustomUserDetails user = (CustomUserDetails)authentication.getPrincipal();
 	String useremail = authentication.getName();
 	%>
 	<%= useremail %>
-	<%= user.getMem_email() %>
 </body>
 </html>
