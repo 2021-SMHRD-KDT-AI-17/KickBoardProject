@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.kickboard.Kdash.entity.Goods;
 import com.kickboard.Kdash.entity.News;
 import com.kickboard.Kdash.entity.Request;
+import com.kickboard.Kdash.service.GoodsService;
 import com.kickboard.Kdash.service.NewsService;
 import com.kickboard.Kdash.service.RequestService;
 
@@ -20,6 +22,8 @@ public class Rest_Controller {
 	private NewsService newsService;
 	@Resource
 	private RequestService requestService;
+	@Resource
+	private GoodsService goodsService;
 	//---뉴스
 	@GetMapping("/newsFirstList")
 	public @ResponseBody List<News> firstList(){
@@ -60,4 +64,10 @@ public class Rest_Controller {
 		return requestService.likesUpdate(idx,likes);
 	}
 	//---
+	//---굿즈샵
+	@GetMapping("/goodsFirstList")
+	public @ResponseBody List<Goods> goodsFirstList(){
+		System.out.println("goods");
+		return goodsService.goodsFirstList();
+	}
 }
