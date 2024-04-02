@@ -11,7 +11,7 @@
 	</insert>
 
 	<select id="getUser" resultType="com.kickboard.Kdash.config.auth.CustomUserDetails">
-		SELECT * FROM tb_member WHERE mem_email = #{email}
+		SELECT mem_email, mem_pw FROM tb_member WHERE mem_email = #{email}
 	</select>
 	
 	<select id="userEmail" resultType="com.kickboard.Kdash.entity.SignupDto">

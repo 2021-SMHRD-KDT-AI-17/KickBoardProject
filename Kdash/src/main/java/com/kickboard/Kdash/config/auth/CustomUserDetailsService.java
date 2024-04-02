@@ -20,6 +20,7 @@ public class CustomUserDetailsService implements UserDetailsService{
     
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+    	
         CustomUserDetails principal  = authMapper.getUser(email);
         
         if(principal == null) throw new UsernameNotFoundException("회원이 존재하지 않습니다");
@@ -28,6 +29,7 @@ public class CustomUserDetailsService implements UserDetailsService{
     }
     
     private UserDetails toUserDetails(SignupDto member) {
+    	    	
     	return User.builder()
     			.username(member.getEmail())
     			.password(member.getPassword())

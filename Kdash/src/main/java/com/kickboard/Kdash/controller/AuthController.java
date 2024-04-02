@@ -38,7 +38,12 @@ public class AuthController {
 
 	@PostMapping("/login")
 	public String login(String email, String password, HttpSession session) {
+		
+		System.out.println(email+" | "+password);
+		
 		String userEmail = authService.emailCheck(email, password);
+		
+		System.out.println("/login: "+userEmail);
 		if (userEmail == null) {
 			return "login";
 		}

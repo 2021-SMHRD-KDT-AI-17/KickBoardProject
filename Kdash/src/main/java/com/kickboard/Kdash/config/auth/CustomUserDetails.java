@@ -15,22 +15,23 @@ import java.util.Set;
 public class CustomUserDetails implements UserDetails {
 
     private String role;
-    private String email;
-    private String password;
+    private String mem_email;
+    private String mem_pw;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-		return Collections.singletonList(new SimpleGrantedAuthority(this.role));
+//		return Collections.singletonList(new SimpleGrantedAuthority(this.role));
+		return Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
 	}
 
     @Override
     public String getUsername() {
-    	return email;
+    	return this.mem_email;
     }
     
     @Override
     public String getPassword() {
-        return password;
+        return this.mem_pw;
     }
 
     @Override
