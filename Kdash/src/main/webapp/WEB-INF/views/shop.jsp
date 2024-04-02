@@ -504,12 +504,17 @@
 	    var listnum = 0;
 	    for (var i = startN; i < startN + goods_perpage; i++) {
 	        carts[listnum].classList.remove('style');
+	        carts[listnum].classList.remove('onclick');
+	        carts[listnum].classList.remove('style');
 	        if (goods_idxList[i] != null) {
 	            let itemidx=Number(goods_idxList[i]);
 	            console.log(itemidx);
 	            divs[listnum].classList.remove("invisible");
 	            imgs[listnum].setAttribute('src', goods_imgList[i]);
-	            cartbutton(listnum, itemidx);
+	            imgs[listnum].setAttribute("onclick", "location.href='shopDetails'");
+	            // r_tr[listnum].setAttribute("onclick", "location.href='shopDetails?idx=" + req_IdxList[i] + "'");
+				imgs[listnum].setAttribute("style", "cursor:pointer;");
+	            //cartbutton(listnum, itemidx);
 	            // carts[listnum].addEventListener('click', addcart(itemidx));
 	            
 	            names[listnum].innerText = goods_nameList[i];

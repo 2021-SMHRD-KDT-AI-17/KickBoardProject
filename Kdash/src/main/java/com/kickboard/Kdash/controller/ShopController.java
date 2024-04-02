@@ -17,10 +17,8 @@ public class ShopController {
 	@Autowired
 	private GoodsMapper goodsMapper;
 	
-//	@GetMapping("/shop")
-//	public String shop() {
-////		List<Goods> shop_list = goodsMapper.goodsFirstList();
-////		model.addAttribute("shop_list",shop_list);
-//		return "shop";
-//	}
+	@GetMapping("/shopDetails")
+	public String shop() {
+		return "shop_details";
+	}
 }
