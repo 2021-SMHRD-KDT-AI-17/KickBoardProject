@@ -1,7 +1,5 @@
 package com.kickboard.Kdash.controller;
 
-import java.lang.reflect.Member;
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.kickboard.Kdash.entity.SignupDto;
-import com.kickboard.Kdash.mapper.AuthMapper;
 import com.kickboard.Kdash.service.AuthService;
 import com.kickboard.Kdash.utils.Script;
 
@@ -25,9 +22,28 @@ public class AuthController {
 	@Autowired
 	AuthService authService;
 
+//	@GetMapping("/login")
+//	public String signin() {
+//		return "login";
+//	}
+
 	@GetMapping("/login")
-	public String signin() {
+	public String toLoginPage(HttpSession session) {
+		String email = (String) session.getAttribute("userEmail");
+		if (email != null) {
+			return "Home";
+		}
 		return "login";
+	}
+
+	@PostMapping("/login")
+	public String login(String email, String password, HttpSession session) {
+		String userEmail = authService.emailCheck(email, password);
+		if (userEmail == null) {
+			return "login";
+		}
+		session.setAttribute("userEmail", email);
+		return "Home";
 	}
 
 	@GetMapping("/register")

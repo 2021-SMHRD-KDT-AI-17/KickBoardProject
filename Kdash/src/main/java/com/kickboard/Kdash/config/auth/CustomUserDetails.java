@@ -4,39 +4,33 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import lombok.Data;
+
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+@Data
 public class CustomUserDetails implements UserDetails {
 
-    private Set<String> roles;
+    private String role;
     private String email;
     private String password;
 
-    public CustomUserDetails(String email, String password, Set<String> roles) {
-        this.email = email;
-        this.password = password;
-        this.roles = roles;
-    }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        Set<GrantedAuthority> authorities = new HashSet<>();
-        for (String role : roles) {
-            authorities.add(new SimpleGrantedAuthority(role));
-        }
-        return authorities;
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
-    }
+		return Collections.singletonList(new SimpleGrantedAuthority(this.role));
+	}
 
     @Override
     public String getUsername() {
-        return email;
+    	return email;
+    }
+    
+    @Override
+    public String getPassword() {
+        return password;
     }
 
     @Override

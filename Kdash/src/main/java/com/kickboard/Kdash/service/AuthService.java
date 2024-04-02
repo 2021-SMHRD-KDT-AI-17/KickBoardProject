@@ -41,5 +41,13 @@ public class AuthService {
 	public void signup(SignupDto signupDto) {
 		authMapper.signup(signupDto);
 	}
+	
+	// 로그인 이메일, 비밀번호 체크.??
+	public String emailCheck(String email, String password) {
+		SignupDto emailChk = authMapper.userEmail(email);
+		if(emailChk.getPassword().equals(password))
+			return emailChk.getEmail();
+		return null;
+	}
 
 }

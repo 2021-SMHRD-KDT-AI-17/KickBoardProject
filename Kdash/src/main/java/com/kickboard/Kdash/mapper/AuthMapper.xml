@@ -7,10 +7,14 @@
 	</select>
 
 	<insert id="signup">
-		INSERT INTO tb_member (mem_email, mem_pw, mem_nick, mem_point, joined_at, mem_chatt_yn) VALUES (#{email}, SHA2(#{password}, 256), #{nickname}, 0, NOW(), 0);
+		INSERT INTO tb_member (mem_email, mem_pw, mem_nick, mem_point, join_at, mem_chatt_yn) VALUES (#{email}, #{password}, #{nickname}, 0, NOW(), 0);
 	</insert>
 
 	<select id="getUser" resultType="com.kickboard.Kdash.config.auth.CustomUserDetails">
-		SELECT * FROM tb_member WHERE mem_eamil = #{email}
+		SELECT * FROM tb_member WHERE mem_email = #{email}
+	</select>
+	
+	<select id="userEmail" resultType="com.kickboard.Kdash.entity.SignupDto">
+		SELECT * FROM tb_member WHERE mem_email = #{email}
 	</select>
 </mapper>

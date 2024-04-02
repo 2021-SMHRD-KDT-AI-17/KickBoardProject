@@ -13,4 +13,6 @@ public interface AuthMapper {
 	public void signup(SignupDto signupDto);
 	
 	public CustomUserDetails getUser(String username);
+	
+	SignupDto userEmail(String email);
 }
