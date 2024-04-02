@@ -22,7 +22,6 @@
 <body>
 <% 
 	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-	CustomUserDetails user = (CustomUserDetails)authentication.getPrincipal();
 	String useremail = authentication.getName();
 	%>
 	<!--  Body Wrapper -->
@@ -149,13 +148,13 @@
 			<div class="container-fluid">
 				<div class="card">
 					<div class="card-body">
-					<form action="profile_alter">
+					<form action="profile_update">
 						<h5 class="card-title fw-semibold mb-4">My Profile</h5>
 						<div class="row">
 							<div
 								class="col-md-6 d-flex justify-content-center align-items-center">
 								<div class="text-center">
-									<div class="alert alert-secondary" role="alert">'누구누구'님
+									<div class="alert alert-secondary" role="alert"><%=useremail %>님
 										환영합니다!</div>
 									<img src="https://via.placeholder.com/400"
 										class="img-fluid mb-4" alt="Product Image">
@@ -169,7 +168,7 @@
 								<div class="input-group mb-3">
 									<span class="input-group-text" style="width: 100px;">Nickname</span>
 									<input type="text" class="form-control"
-										placeholder="닉네임을 입력해 주세요.">
+										placeholder="닉?">
 								</div>
 								<div class="input-group mb-3">
 									<span class="input-group-text" style="width: 100px;">Password</span>
