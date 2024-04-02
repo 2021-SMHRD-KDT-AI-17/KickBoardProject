@@ -1,7 +1,16 @@
+<%@page import="org.springframework.security.core.Authentication"%>
+<%@page import="com.kickboard.Kdash.config.auth.CustomUserDetails"%>
+<%@page import="org.springframework.security.core.context.SecurityContextHolder"%>
+<%@page import="java.security.Principal"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
+<% 
+	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	CustomUserDetails user = (CustomUserDetails)authentication.getPrincipal();
+	String useremail = authentication.getName();
+	%>
 
 <head>
   <meta charset="utf-8">
@@ -14,6 +23,8 @@
 </head>
 
 <body>
+	
+
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
@@ -139,7 +150,7 @@
                 	
                   <div class="message-body">
                   
-                  <p class="mb-0 fs-3 profile-name">님 환영합니다.</p>
+                  <p class="mb-0 fs-3 profile-name"><%=user.getMem_email() %>님 환영합니다.</p>
                     <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>

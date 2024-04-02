@@ -57,6 +57,7 @@ public class AuthService {
 		System.out.println("[AuthService]:"+emailChk+" | "+emailChk.getPassword());
 		
 		if(emailChk.getPassword().equals(password))
+			
 			return emailChk.getEmail();
 		return null;
 	}

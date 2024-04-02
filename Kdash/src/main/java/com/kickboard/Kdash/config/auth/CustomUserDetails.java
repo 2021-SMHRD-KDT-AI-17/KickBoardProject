@@ -17,6 +17,7 @@ public class CustomUserDetails implements UserDetails {
     private String role;
     private String mem_email;
     private String mem_pw;
+    private String mem_nick;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -33,6 +34,10 @@ public class CustomUserDetails implements UserDetails {
     @Override
     public String getPassword() {
         return this.mem_pw;
+    }
+    
+    public String getNick() {
+    	return this.mem_nick;
     }
 
     @Override

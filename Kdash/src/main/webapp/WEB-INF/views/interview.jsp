@@ -1,3 +1,7 @@
+<%@page import="org.springframework.security.core.Authentication"%>
+<%@page import="com.kickboard.Kdash.config.auth.CustomUserDetails"%>
+<%@page import="org.springframework.security.core.context.SecurityContextHolder"%>
+<%@page import="java.security.Principal"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
@@ -13,6 +17,11 @@
 </head>
 
 <body>
+<% 
+	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	CustomUserDetails user = (CustomUserDetails)authentication.getPrincipal();
+	String useremail = authentication.getName();
+	%>
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
@@ -410,9 +419,7 @@
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<<<<<<< HEAD
   <script src="resources/assets/js/inverviewMain.js"></script>
-=======
   <script type="text/javascript">
   const gr_tr = document.getElementsByClassName("g_tr");
   const gr_title = document.getElementsByClassName("goodreq_title");
@@ -662,7 +669,6 @@
 	    })
 	}
   </script>
->>>>>>> refs/remotes/origin/master
   <script src="resources/assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="resources/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="resources/assets/js/sidebarmenu.js"></script>

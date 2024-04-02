@@ -55,7 +55,7 @@ public class SecurityConfig{
                     		System.out.println("로그인 성공");
                             System.out.println("authentication" + authentication.getName());
 
-                            response.sendRedirect("/test");
+                            response.sendRedirect("/");
                     }
                 })
       
