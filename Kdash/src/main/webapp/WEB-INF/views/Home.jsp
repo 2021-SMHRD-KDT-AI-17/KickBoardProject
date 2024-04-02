@@ -168,6 +168,8 @@
         </nav>
       </header>
       <!--  Header End -->
+      
+      
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
@@ -199,17 +201,17 @@
                     <!-- style="background-color:#004098;" -->
                     <div class="club-title-box">
                       <div class="club-title-teamBox text-center mb-3">
-                        <img src="resources/assets/images/logos/ball_logo.png" class="img-emble">
+                        <img src="resources/assets/images/logos/울산HDFC.png" class="img-emble">
                         <ul class="">
                           <li class="club-list">울산 현대</li>
-                          <li class="club-list">GANGWON FC</li>
+                          <li class="club-list">ULSAN HDFC</li>
                         </ul>
                       </div>
                     </div>
                     <div class="row justify-content-center align-items-center mb-2">
                       <div class="col-lg-6">
                         <div class="card">
-                            <img src="resources/assets/images/backgrounds/bg1.jpg " class="w-100 formation-img">
+                            <img src="resources/assets/images/formation/울산.png" class="w-100 formation-img">
                         </div>
                       </div>
                       <div class="col-lg-6">
@@ -278,12 +280,9 @@
                             </tbody>
                           </table>
                         </div>
-                        
                       </div>
-
                      </div>
                      <div id="rank-5"></div>
-
                   </div>
                 </div>
               </div>
@@ -297,7 +296,7 @@
                           <div class="col-8">
                             <h5 class="fw-semibold mb-3">현재 순위 : <span>1위</span></h5>
                             <div class="d-flex align-items-center mb-3">
-                              <p class="text-dark me-1 fs-3 mb-0">최근 5경기 전적</p>
+                              <p class="text-dark me-1 fs-3 mb-0">최근 전적</p>
                             </div>
                             <div class="d-flex align-items-center">
                               <div class="me-4">
@@ -383,7 +382,97 @@
               </div>
             </div>
           </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="d-sm-flex d-block align-items-center justify-content-end mb-9">
+                <div class="mb-3 mb-sm-0">
+                  <select class="form-select">
+                    <option>제갈제니</option>
+                    <option>제갈제니</option>
+                    <option>제갈제니</option>
+                    <option>제갈제니</option>
+                    <option>제갈제니</option>
+                  </select>
+                </div>
+                <div class="ms-sm-3">
+                  <!-- 입력 필드와 돋보기 아이콘을 포함한 인풋 그룹 -->
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="search" placeholder="선수를 검색하세요.">
+                    <span class="input-group-text">
+                      <a href="#"><i class="ti ti-search" id="searchIcon"></i></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4 d-flex align-items-strech">
+                  <div class="card w-100">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                      <div class="club-title-box">
+                        <div class="player-title text-center mb-3">
+                          <ul class="player-info">
+                            <li class="club-list">울산 현대</li>
+                            <li class="club-list">김옥지</li>
+                          </ul>
+                        </div>
+                        <div class="d-flex justify-content-center mb-3">
+                          <img src="resources/assets/images/profile/user-1.jpg " class="plyer-img">
+                        </div>
+                        <div class="row">
+                          <table class="table table-sm text-center table-light mb-0">
+                            <tr>
+                              <th>등번호</th>
+                              <td>10</td>
+                              <th>포지션</th>
+                              <td>ST</td>
+                            </tr>
+                            <tr>
+                              <th>키</th>
+                              <td>175</td>
+                              <th>몸무게</th>
+                              <td>60</td>
+                            </tr>
+                            <tr>
+                              <th colspan="2">생년월일</th>
+                              <td colspan="2">1990.01.01</td>
+                            </tr>
+                            <tr>
+                              <th colspan="4"><button class="btn btn-sm btn-outline-primary"><i class="ti ti-bell"></i>팔로우</button></th>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8">
+                  <div class="card w-100">
+                    <div class="card-body d-flex flex-column h-100">
+                      <div class="row flex-grow-1">
+                        <div class="col-lg-6">
+                          <div class="">
+                            <h5 class="alert alert-secondary">player-avg record</h5>
+                            <div id="player-avg"></div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="">
+                            <h5 class="alert alert-secondary">player-total record</h5>
+                            <div id="player-data"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="alert alert-secondary mt-auto mb-0">설명을 좀 써</div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
         </div>
+        
+      </div>
       </div>
     </div>
   </div>
