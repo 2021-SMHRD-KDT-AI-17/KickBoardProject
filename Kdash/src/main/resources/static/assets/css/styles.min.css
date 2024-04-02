@@ -20181,7 +20181,7 @@ ul {
     background-color: #f7f7f7; /* 채팅 박스 배경색 */
     border-radius: 10px; /* 채팅 박스 둥근 모서리 */
     padding: 10px; /* 채팅 박스 내부 여백 */
-    height: 100%;
+    overflow-y: scroll; /* 세로 방향으로 항상 스크롤을 표시합니다. */
   }
 .message {
     background-color: #ffffff; /* 메시지 배경색 */
@@ -20230,7 +20230,7 @@ ul {
     max-height: 120px;
 }
 .bg-img{
-    background-image: url(/resources/assets/images/backgrounds/bg4.jpg);
+    background-image: url(/연습/assets/images/backgrounds/bg4.jpg);
     background-size: cover;
     background-position: center;
     max-height: 100%;
@@ -20258,7 +20258,7 @@ ul {
     border-radius: 10%;
 }
 .field-img{
-    background-image: url('/resources/assets/images/products/filed1.jpg');
+    background-image: url('/연습/assets/images/products/filed1.jpg');
     background-size: cover;
 }
 .text-end-sub{
@@ -20293,7 +20293,7 @@ ul {
     transform: translate(-50%, -50%);
 }
 .table-img {
-    background-image: url('/resources/assets/images/products/green.jpg');
+    background-image: url('/연습/assets/images/products/green.jpg');
     background-position: center;
     background-size: cover;
     max-width: 100%;
@@ -20350,7 +20350,13 @@ ul {
     height: 400px;
 }
 .club-title-teamBox{
-    background-image: url('/resources/assets/images/backgrounds/k-l.jpg');
+    background-image: url('/연습/assets/images/backgrounds/t.jpg');
+    background-size: cover;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+.player-title{
+    background-image: url('/연습/assets/images/backgrounds/p-t.jpg');
     background-size: cover;
     padding-top: 5px;
     border-radius: 10px;
@@ -20375,6 +20381,17 @@ ul {
     background-color: #0067ac;
     color: white;
 }
-.profile-name{
-	text-align: center;
+.plyer-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product-img{
+    
+}
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    opacity: 1; /* 화살표 항상 표시 */
 }
