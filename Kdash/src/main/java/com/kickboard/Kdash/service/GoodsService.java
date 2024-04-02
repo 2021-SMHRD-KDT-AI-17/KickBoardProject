@@ -16,4 +16,8 @@ public class GoodsService {
 	public List<Goods> goodsFirstList() {
 		return goodsMapper.goodsFirstList();
 	}
+	public Goods Addcart(int idx) {
+		return goodsMapper.Addcart(idx);
+	}
+
 }

@@ -2,6 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kickboard.Kdash.mapper.ProfileMapper">
 	<update id="profile_update" parameterType="com.kickboard.Kdash.entity.SignupDto">
-		update tb_member set mem_nick=#{nickname} where mem_email=#{email}
+		update tb_member set mem_nick=#{nickname}, mem_pw=#{password} where mem_email=#{email}
 	</update>
 </mapper>

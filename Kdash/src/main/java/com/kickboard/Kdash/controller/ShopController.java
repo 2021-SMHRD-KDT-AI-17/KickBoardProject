@@ -7,19 +7,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.kickboard.Kdash.entity.Shop;
-import com.kickboard.Kdash.mapper.ShopMapper;
+import com.kickboard.Kdash.entity.Goods;
+import com.kickboard.Kdash.mapper.GoodsMapper;
+
 
 @Controller
 public class ShopController {
 	
 	@Autowired
-	private ShopMapper shopMapper;
+	private GoodsMapper goodsMapper;
 	
-	@GetMapping("/shop")
-	public String shop(Model model) {
-		List<Shop> shop_list = shopMapper.shop_list();
-		model.addAttribute("shop_list",shop_list);
-		return "shop";
+	@GetMapping("/shopDetails")
+	public String shop() {
+		return "shop_details";
 	}
 }

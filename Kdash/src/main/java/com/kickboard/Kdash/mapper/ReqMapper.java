@@ -16,4 +16,6 @@ public interface ReqMapper {
 	public int likesUpdate(int idx, int likes);
 
 	public Request getInterview(int idx);
+	public String getPlayerName(int idx);
+	public String getClubName(int idx);
 }

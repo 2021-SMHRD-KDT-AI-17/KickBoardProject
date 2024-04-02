@@ -97,9 +97,6 @@ function showReqList(startN) {
 		r_viewee[listnum].classList.remove('bg-primary');
 		r_viewee[listnum].classList.remove('bg-danger');
 		if (req_IdxList[i] != null) {
-			console.log(req_IdxList[i]);
-			console.log(req_idx);
-			console.log(req_IdxList[i] == req_idx);
 			r_tr[listnum].setAttribute("onclick", "location.href='interview_detail?idx=" + req_IdxList[i] + "'");
 			r_tr[listnum].setAttribute("style", "cursor:pointer;");
 			r_idx[listnum].innerText = req_IdxList[i];
@@ -165,8 +162,10 @@ function getList(init, isPre, idx) {
 			req_VieweeList = [];
 			req_LikesList = [];
 			req_AtList = [];
-			req_lastIdx = data[data.length - 1].req_idx;
-			req_firstIdx = data[0].req_idx;
+			if(data.length!=0){
+				req_lastIdx = data[data.length - 1].req_idx;
+				req_firstIdx = data[0].req_idx;
+			}
 			let tmp = "";
 			for (var i = 0; i < data.length; i++) {
 				if (data[i] != null) {

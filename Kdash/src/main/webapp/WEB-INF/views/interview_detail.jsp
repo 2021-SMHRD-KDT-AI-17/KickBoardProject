@@ -2,6 +2,7 @@
 <%@page import="com.kickboard.Kdash.config.auth.CustomUserDetails"%>
 <%@page import="org.springframework.security.core.context.SecurityContextHolder"%>
 <%@page import="java.security.Principal"%>
+<%@page import="com.kickboard.Kdash.entity.Request"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!doctype html>
@@ -24,6 +25,7 @@
 	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 	String useremail = authentication.getName();
 	%>
+<<<<<<< HEAD
 	<!--  Body Wrapper -->
 	<div class="page-wrapper" id="main-wrapper" data-layout="vertical"
 		data-navbarbg="skin6" data-sidebartype="full"
@@ -45,57 +47,85 @@
 					</div>
 				</div>
 				<!-- Sidebar navigation-->
-				<nav class="sidebar-nav scroll-sidebar" data-simplebar="">
-					<ul id="sidebarnav">
-						<li class="nav-small-cap"><i
-							class="ti ti-dots nav-small-cap-icon fs-4"></i> <span
-							class="hide-menu">Home</span></li>
-						<li class="sidebar-item"><a class="sidebar-link" href="home"
-							aria-expanded="false"> <span> <i
-									class="ti ti-layout-dashboard"></i>
-							</span> <span class="hide-menu">Dashboard</span>
-						</a></li>
-						<li class="nav-small-cap"><i
-							class="ti ti-dots nav-small-cap-icon fs-4"></i> <span
-							class="hide-menu">contents</span></li>
-						
-						<li class="sidebar-item"><a class="sidebar-link"
-							href="predict" aria-expanded="false"> <span> <i
-									class="ti ti-current-location"></i>
-							</span> <span class="hide-menu">predict</span>
-						</a></li>
-						<li class="sidebar-item"><a class="sidebar-link" href="news"
-							aria-expanded="false"> <span> <i class="ti ti-news"></i>
-							</span> <span class="hide-menu">news</span>
-						</a></li>
-						<li class="sidebar-item"><a class="sidebar-link"
-							href="interview" aria-expanded="false"> <span> <i
-									class="ti ti-ad-2"></i>
-							</span> <span class="hide-menu">interview</span>
-						</a>
-						<li class="sidebar-item"><a class="sidebar-link" href="shop"
-							aria-expanded="false"> <span> <i
-									class="ti ti-shopping-bag"></i>
-							</span> <span class="hide-menu">shop</span>
-						</a></li>
-						<li class="nav-small-cap"><i
-							class="ti ti-dots nav-small-cap-icon fs-4"></i> <span
-							class="hide-menu">profile</span></li>
-						<li class="sidebar-item"><a class="sidebar-link" href="login"
-							aria-expanded="false"> <span> <i class="ti ti-login"></i>
-							</span> <span class="hide-menu">Login</span>
-						</a></li>
-						<li class="sidebar-item"><a class="sidebar-link"
-							href="register" aria-expanded="false"> <span> <i
-									class="ti ti-user-plus"></i>
-							</span> <span class="hide-menu">Register</span>
-						</a> <a class="sidebar-link" href="#" aria-expanded="false"> <span>
-									<i class="ti ti-logout"></i>
-							</span> <span class="hide-menu">logout</span>
-						</a></li>
-						</li>
-					</ul>
-				</nav>
+	       <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Home</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="home" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">contents</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="predict" aria-expanded="false">
+                <span>
+                  <i class="ti ti-current-location"></i>
+                </span>
+                <span class="hide-menu">predict</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link"href="news" aria-expanded="false">
+                <span>
+                  <i class="ti ti-news"></i>
+                </span>
+                <span class="hide-menu">news</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link active" aria-expanded="false">
+                <span>
+                  <i class="ti ti-ad-2"></i>
+                </span>
+                <span class="hide-menu">interview</span>
+              </a>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="shop" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-shopping-bag"></i>
+                  </span>
+                  <span class="hide-menu">shop</span>
+                </a>
+            </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">profile</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="login" aria-expanded="false">
+                <span>
+                  <i class="ti ti-login"></i>
+                </span>
+                <span class="hide-menu">Login</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="register" aria-expanded="false">
+                <span>
+                  <i class="ti ti-user-plus"></i>
+                </span>
+                <span class="hide-menu">Register</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="login" aria-expanded="false">
+                <span>
+                  <i class="ti ti-logout"></i>
+                </span>
+                <span class="hide-menu">logout</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
 				<!-- End Sidebar navigation -->
 			</div>
 			<!-- End Sidebar scroll-->
@@ -149,6 +179,9 @@
 					<a href="#"><i class="ti ti-ad-2"></i></a>${interview.mem_email}님의
 					인터뷰 질의글
 				</h1>
+				<%String name=(String)request.getAttribute("name");
+					Request req=(Request)request.getAttribute("interview");
+					String content=req.getReq_content();%>
 				<br>
 				<div class="col-lg-12 d-flex align-items-stretch">
 					<div class="card w-100">
@@ -156,21 +189,29 @@
 							<table class="table">
 								<thead>
 									<tr>
-										<th scope="col" class="text-center fw-semibold fs-4 mb-0" id="idxnow">${interview.req_idx}</th>
-										<th scope="col" class="text-center fw-semibold fs-4 mb-0">${interview.req_title}</th>
-										<th scope="col" class="text-center fw-semibold fs-4 mb-0"><span
-											class="badge bg-primary rounded-3 fw-semibold">선수</span></th>
-										<th scope="col" class="text-center fw-semibold fs-4 mb-0">린가드</th>
-										<th scope="col" class="text-center fw-semibold fs-4 mb-0"
+										<th scope="col" class="text-center fw-semibold fs-4 mb-0 col-lg-1" id="idxnow">${interview.req_idx}</th>
+										<th scope="col" class="text-center fw-semibold fs-4 mb-0 col-lg-4">${interview.req_title}</th>
+										<%if(name.contains("p")){ %>
+										<th scope="col" class="text-center fw-semibold fs-4 mb-0">
+										<span class="badge bg-primary rounded-3 fw-semibold col-lg-6">선수
+										</span></th>
+										<th scope="col" class="text-center fw-semibold fs-4 mb-0"><%=name.substring(1)%></th>
+										<%} else{%>
+										<th scope="col" class="text-center fw-semibold fs-4 mb-0">
+										<span class="badge bg-danger rounded-3 fw-semibold col-lg-6">구단
+										</span></th>
+										<th scope="col" class="text-center fw-semibold fs-4 mb-0"><%=name.substring(1)%></th>
+										<%} %>
+										<th scope="col" class="text-center fw-semibold fs-4 mb-0 col-lg-1"
 											id="likes">👍${interview.req_likes}</th>
-										<th scope="col" class="text-center fw-semibold fs-4 mb-0">${interview.req_at}</th>
+										<th scope="col" class="text-center fw-semibold fs-4 mb-0 col-lg-3">${interview.req_at}</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td colspan="7">
+										<td colspan="8">
 											<div class="card-body pt-3 p-4">
-												<h5 class="fw-semibold fs-4">${interview.req_content}</h5>
+												<h5 class="fw-semibold fs-4"><%=content %></h5>
 												<!--                       <h5 class="fw-semibold fs-4">집가고싶다.&ensp;비가오는&ensp;날엔&ensp;축구✔&ensp;긴글&ensp;테스트&ensp;글&ensp;짤리나&ensp;테스트&ensp;내일점심&ensp;뭐먹지?????????????????????&ensp;시~~~~~~~~~~~~~~~~~~작&ensp;아아~~~~~~~~~~악</h5> -->
 											</div>
 										</td>

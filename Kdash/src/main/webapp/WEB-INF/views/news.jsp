@@ -38,9 +38,6 @@
           </div>
         </div>
         <!-- Sidebar navigation-->
-
-        
-        
         <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
@@ -68,7 +65,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="news" aria-expanded="false">
+              <a class="sidebar-link active" aria-expanded="false">
                 <span>
                   <i class="ti ti-news"></i>
                 </span>

@@ -1,4 +1,3 @@
-//양식
 const gr_tr = document.getElementsByClassName("g_tr");
 const gr_title = document.getElementsByClassName("goodreq_title");
 const gr_writer = document.getElementsByClassName("goodreq_writer");
@@ -70,8 +69,8 @@ for (var i = 0; i < atags.length; i++) {
 					gr_likes[i].innerText += data[i].req_likes;
 					gr_at.innerText = data[i].req_at;
 				} else {
-					gr_tr[listnum].classList.remove('bg-onclick');
-					gr_tr[listnum].classList.remove('style');
+					gr_tr[i].classList.remove('bg-onclick');
+					gr_tr[i].classList.remove('style');
 					gr_title[i].innerText = "어서 인터뷰 요청 글을 작성해 보세요!💨";
 					gr_writer[i].innerText = "";
 					gr_viewee[i].innerText = "";
@@ -203,8 +202,10 @@ function getList(init, isPre, idx) {
 			req_VieweeList = [];
 			req_LikesList = [];
 			req_AtList = [];
-			req_lastIdx = data[data.length - 1].req_idx;
-			req_firstIdx = data[0].req_idx;
+			if(data.length!=0){
+				req_lastIdx = data[data.length - 1].req_idx;
+				req_firstIdx = data[0].req_idx;
+			}
 			let tmp = "";
 			for (var i = 0; i < data.length; i++) {
 				if (data[i] != null) {
