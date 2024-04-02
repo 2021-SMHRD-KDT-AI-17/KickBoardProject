@@ -18,6 +18,14 @@ public class RequestController {
 	public String getInterview(@RequestParam("idx") int idx, Model model) {
 		Request req=requestService.getInterview(idx);
 		model.addAttribute("interview",req);
+		String name=null;
+		if(req.getClub_idx()==0) {
+			name="p"+requestService.getPlayerName(idx);
+		}
+		if(req.getPlayer_idx()==0) {
+			name="c"+requestService.getClubName(idx);
+		}
+		model.addAttribute("name",name);
 		return "interview_detail";
 	}
 	@GetMapping("/interview_write")

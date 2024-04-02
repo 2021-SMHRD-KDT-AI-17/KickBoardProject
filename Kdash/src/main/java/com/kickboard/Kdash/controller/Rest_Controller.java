@@ -15,6 +15,7 @@ import com.kickboard.Kdash.service.NewsService;
 import com.kickboard.Kdash.service.RequestService;
 
 import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpSession;
 
 @RestController
 public class Rest_Controller {
@@ -64,10 +65,19 @@ public class Rest_Controller {
 		return requestService.likesUpdate(idx,likes);
 	}
 	//---
-	//---굿즈샵
+	//---샵
 	@GetMapping("/goodsFirstList")
 	public @ResponseBody List<Goods> goodsFirstList(){
-		System.out.println("goods");
 		return goodsService.goodsFirstList();
+	}
+	@GetMapping("/goodsAddcart")
+	public @ResponseBody Goods goodsAddcart(@RequestParam("idx") int idx, HttpSession session) {
+		System.out.println("카트 실행");
+		List<Goods> cart=(List<Goods>)session.getAttribute("cart");
+		Goods item=null;
+		item =goodsService.Addcart(idx);
+		cart.add(item);
+		session.setAttribute("cart", item);
+		return item;
 	}
 }

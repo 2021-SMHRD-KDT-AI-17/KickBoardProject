@@ -10,5 +10,5 @@ import com.kickboard.Kdash.entity.Goods;
 public interface GoodsMapper {
 
 	public List<Goods> goodsFirstList();
-
+	public Goods Addcart(int idx);
 }

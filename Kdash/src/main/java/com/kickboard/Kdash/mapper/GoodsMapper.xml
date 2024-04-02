@@ -4,4 +4,7 @@
 <select id="goodsFirstList" resultType="com.kickboard.Kdash.entity.Goods">
 	select * from tb_goods order by goods_idx DESC limit 40
 </select>
+	<select id="Addcart" parameterType="int" resultType="com.kickboard.Kdash.entity.Goods">
+		select *  from tb_goods where ${idx}=goods_idx
+	</select>
 </mapper>

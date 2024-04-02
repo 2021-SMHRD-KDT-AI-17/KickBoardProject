@@ -34,5 +34,11 @@ public class RequestService {
 		byte cnt=(byte)reqMapper.likesUpdate(idx,likes);
 		return cnt>0?true:false;
 	}
+	public String getPlayerName(int idx) {
+		return reqMapper.getPlayerName(idx);
+	}
+	public String getClubName(int idx) {
+		return reqMapper.getClubName(idx);
+	}
 
 }

@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 public class Goods {
 	private int goods_idx;
 	private String goods_name;
-	private String goods_img;
-	private int goods_price;
 	private int goods_inventory;
 	private String goods_manufacturer;
+	private String goods_img;
+	private int goods_price;
 }
