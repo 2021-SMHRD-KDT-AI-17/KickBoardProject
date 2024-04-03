@@ -204,7 +204,7 @@ if (authentication != null && authentication.isAuthenticated()
 													class="img-fluid mb-4" alt="Product Image">
                     </div>
                     <div class="col-md-6">
-                        <h4 class="mb-3">Product name:</h4>
+                        <h4 class="mb-3">${goodsinfo.goods_name}</h4>
                         <h5 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac sapien aliquet, placerat nunc in, fermentum turpis. Vivamus sodales vehicula ex.</h5>
                         <h4 class="fw-bold mb-3">Price: $99.99</h4>
                         <div class="input-group mb-3">
