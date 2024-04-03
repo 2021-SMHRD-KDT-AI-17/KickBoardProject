@@ -1,5 +1,6 @@
 package com.kickboard.Kdash.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -72,12 +73,14 @@ public class Rest_Controller {
 	}
 	@GetMapping("/goodsAddcart")
 	public @ResponseBody Goods goodsAddcart(@RequestParam("idx") int idx, HttpSession session) {
-		System.out.println("카트 실행");
-		List<Goods> cart=(List<Goods>)session.getAttribute("cart");
-		Goods item=null;
-		item =goodsService.Addcart(idx);
+		List<Goods> cart= new ArrayList<>();
+		if(session.getAttribute("cart")!=null) {
+			cart=(List<Goods>)session.getAttribute("cart");
+		}
+		Goods item=goodsService.Addcart(idx);
 		cart.add(item);
-		session.setAttribute("cart", item);
+		session.setAttribute("cart", cart);
+		System.out.println(cart.size());
 		return item;
 	}
 }

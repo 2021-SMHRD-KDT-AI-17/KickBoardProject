@@ -1,11 +1,3 @@
-/* class
-goodsDiv - 상품 전체 영역
-goodsImg - 상품 이미지 영역
-goodsAdd - 상품 장바구니에 추가버튼(p태그)
-goodsName - 상품 이름
-goodsPrice - 상품 가격
-goodsInven - 상품 재고
- */
 const divs = document.getElementsByClassName("goodsDiv");
 const imgs = document.getElementsByClassName("goodsImg");
 const carts = document.getElementsByClassName("goodsAdd");
@@ -105,20 +97,17 @@ function pre_post(option) {
 function showGoodsList(startN) {
     var listnum = 0;
     for (var i = startN; i < startN + goods_perpage; i++) {
-        carts[listnum].classList.remove('style');
-        carts[listnum].classList.remove('onclick');
+        imgs[listnum].classList.remove('style');
+        imgs[listnum].classList.remove('onclick');
         carts[listnum].classList.remove('style');
         if (goods_idxList[i] != null) {
             let itemidx=Number(goods_idxList[i]);
-            console.log(itemidx);
             divs[listnum].classList.remove("invisible");
             imgs[listnum].setAttribute('src', goods_imgList[i]);
             imgs[listnum].setAttribute("onclick", "location.href='goodsDetails?idx=" + itemidx + "'");
-            // r_tr[listnum].setAttribute("onclick", "location.href='shopDetails?idx=" + req_IdxList[i] + "'");
 			imgs[listnum].setAttribute("style", "cursor:pointer;");
-            //cartbutton(listnum, itemidx);
-            // carts[listnum].addEventListener('click', addcart(itemidx));
-            
+            carts[listnum].setAttribute('onclick', "addcart(" + itemidx + ")");
+            carts[listnum].setAttribute("style", "cursor:pointer;");
             names[listnum].innerText = goods_nameList[i];
             prices[listnum].innerText = goods_priceList[i];
             inventory[listnum].innerText = goods_inventory[i];
@@ -183,5 +172,18 @@ function getList(init, isPre, idx) {
     })
 }
 function addcart(idx) {
-
+	if(uid=="anonymousUser"){
+		alert("로그인 해주세요");
+	}
+	else
+    $.ajax({
+        url:"goodsAddcart?idx="+idx,
+        type:"get",
+        dataType:'json',
+        success:(data)=>{
+            alert("장바구니에 '"+data.goods_name+"'가 추가 됬습니다");
+        },error:()=>{
+            alert("장바구니 추가 실패");
+        }
+    })
 }
