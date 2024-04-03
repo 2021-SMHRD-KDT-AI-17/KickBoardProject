@@ -7,7 +7,7 @@ $(function () {
   var options = {
     series: [{
       name: '순위',
-      data: [10,2,1, 4, 5, 6, 12]
+      data: [4,3,2, 2, 2, 1, 1]
     }],
     chart: {
       type: 'line',
@@ -69,7 +69,7 @@ $(function () {
   // =====================================
   var record = {
     color: "#adb5bd",
-    series: [3, 1, 6],
+    series: [2, 2, 1],
     labels: ["승", "무", "패"],
     chart: {
       width: 180,

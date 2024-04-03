@@ -253,18 +253,18 @@ if (authentication != null && authentication.isAuthenticated()
                              </tr>
                             <tr>
                              <td>1</td>
-                             <td>3</td>
-                             <td>제갈제니</td>
+                             <td>4</td>
+                             <td>이동경</td>
                             </tr>
                             <tr>
                              <td>2</td>
                              <td>2</td>
-                             <td>김옥지</td>
+                             <td>마틴 아담</td>
                             </tr>
                             <tr>
                              <td>3</td>
                              <td>1</td>
-                             <td>김빵빵</td>
+                             <td>장시영</td>
                             </tr>
                             </tbody>
                           </table>
@@ -284,18 +284,18 @@ if (authentication != null && authentication.isAuthenticated()
                                </tr>
                               <tr>
                                <td>1</td>
-                               <td>3</td>
-                               <td>제갈제니</td>
+                               <td>2</td>
+                               <td>이동경</td>
                               </tr>
                               <tr>
                                <td>2</td>
-                               <td>2</td>
-                               <td>김옥지</td>
+                               <td>1</td>
+                               <td>루빅손</td>
                               </tr>
                               <tr>
                                <td>3</td>
                                <td>1</td>
-                               <td>김빵빵</td>
+                               <td>이규성</td>
                               </tr>
                             </tbody>
                           </table>
@@ -314,17 +314,17 @@ if (authentication != null && authentication.isAuthenticated()
                         <h5 class="card-title mb-9 fw-semibold text-b justify-content-between">올 시즌 전적</h5>
                         <div class="row align-items-center">
                           <div class="col-8">
-                            <h5 class="fw-semibold mb-3">현재 순위 : <span>1위</span></h5>
+                            <h5 class="fw-semibold mb-3">현재 순위 : <span>3위</span></h5>
                             <div class="d-flex align-items-center mb-3">
                               <p class="text-dark me-1 fs-3 mb-0">최근 전적</p>
                             </div>
                             <div class="d-flex align-items-center">
                               <div class="me-4">
                                 <div id="teamA" class="d-flex flex-wrap mr-3 mb-2">
+                                  <span class="result draw">패</span>
+                                  <span class="result lose">무</span>
                                   <span class="result draw">무</span>
-                                  <span class="result lose">패</span>
-                                  <span class="result draw">무</span>
-                                  <span class="result lose">패</span>
+                                  <span class="result lose">승</span>
                                 </div>
                               </div>
                             </div>
@@ -346,43 +346,43 @@ if (authentication != null && authentication.isAuthenticated()
                         </div>
                         <ul class="timeline-widget mb-0 position-relative mb-n5">
                           <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.04.06</div>
                             <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                               <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
                               <span class="timeline-badge-border d-block flex-shrink-0"></span>
                             </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>광주</span>VS<span>서울</span></div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>울산</span>VS<span>수원</span></div>
                           </li>
                           <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.04.13</div>
                             <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                               <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
                               <span class="timeline-badge-border d-block flex-shrink-0"></span>
                             </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>광주</span>VS<span>서울</span></div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>울산</span>VS<span>강원</span></div>
                           </li>
                           <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.04.20</div>
                             <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                               <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
                               <span class="timeline-badge-border d-block flex-shrink-0"></span>
                             </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>광주</span>VS<span>서울fc</span></div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>광주</span>VS<span>울산</span></div>
                           </li>
                           <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.04.28</div>
                             <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                               <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
                               <span class="timeline-badge-border d-block flex-shrink-0"></span>
                             </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">광주fc vs 전북 현대 모터스</div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">울산 vs 제주</div>
                           </li>
                           <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.05.01</div>
                             <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                               <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
                             </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">전북 현대 모터스 vs 서울fc</div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">대구 vs 울산</div>
                           </li>
                         </ul>
                       </div>
