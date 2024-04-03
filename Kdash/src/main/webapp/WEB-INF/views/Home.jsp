@@ -215,7 +215,7 @@
               <div class="mb-3 mb-sm-0">
               </div>
               <div>
-                <select class="form-select">
+                <select id="teamselect"class="form-select">
                   <option value="7">울산 HD</option>
                   <option value="11">포항</option>
                   <option value="3">광주FC</option>

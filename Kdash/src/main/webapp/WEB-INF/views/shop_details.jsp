@@ -202,7 +202,7 @@ if (authentication != null && authentication.isAuthenticated()
 											<i class="ti ti-home"></i> Product Title</h5>
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="https://via.placeholder.com/400"
+                        <img src="${goodsinfo.goods_img}"
 													class="img-fluid mb-4" alt="Product Image">
                     </div>
                     <div class="col-md-6">
