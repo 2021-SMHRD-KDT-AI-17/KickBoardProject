@@ -20,6 +20,7 @@
 <body>
 	<% 
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		authentication.getName();
 		if (authentication != null && authentication.isAuthenticated()
 				&& authentication.getPrincipal() instanceof CustomUserDetails) {
 			CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
