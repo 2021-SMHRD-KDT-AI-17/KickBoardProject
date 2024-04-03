@@ -30,18 +30,18 @@
                     <label for="teamselect" class="form-label">구단 설정</label>
                     <div>
                       <select id="teamselect" class="form-select">
-                        <option value="1">울산</option>
-                        <option value="2">포항</option>
-                        <option value="3">광주</option>
-                        <option value="4">전북</option>
-                        <option value="5">인천</option>
-                        <option value="6">대구</option>
-                        <option value="7">서울</option>
-                        <option value="8">대전</option>
-                        <option value="9">제주</option>
-                        <option value="10">강원</option>
-                        <option value="11">수원FC</option>
-                        <option value="12">김천</option>
+                        <option value="1">FC서울</option>
+                        <option value="2">강원FC</option>
+                        <option value="3">광주FC</option>
+                        <option value="4">김천상무FC</option>
+                        <option value="5">대전하나시티즌</option>
+                        <option value="6">수원FC</option>
+                        <option value="7">울산HDFC</option>
+                        <option value="8">인천유나이티드</option>
+                        <option value="9">전북현대모터스</option>
+                        <option value="10">제주유나이티드</option>
+                        <option value="11">포항스틸러스</option>
+                        <option value="12">대구FC</option>
                       </select>
                     </div>
                   </div>
@@ -66,7 +66,7 @@
                   <a href="login" class="btn btn-secondary w-100 py-8 fs-4 mb-4 rounded-2">Sign Up</a>
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">Already have an Account?</p>
-                    <a class="text-primary fw-bold ms-2" href="login">Sign In</a>
+                    <a class="text-primary fw-bold ms-2" href="login">Setting</a>
                   </div>
                 </form>
               </div>

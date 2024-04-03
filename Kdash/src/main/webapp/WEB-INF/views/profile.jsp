@@ -204,10 +204,10 @@ if (authentication != null && authentication.isAuthenticated()
 								<div class="text-center">
 								
 								<!-- 세션에 저장된 이메일! -->
-								
-									<input type="hidden" name="email" value="<%=useremail %>">
+								<% CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();%>
+									<input type="hidden" name="email" value="<%=userDetails.getMem_email() %>">
 									
-									<div class="alert alert-secondary" role="alert"><%=useremail %>님
+									<div class="alert alert-secondary" role="alert"><%=userDetails.getMem_email() %>님
 										환영합니다!</div>
 									<img src="https://via.placeholder.com/400"
 										class="img-fluid mb-4" alt="Product Image">
