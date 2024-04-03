@@ -215,18 +215,18 @@
               </div>
               <div>
                 <select class="form-select">
-                  <option value="1">울산 HD</option>
-                  <option value="2">포항</option>
-                  <option value="3">광주</option>
-                  <option value="4">전북 현대</option>
-                  <option value="1">인천 utd</option>
-                  <option value="2">대구</option>
-                  <option value="3">서울</option>
-                  <option value="4">대전 하나</option>
-                  <option value="1">제주 utd</option>
-                  <option value="2">강원</option>
-                  <option value="3">수원 FC</option>
-                  <option value="4">김천 상무</option>
+                  <option value="7">울산 HD</option>
+                  <option value="11">포항</option>
+                  <option value="3">광주FC</option>
+                  <option value="9">전북 현대</option>
+                  <option value="8">인천 utd</option>
+                  <option value="12">대구</option>
+                  <option value="1">FC서울</option>
+                  <option value="5">대전 하나</option>
+                  <option value="10">제주 utd</option>
+                  <option value="2">강원FC</option>
+                  <option value="6">수원 FC</option>
+                  <option value="4">김천상무FC</option>
                 </select>
               </div>
             </div>
@@ -517,6 +517,7 @@
   <script src="resources/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="resources/assets/js/sidebarmenu.js"></script>
   <script src="resources/assets/js/app.min.js"></script>
+  <script src="resources/assets/js/team.js"></script>
   <script src="resources/assets/libs/apexcharts/dist/apexcharts.js"></script>
   <script src="resources/assets/libs/simplebar/dist/simplebar.js"></script>
   <script src="resources/assets/js/dashboard.js"></script>

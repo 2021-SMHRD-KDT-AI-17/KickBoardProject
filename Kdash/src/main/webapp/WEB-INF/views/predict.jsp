@@ -637,7 +637,7 @@ if (authentication != null && authentication.isAuthenticated()
                     <label class="form-check-label fw-normal mt-1" for="lose">패</label>
                   </div>
                   <!-- 버튼을 form 요소 안에 추가 -->
-                  <button type="submit" class="btn btn-sm btn-outline-success">전송</button>
+                  <button type="submit"  class="btn btn-sm btn-outline-success">전송</button>
                 </form>
               </div>
             </div>
