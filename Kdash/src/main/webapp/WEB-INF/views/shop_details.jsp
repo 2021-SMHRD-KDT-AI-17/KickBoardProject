@@ -1,3 +1,5 @@
+<%@page import="com.kickboard.Kdash.entity.Goods"%>
+<%@page import="org.springframework.ui.Model"%>
 <%@page import="org.springframework.security.core.Authentication"%>
 <%@page import="com.kickboard.Kdash.config.auth.CustomUserDetails"%>
 <%@page
@@ -205,8 +207,11 @@ if (authentication != null && authentication.isAuthenticated()
                     </div>
                     <div class="col-md-6">
                         <h4 class="mb-3">${goodsinfo.goods_name}</h4>
-                        <h5 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac sapien aliquet, placerat nunc in, fermentum turpis. Vivamus sodales vehicula ex.</h5>
-                        <h4 class="fw-bold mb-3">Price: $99.99</h4>
+                        <h5 class="mb-4">${goodsinfo.goods_manufacturer}</h5>
+                        <%Goods goods = (Goods)request.getAttribute("goodsinfo"); %>
+                        <%int price = goods.getGoods_price(); %>
+                        <%String pri = String.format("%,d",price); %>
+                        <h4 class="fw-bold mb-3">Price: <%=pri %></h4>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Quantity</span>
                             <input type="number" class="form-control"
