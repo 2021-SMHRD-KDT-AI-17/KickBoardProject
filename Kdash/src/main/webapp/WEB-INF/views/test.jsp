@@ -21,12 +21,8 @@
 	if (authentication != null && authentication.isAuthenticated()
 			&& authentication.getPrincipal() instanceof CustomUserDetails) {
 		CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
-		String useremail = authentication.getName();
-		out.println(useremail);
-		// userDetails가 null이 아닌 경우에만 메서드 호출
 		if (userDetails != null) {
 			out.println(userDetails.getMem_point());
-			out.println(userDetails.getMem_nick());
 		}
 	} else {
 		// 로그인하지 않은 사용자에게 보여줄 처리

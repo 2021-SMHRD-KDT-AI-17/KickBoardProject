@@ -19,8 +19,16 @@
 
 <body>
 <% 
-	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-	String useremail = authentication.getName();
+Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+if (authentication != null && authentication.isAuthenticated()
+		&& authentication.getPrincipal() instanceof CustomUserDetails) {
+	CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+	if (userDetails != null) {
+		
+	}
+} else {
+
+}
 	%>
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
@@ -142,9 +150,16 @@
                   <img src="resources/assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
-                  <%if(useremail!="anonymousUser"){ %>
+                 <%
+	        if (authentication != null && authentication.isAuthenticated()
+	   		&& authentication.getPrincipal() instanceof CustomUserDetails) {
+	    		CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+		    	if (userDetails != null) {
+		    		
+		    	}
+            %>
                   <div class="message-body">
-                  <p class="mb-0 fs-3 profile-name text-center"><%=useremail %>님 환영합니다.</p>
+                  <p class="mb-0 fs-3 profile-name text-center"><%=userDetails.getMem_nick() %>님 환영합니다.</p>
                     <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
