@@ -20238,6 +20238,7 @@ ul {
 }
 .predict-box{
     height: 800px;
+    overflow-y:auto; 
     
 }
 .predict-card{
