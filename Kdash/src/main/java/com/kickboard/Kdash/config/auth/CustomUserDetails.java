@@ -42,7 +42,11 @@ public class CustomUserDetails implements UserDetails, OAuth2User {
     }
     
     public String getNick() {
-    	return this.mem_nick;
+    	if (this.mem_nick == null) {
+            return "Anonymous";
+        } else {
+            return this.mem_nick;
+        }
     }
     
     public int getPoint() {

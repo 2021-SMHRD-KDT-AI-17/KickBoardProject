@@ -4,12 +4,14 @@ import java.security.Principal;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.kickboard.Kdash.config.auth.CustomUserDetails;
 import com.kickboard.Kdash.entity.SignupDto;
 import com.kickboard.Kdash.service.AuthService;
 import com.kickboard.Kdash.utils.Script;

@@ -1,11 +1,13 @@
 <%@page import="org.springframework.security.core.Authentication"%>
 <%@page import="com.kickboard.Kdash.config.auth.CustomUserDetails"%>
-<%@page import="org.springframework.security.core.context.SecurityContextHolder"%>
+<%@page
+	import="org.springframework.security.core.context.SecurityContextHolder"%>
 <%@page import="java.security.Principal"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<sec:authentication var="user" property="principal"/>
+<%@ taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"%>
+<sec:authentication var="user" property="principal" />
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,15 +16,25 @@
 </head>
 <body>
 	<h1>Test</h1>
-	<% 
+	<%
 	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-	CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
-	String useremail = authentication.getName();
+	if (authentication != null && authentication.isAuthenticated()
+			&& authentication.getPrincipal() instanceof CustomUserDetails) {
+		CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+		String useremail = authentication.getName();
+		out.println(useremail);
+		// userDetails가 null이 아닌 경우에만 메서드 호출
+		if (userDetails != null) {
+			out.println(userDetails.getMem_point());
+			out.println(userDetails.getMem_nick());
+		}
+	} else {
+		// 로그인하지 않은 사용자에게 보여줄 처리
+		out.println("로그인이 필요합니다.");
+	}
 	%>
-	<%= useremail %>
-	<%= authentication.getPrincipal() %>
-	<%= authentication.getDetails() %>
-	<%= userDetails.getMem_point() %>
+
+
 
 </body>
 </html>
