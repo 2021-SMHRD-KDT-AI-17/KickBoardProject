@@ -287,7 +287,7 @@ if (authentication != null && authentication.isAuthenticated()
 	<script
 		src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="/연습/assets/js/profile.js"></script>
+	<script src="resources/assets/js/profile.js"></script>
 	<script src="resources/assets/libs/jquery/dist/jquery.min.js"></script>
 	<script
 		src="resources/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
