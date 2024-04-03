@@ -20,6 +20,7 @@
 <body>
 <% 
 	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
 	String useremail = authentication.getName();
 	%>
 	
@@ -149,7 +150,7 @@
                 
                 	<%if(useremail!="anonymousUser"){ %>
                   <div class="message-body">
-                  <p class="mb-0 fs-3 profile-name text-center"><%=useremail %>님 환영합니다.</p>
+                  <p class="mb-0 fs-3 profile-name text-center"><%=userDetails.getMem_nick() %>님 환영합니다.</p>
                     <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>

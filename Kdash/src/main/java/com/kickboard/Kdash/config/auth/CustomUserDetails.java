@@ -22,6 +22,7 @@ public class CustomUserDetails implements UserDetails, OAuth2User {
     private String mem_email;
     private String mem_pw;
     private String mem_nick;
+    private int mem_point;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -42,6 +43,10 @@ public class CustomUserDetails implements UserDetails, OAuth2User {
     
     public String getNick() {
     	return this.mem_nick;
+    }
+    
+    public int getPoint() {
+    	return this.mem_point;
     }
 
     @Override
