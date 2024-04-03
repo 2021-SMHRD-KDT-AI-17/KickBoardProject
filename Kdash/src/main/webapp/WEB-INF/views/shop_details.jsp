@@ -45,7 +45,7 @@ if (authentication != null && authentication.isAuthenticated()
 			<div>
 				<div
 					class="brand-logo d-flex align-items-center justify-content-between">
-					<a href="resources/html/main.html" class="text-nowrap logo-img"> <img
+					<a href="home" class="text-nowrap logo-img"> <img
 						src="resources/assets/images/logos/kick_logo.png" width="180" alt="" />
 					</a>
 					<div
@@ -211,7 +211,26 @@ if (authentication != null && authentication.isAuthenticated()
                         <%Goods goods = (Goods)request.getAttribute("goodsinfo"); %>
                         <%int price = goods.getGoods_price(); %>
                         <%String pri = String.format("%,d",price); %>
+                        
                         <h4 class="fw-bold mb-3">Price: <%=pri %></h4>
+                        <%
+	        if (authentication != null && authentication.isAuthenticated()
+	   		&& authentication.getPrincipal() instanceof CustomUserDetails) {
+	    		CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+		    	if (userDetails != null) {
+		    		
+		    	}
+            %>
+            <%int point = userDetails.getMem_point(); %>
+            <%int disprice = price-point; %>
+            <%String dis = String.format("%,d",disprice); %>
+            <br>
+            <h5 class="fw-bold">포인트 할인 후 가격 : </h5>
+            <h4 class="fw-bold mb-3">Discount Price: <%=dis %></h4>
+            <%}else{ %>
+            <input type="hidden">
+            <%} %>
+                        
                         <div class="input-group mb-3">
                             <span class="input-group-text">Quantity</span>
                             <input type="number" class="form-control"
