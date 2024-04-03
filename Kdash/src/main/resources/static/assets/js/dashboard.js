@@ -67,7 +67,7 @@ $(function () {
   // =====================================
   // record
   // =====================================
-  var record = {
+/*  var record = {
     color: "#adb5bd",
     series: [2, 2, 1],
     labels: ["승", "무", "패"],
@@ -116,7 +116,7 @@ $(function () {
   };
 
   var chart = new ApexCharts(document.querySelector("#record"), record);
-  chart.render();
+  chart.render();*/
 
 
   // 평균 차트

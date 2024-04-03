@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.kickboard.Kdash.entity.Club;
 import com.kickboard.Kdash.entity.Goods;
 import com.kickboard.Kdash.entity.News;
 import com.kickboard.Kdash.entity.Request;
+import com.kickboard.Kdash.service.DashboardService;
 import com.kickboard.Kdash.service.GoodsService;
 import com.kickboard.Kdash.service.NewsService;
 import com.kickboard.Kdash.service.RequestService;
@@ -26,6 +28,8 @@ public class Rest_Controller {
 	private RequestService requestService;
 	@Resource
 	private GoodsService goodsService;
+	@Resource
+	private DashboardService dashboardService;
 	//---뉴스
 	@GetMapping("/newsFirstList")
 	public @ResponseBody List<News> firstList(){
@@ -82,5 +86,12 @@ public class Rest_Controller {
 		session.setAttribute("cart", cart);
 		System.out.println(cart.size());
 		return item;
+	}
+	//---
+	//---메인대시보드
+	@GetMapping("/showClub")
+	public @ResponseBody Club showClub(@RequestParam("clubname") String name){
+		System.out.println(name);
+		return dashboardService.showClub(name);
 	}
 }

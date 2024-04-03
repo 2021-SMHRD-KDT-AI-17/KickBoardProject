@@ -216,17 +216,17 @@
               </div>
               <div>
                 <select id="teamselect"class="form-select">
-                  <option value="7">울산 HD</option>
-                  <option value="11">포항</option>
+                  <option value="7">울산HDFC</option>
+                  <option value="11">포항스틸러스</option>
                   <option value="3">광주FC</option>
-                  <option value="9">전북 현대</option>
-                  <option value="8">인천 utd</option>
-                  <option value="12">대구</option>
+                  <option value="9">전북현대모터스</option>
+                  <option value="8">인천유나이티드</option>
+                  <option value="12">대구FC</option>
                   <option value="1">FC서울</option>
-                  <option value="5">대전 하나</option>
-                  <option value="10">제주 utd</option>
+                  <option value="5">대전하나시티즌</option>
+                  <option value="10">제주유나이티드</option>
                   <option value="2">강원FC</option>
-                  <option value="6">수원 FC</option>
+                  <option value="6">수원FC</option>
                   <option value="4">김천상무FC</option>
                 </select>
               </div>
@@ -238,17 +238,16 @@
                     <!-- style="background-color:#004098;" -->
                     <div class="club-title-box">
                       <div class="club-title-teamBox text-center mb-3">
-                        <img src="resources/assets/images/logos/울산HDFC.png" class="img-emble">
+                        <img src="resources/assets/images/logos/울산HDFC.png" id="clublogo"class="img-emble">
                         <ul class="">
-                          <li class="club-list">울산 현대</li>
-                          <li class="club-list">ULSAN HDFC</li>
+                          <li class="club-list"id="clubname">울산 현대</li>
                         </ul>
                       </div>
                     </div>
                     <div class="row justify-content-center align-items-center mb-2">
                       <div class="col-lg-6">
                         <div class="card">
-                            <img src="resources/assets/images/formation/울산.png" class="w-100 formation-img">
+                            <img src="resources/assets/images/formation/울산HDFC.png" class="w-100 formation-img" id="clubformation">
                         </div>
                       </div>
                       <div class="col-lg-6">
@@ -265,23 +264,23 @@
                            <tbody>
                             <tr class="table-head-2">
                               <th scope="col">순위</th>
-                              <th scope="col">도움 수</th>
+                              <th scope="col">득점 수</th>
                               <th scope="col">선수</th>
                              </tr>
                             <tr>
                              <td>1</td>
-                             <td>4</td>
-                             <td>이동경</td>
+                             <td class="clubgoalplayer_count">4</td>
+                             <td class="clubgoalplayer_player">이동경</td>
                             </tr>
                             <tr>
                              <td>2</td>
-                             <td>2</td>
-                             <td>마틴 아담</td>
+                             <td class="clubgoalplayer_count">2</td>
+                             <td class="clubgoalplayer_player">마틴 아담</td>
                             </tr>
                             <tr>
                              <td>3</td>
-                             <td>1</td>
-                             <td>장시영</td>
+                             <td class="clubgoalplayer_count">1</td>
+                             <td class="clubgoalplayer_player">장시영</td>
                             </tr>
                             </tbody>
                           </table>
@@ -301,18 +300,18 @@
                                </tr>
                               <tr>
                                <td>1</td>
-                               <td>2</td>
-                               <td>이동경</td>
+                               <td class="clubhelpplayer_count">2</td>
+                               <td class="clubhelpplayer_player">이동경</td>
                               </tr>
                               <tr>
                                <td>2</td>
-                               <td>1</td>
-                               <td>루빅손</td>
+                               <td class="clubhelpplayer_count">1</td>
+                               <td class="clubhelpplayer_player">루빅손</td>
                               </tr>
                               <tr>
                                <td>3</td>
-                               <td>1</td>
-                               <td>이규성</td>
+                               <td class="clubhelpplayer_count">1</td>
+                               <td class="clubhelpplayer_player">이규성</td>
                               </tr>
                             </tbody>
                           </table>
@@ -331,17 +330,16 @@
                         <h5 class="card-title mb-9 fw-semibold text-b justify-content-between">올 시즌 전적</h5>
                         <div class="row align-items-center">
                           <div class="col-8">
-                            <h5 class="fw-semibold mb-3">현재 순위 : <span>3위</span></h5>
+                            <h5 class="fw-semibold mb-3">현재 순위 : <span id="clubrank">3위</span></h5>
                             <div class="d-flex align-items-center mb-3">
-                              <p class="text-dark me-1 fs-3 mb-0">최근 전적</p>
+                              <p class="text-dark me-1 fs-3 mb-0">종합기록</p>
                             </div>
                             <div class="d-flex align-items-center">
                               <div class="me-4">
                                 <div id="teamA" class="d-flex flex-wrap mr-3 mb-2">
-                                  <span class="result draw">패</span>
-                                  <span class="result lose">무</span>
+                                  <span class="result win">승</span>
                                   <span class="result draw">무</span>
-                                  <span class="result lose">승</span>
+                                  <span class="result lose">패</span>
                                 </div>
                               </div>
                             </div>
