@@ -20238,7 +20238,7 @@ ul {
 }
 .predict-box{
     height: 800px;
-    overflow-y: auto;
+    
 }
 .predict-card{
     height: 50%; /* predict-card의 높이를 부모 요소인 predict-box의 50%로 설정 */
@@ -20246,7 +20246,7 @@ ul {
 }
 
 .chat-box{
-    max-height: 100%;
+    max-height: 680px;
     overflow-y: auto;
 }
 .small-logo{
@@ -20387,8 +20387,9 @@ ul {
     object-fit: cover;
     border-radius: 10px;
 }
-.product-img{
-    
+.chat-message{
+    height: 80%;
+    overflow-y: auto;
 }
 /* Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-inner-spin-button, 
