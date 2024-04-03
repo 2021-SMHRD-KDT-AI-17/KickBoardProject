@@ -1,3 +1,5 @@
+<%@page import="com.kickboard.Kdash.entity.Goods"%>
+<%@page import="java.util.List"%>
 <%@page import="org.springframework.security.core.Authentication"%>
 <%@page import="com.kickboard.Kdash.config.auth.CustomUserDetails"%>
 <%@page
@@ -223,20 +225,22 @@
 					<div class="card-body">
 						<!-- <h5 class="card-title fw-semibold mb-4">Sample Page</h5> -->
 						<div>
+						<%List<Goods> basket=(List<Goods>)session.getAttribute("cart"); %>
+						<%if(basket!=null)for(var i=0; i<basket.size();i++) {%>
 							<div class="card">
 								<div
 									class="card-body row align-items-center justify-content-center">
-									<div class="col-3">
-										<img src="resources/assets/images/products/s1.jpg"
+									<div class="col-2">
+										<img src="<%=basket.get(i).getGoods_img() %>"
 											class="card-img-top rounded-0">
 									</div>
 									<div class="col-8">
 										<h2 class="text-primary d-block fw-normal">
-											상품명
+											<%=basket.get(i).getGoods_name() %>
 											</h5>
 											<div class="input-group mb-3">
 												<span class="input-group-text">주문수</span> <input
-													type="number" class="form-control" value="1" min="1">
+													type="text" class="form-control" value="1" min="1">
 												<button class="btn btn-outline-secondary" type="button"
 													id="button-addon1">-</button>
 												<button class="btn btn-outline-secondary" type="button"
@@ -246,18 +250,21 @@
 												<span class="input-group-text">금액</span> <input type="text"
 													class="form-control" value="15,000" min="1" readonly>
 											</div>
+											
 											<div class="text-end">
 												<button class="btn btn-primary">장바구니에서 제거</button>
 											</div>
 									</div>
 								</div>
 							</div>
+							<%} %>
+							
 						</div>
 						<div>
 							<div class="card">
 								<div
 									class="card-body row align-items-center justify-content-center">
-									<div class="col-3">
+									<div class="col-2">
 										<img src="resources/assets/images/products/s5.jpg"
 											class="card-img-top rounded-0">
 									</div>
@@ -269,7 +276,7 @@
 											<div></div>
 											<div class="input-group mb-3">
 												<span class="input-group-text">주문수</span> <input
-													type="number" class="form-control" value="5" min="1">
+													type="text" class="form-control" value="5" min="1">
 												<button class="btn btn-outline-secondary" type="button"
 													id="button-addon1">-</button>
 												<button class="btn btn-outline-secondary" type="button"

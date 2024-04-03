@@ -437,6 +437,9 @@ if (authentication != null && authentication.isAuthenticated()
 
 		</div>
 	</div>
+	<script>
+	let uid = '<%=authentication.getName()%>';
+	</script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="resources/assets/js/shopMain.js"></script>
 	<script
