@@ -101,7 +101,24 @@ if (authentication != null && authentication.isAuthenticated()
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">profile</span>
             </li>
+            <%
+	        if (authentication != null && authentication.isAuthenticated()
+	   		&& authentication.getPrincipal() instanceof CustomUserDetails) {
+	    		CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+		    	if (userDetails != null) {
+		    		
+		    	}
+            %>
             <li class="sidebar-item">
+            <a class="sidebar-link" href="logout" aria-expanded="false">
+                <span>
+                  <i class="ti ti-logout"></i>
+                </span>
+                <span class="hide-menu">logout</span>
+              </a>
+              </li>
+              <%}else{ %>
+              <li class="sidebar-item">
               <a class="sidebar-link" href="login" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
@@ -116,13 +133,10 @@ if (authentication != null && authentication.isAuthenticated()
                 </span>
                 <span class="hide-menu">Register</span>
               </a>
-              <a class="sidebar-link" href="logout" aria-expanded="false">
-                <span>
-                  <i class="ti ti-logout"></i>
-                </span>
-                <span class="hide-menu">logout</span>
-              </a>
-            </li>
+              <%} %>
+              
+              
+              
             </li>
           </ul>
         </nav>
@@ -730,7 +744,7 @@ if (authentication != null && authentication.isAuthenticated()
 			//소켓 서버로 부터 send_msg를 통해 이벤트를 받을 경우 
 			socket.on('send_msg', function(msg) {
 				//div 태그를 만들어 텍스트를 msg로 지정을 한뒤 #chat_box에 추가를 시켜준다.
-				$('<div class="chat-message bg-white rounded p-2 mb-2"></div>').text(msg).appendTo("#chat_box");
+				$('<div class=" bg-white rounded p-2 mb-2"></div>').text(msg).appendTo("#chat_box");
 				//스크롤 내리기
 				$('#chat_box').scrollTop($('#chat_box')[0].scrollHeight+20);
 			});

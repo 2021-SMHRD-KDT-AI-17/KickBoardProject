@@ -18,17 +18,17 @@
 </head>
 
 <body>
-<% 
-Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-if (authentication != null && authentication.isAuthenticated()
-		&& authentication.getPrincipal() instanceof CustomUserDetails) {
-	CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
-	if (userDetails != null) {
+	<% 
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		if (authentication != null && authentication.isAuthenticated()
+				&& authentication.getPrincipal() instanceof CustomUserDetails) {
+			CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+			if (userDetails != null) {
+				
+			}
+		} else {
 		
-	}
-} else {
-
-}
+		}
 	%>
 	
 
@@ -104,7 +104,25 @@ if (authentication != null && authentication.isAuthenticated()
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">profile</span>
             </li>
+            
+            <%
+	        if (authentication != null && authentication.isAuthenticated()
+	   		&& authentication.getPrincipal() instanceof CustomUserDetails) {
+	    		CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+		    	if (userDetails != null) {
+		    		
+		    	}
+            %>
             <li class="sidebar-item">
+            <a class="sidebar-link" href="logout" aria-expanded="false">
+                <span>
+                  <i class="ti ti-logout"></i>
+                </span>
+                <span class="hide-menu">logout</span>
+              </a>
+              </li>
+              <%}else{ %>
+              <li class="sidebar-item">
               <a class="sidebar-link" href="login" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
@@ -119,12 +137,10 @@ if (authentication != null && authentication.isAuthenticated()
                 </span>
                 <span class="hide-menu">Register</span>
               </a>
-              <a class="sidebar-link" href="logout" aria-expanded="false">
-                <span>
-                  <i class="ti ti-logout"></i>
-                </span>
-                <span class="hide-menu">logout</span>
-              </a>
+              <%} %>
+              
+              
+              
             </li>
           </ul>
         </nav>
