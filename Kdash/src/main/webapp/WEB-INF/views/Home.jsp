@@ -448,7 +448,7 @@
                         <div class="player-title text-center mb-3">
                           <ul class="player-info">
                             <li class="club-list">울산 현대</li>
-                            <li class="club-list">김옥지</li>
+                            <li class="club-list">이동경</li>
                           </ul>
                         </div>
                         <div class="d-flex justify-content-center mb-3">
@@ -458,19 +458,19 @@
                           <table class="table table-sm text-center table-light mb-0">
                             <tr>
                               <th>등번호</th>
-                              <td>10</td>
+                              <td>14</td>
                               <th>포지션</th>
-                              <td>ST</td>
+                              <td>MF</td>
                             </tr>
                             <tr>
                               <th>키</th>
                               <td>175</td>
                               <th>몸무게</th>
-                              <td>60</td>
+                              <td>68</td>
                             </tr>
                             <tr>
                               <th colspan="2">생년월일</th>
-                              <td colspan="2">1990.01.01</td>
+                              <td colspan="2">1997.09.20</td>
                             </tr>
                             <tr>
                               <th colspan="4"><button class="btn btn-sm btn-outline-primary"><i class="ti ti-bell"></i>팔로우</button></th>
