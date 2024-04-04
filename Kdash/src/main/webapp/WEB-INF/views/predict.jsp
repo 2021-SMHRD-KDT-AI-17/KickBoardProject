@@ -743,10 +743,25 @@ if (authentication != null && authentication.isAuthenticated()
 
 			//소켓 서버로 부터 send_msg를 통해 이벤트를 받을 경우 
 			socket.on('send_msg', function(msg) {
+				<%
+		        if (authentication != null && authentication.isAuthenticated()
+		   		&& authentication.getPrincipal() instanceof CustomUserDetails) {
+		    		CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+		    		String nick = userDetails.getMem_nick();
+			    	if (userDetails != null) {
+			    		
+			    	}
+	            %>
+	            var nick = "<%=nick%>";
 				//div 태그를 만들어 텍스트를 msg로 지정을 한뒤 #chat_box에 추가를 시켜준다.
-				$('<div class=" bg-white rounded p-2 mb-2"></div>').text(msg).appendTo("#chat_box");
+				$('<div class=" bg-white rounded p-2 mb-2"></div>').text(nick+" : "+msg).appendTo("#chat_box");
 				//스크롤 내리기
 				$('#chat_box').scrollTop($('#chat_box')[0].scrollHeight+20);
+				<%}else{ %>
+				$('<div class=" bg-white rounded p-2 mb-2"></div>').text("익명의 사용자 : "+msg).appendTo("#chat_box");
+				//스크롤 내리기
+				$('#chat_box').scrollTop($('#chat_box')[0].scrollHeight+20);
+				<%} %>
 			});
 		});
 		
