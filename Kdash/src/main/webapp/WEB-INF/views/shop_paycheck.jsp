@@ -21,29 +21,8 @@
 	href="resources/assets/images/logos/ball_logo.png" />
 <link rel="stylesheet" href="resources/assets/css/styles.min.css" />
 </head>
-<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
-<script>
-	var IMP = window.IMP;
-	IMP.init("imp50718461");
 
-	function requestPay() {
-		IMP.request_pay({
-			pg : "html5_inicis.INIpayTest",
-			pay_method : "card",
-			merchant_uid : "123451231-1212321321",
-			name : "이강인의 노트북",
-			amount : 55000,
-			buyer_email : "Iamport@chai.finance",
-			buyer_name : "포트원 기술지원팀",
-			buyer_tel : "010-1234-5678",
-			buyer_addr : "서울특별시 강남구 삼성동",
-			buyer_postcode : "123-456",
-		}, function(rsp) {
-			// callback
-			//rsp.imp_uid 값으로 결제 단건조회 API를 호출하여 결제결과를 판단합니다.
-		});
-	}
-</script>
+
 
 <body>
 	<%
@@ -225,8 +204,11 @@
 					<div class="card-body">
 						<!-- <h5 class="card-title fw-semibold mb-4">Sample Page</h5> -->
 						<div>
-						<%List<Goods> basket=(List<Goods>)session.getAttribute("cart"); %>
-						<%if(basket!=null)for(var i=0; i<basket.size();i++) {%>
+						<%List<Goods> basket=(List<Goods>)session.getAttribute("cart"); 
+						int totalpice=0;
+						String cartname="";%>
+						<%if(basket!=null)for(var i=0; i<basket.size();i++) {totalpice+=basket.get(i).getGoods_price();
+						cartname+=basket.get(i).getGoods_name();if(i!=0)cartname+=", ";%>
 							<div class="card">
 								<div
 									class="card-body row align-items-center justify-content-center">
@@ -248,7 +230,7 @@
 											</div>
 											<div class="input-group mb-3">
 												<span class="input-group-text">금액</span> <input type="text"
-													class="form-control" value="15,000" min="1" readonly>
+													class="form-control" value="<%=basket.get(i).getGoods_price() %>" min="1" readonly>
 											</div>
 											
 											<div class="text-end">
@@ -260,39 +242,7 @@
 							<%} %>
 							
 						</div>
-						<div>
-							<div class="card">
-								<div
-									class="card-body row align-items-center justify-content-center">
-									<div class="col-2">
-										<img src="resources/assets/images/products/s5.jpg"
-											class="card-img-top rounded-0">
-									</div>
-									<div class="col-8">
-										<h2 class="text-primary d-block fw-normal">
-											이강인의 노트북
-											</h5>
-											<!-- 주문수와 금액 한 줄에 나오게 해주세요 -->
-											<div></div>
-											<div class="input-group mb-3">
-												<span class="input-group-text">주문수</span> <input
-													type="text" class="form-control" value="5" min="1">
-												<button class="btn btn-outline-secondary" type="button"
-													id="button-addon1">-</button>
-												<button class="btn btn-outline-secondary" type="button"
-													id="button-addon2">+</button>
-											</div>
-											<div class="input-group mb-3">
-												<span class="input-group-text">금액</span> <input type="text"
-													class="form-control" value="45,000" readonly>
-											</div>
-											<div class="text-end">
-												<button class="btn btn-primary">장바구니에서 제거</button>
-											</div>
-									</div>
-								</div>
-							</div>
-						</div>
+
 						<div>
 							<div class="card">
 								<div
@@ -300,8 +250,8 @@
 									<div class="text-end">
 										<div class="input-group mb-3">
 											<span class="input-group-text">총금액</span> <input type="text"
-												class="form-control" value="55,000" min="0" readonly>
-											<button class="btn btn-outline-primary" onclick="requestPay()">결제하기</button>
+												class="form-control" value="<%=totalpice %>" min="0" readonly>
+											<button class="btn btn-outline-primary" id="purchase">결제하기</button>
 										</div>
 									</div>
 
@@ -313,6 +263,32 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+	<script>
+	var IMP = window.IMP;
+	IMP.init("imp50718461");
+	 document.getElementById("purchase").addEventListener('click',()=>{
+			IMP.request_pay({
+				pg : "html5_inicis.INIpayTest",
+				pay_method : "card",
+				merchant_uid : "123451231-1212321321",
+				name : "<%=cartname%>",
+				amount : <%=totalpice %>,
+				buyer_email : "Iamport@chai.finance",
+				buyer_name : "포트원 기술지원팀",
+				buyer_tel : "010-1234-5678",
+				buyer_addr : "서울특별시 강남구 삼성동",
+				buyer_postcode : "123-456",
+			}, function(rsp) {
+				// callback
+				//rsp.imp_uid 값으로 결제 단건조회 API를 호출하여 결제결과를 판단합니다.
+			});
+	 });
+	function requestPay() {
+
+	}
+</script>
+
 	<script
 		src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 	<script src="/연습/js모음/js.js"></script>
