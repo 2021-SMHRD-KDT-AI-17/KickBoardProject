@@ -753,12 +753,14 @@ if (authentication != null && authentication.isAuthenticated()
 			    	}
 	            %>
 	            var nick = "<%=nick%>";
+	            var strong_msg = "<strong>"+"익명의 사용자 : "+"</strong>"+msg;
 				//div 태그를 만들어 텍스트를 msg로 지정을 한뒤 #chat_box에 추가를 시켜준다.
-				$('<div class=" bg-white rounded p-2 mb-2"></div>').text(nick+" : "+msg).appendTo("#chat_box");
+				$('<div class=" bg-white rounded p-2 mb-2"></div>').html(strong_msg).appendTo("#chat_box");
 				//스크롤 내리기
 				$('#chat_box').scrollTop($('#chat_box')[0].scrollHeight+20);
 				<%}else{ %>
-				$('<div class=" bg-white rounded p-2 mb-2"></div>').text("익명의 사용자 : "+msg).appendTo("#chat_box");
+				var strong_msg = "<strong>"+"익명의 사용자 : "+"</strong>"+msg;
+				$('<div class=" bg-white rounded p-2 mb-2"></div>').html(strong_msg).appendTo("#chat_box");
 				//스크롤 내리기
 				$('#chat_box').scrollTop($('#chat_box')[0].scrollHeight+20);
 				<%} %>
