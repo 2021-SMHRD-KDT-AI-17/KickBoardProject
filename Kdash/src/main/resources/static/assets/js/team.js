@@ -17,7 +17,7 @@ const clubGoalplayerPLY=document.getElementsByClassName("clubgoalplayer_player")
 const clubHelpplayerCNT=document.getElementsByClassName("clubhelpplayer_count");
 const clubHelpplayerPLY=document.getElementsByClassName("clubhelpplayer_player");
 (()=>{
-	     $.ajax({
+	    $.ajax({
         url:"showClub",
         type: "get",
         data:"clubname=울산HDFC",
