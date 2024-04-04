@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.kickboard.Kdash.entity.Club;
 import com.kickboard.Kdash.entity.Goods;
 import com.kickboard.Kdash.entity.News;
+import com.kickboard.Kdash.entity.Player;
+import com.kickboard.Kdash.entity.PlayerDetail;
 import com.kickboard.Kdash.entity.Request;
 import com.kickboard.Kdash.service.DashboardService;
 import com.kickboard.Kdash.service.GoodsService;
@@ -91,7 +93,14 @@ public class Rest_Controller {
 	//---메인대시보드
 	@GetMapping("/showClub")
 	public @ResponseBody Club showClub(@RequestParam("clubname") String name){
-		System.out.println(name);
 		return dashboardService.showClub(name);
+	}
+	@GetMapping("/showPlayer")
+	public @ResponseBody Player showPlayer(@RequestParam("playername")String name) {
+		return dashboardService.showPlayer(name);
+	}
+	@GetMapping("/showPlayerDetail")
+	public @ResponseBody PlayerDetail showPlayerDetail(@RequestParam("playeridx")int idx) {
+		return dashboardService.showPlayerDetail(idx);
 	}
 }

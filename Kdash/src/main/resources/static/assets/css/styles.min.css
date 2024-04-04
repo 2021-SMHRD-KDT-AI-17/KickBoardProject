@@ -20392,6 +20392,28 @@ ul {
     height: 80%;
     overflow-y: auto;
 }
+/* 선수사진 */
+.img-container{
+    width: 200px;
+    height: 200px;
+    
+}
+/* 다른 구단일때는 이거 */
+.player-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+/* 울산일때는 2 */
+.player2-img{
+    width: 360px; /* 이미지 전체 크기 */
+    height: 200px; /* 높이를 자동으로 설정하여 비율 유지 */
+    clip-path: inset(0px 180px 0px 0px); /* 왼쪽 절반만 보이도록 설정 */
+    margin-left: 10px;
+}
 /* Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
