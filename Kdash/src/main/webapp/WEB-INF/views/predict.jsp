@@ -174,7 +174,7 @@ if (authentication != null && authentication.isAuthenticated()
 		    	}
             %>
                   <div class="message-body">
-                  <p class="mb-0 fs-3 profile-name text-center"><%=userDetails.getMem_nick() %>님 환영합니다.</p>
+                  <p id="nick" class="mb-0 fs-3 profile-name text-center"><%=userDetails.getMem_nick() %>님 환영합니다.</p>
                   <p class="mb-0 fs-3 profile-name text-center">포인트 : <%=userDetails.getMem_point() %> P</p>
                     <a href="profile" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
@@ -736,7 +736,22 @@ if (authentication != null && authentication.isAuthenticated()
 			//msg_process를 클릭할 때
 			$("#msg_process").click(function() {
 				//소켓에 send_msg라는 이벤트로 input에 #msg의 벨류를 담고 보내준다.
-				socket.emit("send_msg", $("#msg").val());
+				
+				<%
+		        if (authentication != null && authentication.isAuthenticated()
+		   		&& authentication.getPrincipal() instanceof CustomUserDetails) {
+		    		CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+		    		String nick = userDetails.getMem_nick();
+			    	if (userDetails != null) {
+			    		
+			    	}
+	            %>
+	            socket.emit("send_msg", {message:$("#msg").val(),
+	            	nick:"<%=nick%>"});
+	            
+	            <%}else{ %>
+	            socket.emit("send_msg", $("#msg").val());
+	            <%} %>
 				//#msg에 벨류값을 비워준다.
 				$("#msg").val("");
 			});
@@ -752,8 +767,9 @@ if (authentication != null && authentication.isAuthenticated()
 			    		
 			    	}
 	            %>
-	            var nick = "<%=nick%>";
-	            var strong_msg = "<strong>"+"익명의 사용자 : "+"</strong>"+msg;
+	            var real_msg = msg.message;
+	            var nick = msg.nick;
+	            var strong_msg = "<strong>"+nick+" : "+"</strong>"+real_msg;
 				//div 태그를 만들어 텍스트를 msg로 지정을 한뒤 #chat_box에 추가를 시켜준다.
 				$('<div class=" bg-white rounded p-2 mb-2"></div>').html(strong_msg).appendTo("#chat_box");
 				//스크롤 내리기
