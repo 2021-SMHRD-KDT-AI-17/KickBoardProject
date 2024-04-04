@@ -68,7 +68,6 @@ function pre_post(option) {
 }
 function showNewsList(startN) {
     var listnum = 0;
-    console.log(startN);
     for (var i = startN; i < startN + post_perpage; i++) {
         if (news_imgList[i] != null) {
             imgs[listnum].setAttribute('src', news_imgList[i]);
@@ -119,7 +118,6 @@ function getList(init, isPre, idx) {
             news_titleList = [];
             news_linkList = [];
             if(data.length!=0){
-				console.log("확인");
                 news_lastIdx = data[data.length - 1].article_idx;
                 news_firstIdx = data[0].article_idx;
                 for (var i = 0; i < data.length; i++) {
