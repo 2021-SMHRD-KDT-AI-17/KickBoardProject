@@ -361,43 +361,43 @@
                         </div>
                         <ul class="timeline-widget mb-0 position-relative mb-n5">
                           <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.04.06</div>
+                            <div class="timeline-time text-dark flex-shrink-0 text-end scheduledate">2024.04.06</div>
                             <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                               <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
                               <span class="timeline-badge-border d-block flex-shrink-0"></span>
                             </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>울산</span>VS<span>수원</span></div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span class="schedulemy">울산HDFC</span>VS<span class="scheduleenemy">수원FC</span></div>
                           </li>
                           <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.04.13</div>
+                            <div class="timeline-time text-dark flex-shrink-0 text-end scheduledate">2024.04.13</div>
                             <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                               <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
                               <span class="timeline-badge-border d-block flex-shrink-0"></span>
                             </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>울산</span>VS<span>강원</span></div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span class="schedulemy">울산HDFC</span>VS<span class="scheduleenemy">강원FC</span></div>
                           </li>
                           <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.04.20</div>
+                            <div class="timeline-time text-dark flex-shrink-0 text-end scheduledate">2024.04.28</div>
                             <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                               <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
                               <span class="timeline-badge-border d-block flex-shrink-0"></span>
                             </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>광주</span>VS<span>울산</span></div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span class="schedulemy">울산HDFC</span>VS<span class="scheduleenemy">제주유나이티드</span></div>
                           </li>
                           <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.04.28</div>
+                            <div class="timeline-time text-dark flex-shrink-0 text-end scheduledate">2024.05.01</div>
                             <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                               <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
                               <span class="timeline-badge-border d-block flex-shrink-0"></span>
                             </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">울산 vs 제주</div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span class="schedulemy">울산HDFC</span>VS<span class="scheduleenemy">울산FC</span></div>
                           </li>
                           <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.05.01</div>
+                            <div class="timeline-time text-dark flex-shrink-0 text-end scheduledate">2024.05.04</div>
                             <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                               <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
                             </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">대구 vs 울산</div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span class="schedulemy">울산HDFC</span>VS<span class="scheduleenemy">서울FC</span></div>
                           </li>
                         </ul>
                       </div>
