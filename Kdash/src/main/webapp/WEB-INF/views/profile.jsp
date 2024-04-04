@@ -221,7 +221,7 @@ if (authentication != null && authentication.isAuthenticated()
 								<div class="input-group mb-3">
 									<span class="input-group-text" style="width: 100px;">Nickname</span>
 									<input name="nickname" type="text" class="form-control"
-										placeholder="닉?">
+										placeholder="닉네임">
 								</div>
 								<div class="input-group mb-3">
 									<span class="input-group-text" style="width: 100px;">Password</span>

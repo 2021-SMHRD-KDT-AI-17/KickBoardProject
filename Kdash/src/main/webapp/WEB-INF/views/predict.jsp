@@ -592,11 +592,28 @@ if (authentication != null && authentication.isAuthenticated()
                   </div> -->
                   <!-- 채팅 입력 -->
                   <!-- <form class="mt-auto"> -->
-                    <div class="mb-3">
+                    
+                      <%
+		        if (authentication != null && authentication.isAuthenticated()
+		   		&& authentication.getPrincipal() instanceof CustomUserDetails) {
+		    		CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+		    		String nick = userDetails.getMem_nick();
+			    	if (userDetails != null) {
+			    		
+			    	}
+	            %>
+	            <div class="mb-3">
                       <label class="form-label">Your Message</label>
                       <input type="text" id="msg" class="form-control">
                     </div>
                     <button id="msg_process" class="btn btn-primary w-100">Send</button>
+                    <%}else{ %>
+                    <div class="mb-3">
+                      <label class="form-label">Your Message</label>
+                    <input type="text" id="msg" class="form-control" placeholder="로그인이 필요합니다." readonly>
+                    </div>
+                    <button id="msg_process" class="btn btn-primary w-100" disabled>Send</button>
+                    <%} %>
                   <!-- </form> -->
                 </div>
               </div>
