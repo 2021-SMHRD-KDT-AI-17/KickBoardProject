@@ -120,7 +120,7 @@ $(function () {
 
 
   // 평균 차트
-var options = {
+/*var options = {
   series: [{
     name: 'record',
     data: [15, 20, 10, 25, 30, 5, 28, 12] // 출전경기수, 득점, 슈팅, 도움, 패스 성공률, 드리블, 태클, 인터셉트
@@ -147,11 +147,11 @@ var options = {
 };
 
 var chart = new ApexCharts(document.querySelector("#player-avg"), options);
-chart.render();
+chart.render();*/
 
 
 // 세부 차트
-var options = {
+/*var options = {
   series: [{
     name: 'record',
     data: [65, 68, 70, 72, 75, 78, 80, 82, 85, 88]
@@ -181,7 +181,7 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#player-data"), options);
 chart.render();
-
+*/
 })
 
 

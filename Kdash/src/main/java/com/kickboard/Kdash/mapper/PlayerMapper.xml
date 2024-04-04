@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kickboard.Kdash.mapper.PlayerMapper">
+	<select id="showPlayer"	resultType="com.kickboard.Kdash.entity.Player">
+		select * from tb_player where player_name=#{name}
+	</select>
+		<select id="showPlayerDetail"	resultType="com.kickboard.Kdash.entity.PlayerDetail">
+		select * from tb_player_detail where player_idx=#{idx} and year=2023
+	</select>
+</mapper>

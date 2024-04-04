@@ -263,9 +263,9 @@
                            <!-- 테이블 바디 -->
                            <tbody>
                             <tr class="table-head-2">
-                              <th scope="col">순위</th>
-                              <th scope="col">득점 수</th>
-                              <th scope="col">선수</th>
+                              <th scope="col" class="col-lg-1">순위</th>
+                              <th scope="col" class="col-lg-1">득점 수</th>
+                              <th scope="col" class="col-lg-1">선수</th>
                              </tr>
                             <tr>
                              <td>1</td>
@@ -294,9 +294,9 @@
                             <!-- 테이블 바디 -->
                             <tbody>
                               <tr class="table-head-2">
-                                <th scope="col">순위</th>
-                                <th scope="col">도움 수</th>
-                                <th scope="col">선수</th>
+                                <th scope="col" class="col-lg-1">순위</th>
+                                <th scope="col" class="col-lg-1">도움 수</th>
+                                <th scope="col" class="col-lg-1">선수</th>
                                </tr>
                               <tr>
                                <td>1</td>
@@ -327,7 +327,7 @@
                     <!-- Yearly Breakup -->
                     <div class="card overflow-hidden">
                       <div class="card-body p-4">
-                        <h5 class="card-title mb-9 fw-semibold text-b justify-content-between">올 시즌 전적</h5>
+                        <h5 class="card-title mb-9 fw-semibold text-b justify-content-between">이번 시즌 전적<span id="clubround"></span></h5>
                         <div class="row align-items-center">
                           <div class="col-8">
                             <h5 class="fw-semibold mb-3">현재 순위 : <span id="clubrank">3위</span></h5>
@@ -423,10 +423,14 @@
                 <div class="mb-3 mb-sm-0">
                   <select id="playerselect" class="form-select">
                     <option>이동경</option>
-                    <option>마틴아담</option>
+                    <option>마틴 아담</option>
                     <option>장시영</option>
                     <option>루빅손</option>
                     <option>이규성</option>
+                    <option>김지현</option>
+                    <option>보야니치</option>
+                    <option>켈빈</option>
+                    <option>김민우</option>
                   </select>
                 </div>
                 <div class="ms-sm-3">
@@ -450,8 +454,8 @@
                             <li class="club-list" id="playername">이동경</li>
                           </ul>
                         </div>
-                        <div class="d-flex justify-content-center mb-3">
-                          <img src="resources/assets/images/profile/user-1.jpg " class="plyer-img">
+                        <div class="mb-3 img-container">
+                          <img src="resources/assets/images/profile/user-1.jpg" class="plyer-img" id="playerimg">
                         </div>
                         <div class="row">
                           <table class="table table-sm text-center table-light mb-0">
@@ -486,18 +490,19 @@
                       <div class="row flex-grow-1">
                         <div class="col-lg-6">
                           <div class="">
-                            <h5 class="alert alert-secondary">player-avg record</h5>
+                            <h5 class="alert alert-secondary">이번시즌 주요기록</h5>
                             <div id="player-avg"></div>
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="">
-                            <h5 class="alert alert-secondary">player-total record</h5>
+                            <h5 class="alert alert-secondary">선수 작년(2023) 기록</h5>
                             <div id="player-data"></div>
                           </div>
                         </div>
                       </div>
-                      <div class="alert alert-secondary mt-auto mb-0">설명을 좀 써</div>
+                      <!-- 설명 -->
+                      <div class="alert alert-secondary mt-auto mb-0"></div>
                     </div>
                   </div>
                 </div>
@@ -511,15 +516,17 @@
       </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="resources/assets/libs/apexcharts/dist/apexcharts.js"></script>
+  <script src="resources/assets/js/dashboard.js"></script>
+  <script src="resources/assets/js/team.js"></script>
+  <script src="resources/assets/js/player.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
   <script src="resources/assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="resources/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="resources/assets/js/sidebarmenu.js"></script>
   <script src="resources/assets/js/app.min.js"></script>
-  <script src="resources/assets/js/team.js"></script>
-  <script src="resources/assets/libs/apexcharts/dist/apexcharts.js"></script>
   <script src="resources/assets/libs/simplebar/dist/simplebar.js"></script>
-  <script src="resources/assets/js/dashboard.js"></script>
   
 </body>
 
