@@ -38,6 +38,7 @@ const clubHelpplayerPLY=document.getElementsByClassName("clubhelpplayer_player")
             playerPosition.innerText = data.player_position;
             playerWeight.innerText = data.player_weight;
             playerHeight.innerText = data.player_height;
+            playerbrithday.innerText=data.player_birthdate;
             playerbargragh(data.player_idx);
             playerRadarchart(5,4,16,2,5,1,3,4);
         }, erro: () => {
@@ -65,7 +66,7 @@ $(document).ready(function () {
                 playerPosition.innerText = data.player_position;
                 playerWeight.innerText = data.player_weight;
                 playerHeight.innerText = data.player_height;
-                
+                playerbrithday.innerText=data.player_birthdate;
                 playerbargragh(data.player_idx);
                 var who=data.player_idx;
                 if(who==270){

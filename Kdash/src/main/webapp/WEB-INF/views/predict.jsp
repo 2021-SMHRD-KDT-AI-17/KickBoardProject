@@ -205,10 +205,10 @@ if (authentication != null && authentication.isAuthenticated()
           <div class="col-lg-8 mb-4">
             <div class="card predict-box">
               <div class="card-body">
-                <h5 class="card-title fw-semibold mb-4 text-center">
-                  <span><img src="resources/assets/images/logos/ball_logo.png" class="field-logo">Gwangju </span>
+<h5 class="card-title fw-semibold mb-4 text-center fs-6">
+                  <span><img src="resources/assets/images/logos/울산HDFC.png" class="field-logo">울산 HD </span>
                   vs
-                  <span> seoul</span><img src="resources/assets/images/logos/ball_logo.png" class="field-logo"></h5>
+                  <span> 대전 하나</span><img src="resources/assets/images/logos/대전하나시티즌.png" class="field-logo"></h5>
                 <!-- card -->
                 <div class="row">
                   <div class="col-lg-12 player-card">
@@ -216,134 +216,134 @@ if (authentication != null && authentication.isAuthenticated()
                       <div class="card-body">
                         <img src="resources/assets/images/products/filed1.jpg" class="mx100-mh100">
                         <div class="card-body team-lineup-a rounded p-3">
-                          <table class="table-sm table-img text-center table-text-color " style="width: 180px;">
+<table class="table-sm table-img text-center table-text-color no-wrap" style="width: 180px; white-space: nowrap;">
                             <tr class="team-name-row">
-                              <td colspan="3">팀 이름</td>
+                              <td colspan="3">울산 HD</td>
                             </tr>
                             <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>21</td>
+                              <td>조현우</td>
+                              <td>GK</td>
                             </tr>
                             <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>2</td>
+                              <td>심상민</td>
+                              <td>LB</td>
                             </tr>
                             <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>19</td>
+                              <td>김영권</td>
+                              <td>CB</td>
                             </tr>
                             <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>20</td>
+                              <td>황석호</td>
+                              <td>CB</td>
                             </tr>
                             <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>66</td>
+                              <td>설영우</td>
+                              <td>RB</td>
                             </tr>
                             <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>95</td>
+                              <td>마테우스</td>
+                              <td>CDM</td>
                             </tr>
                             <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>7</td>
+                              <td>고승범</td>
+                              <td>CDM</td>
                             </tr>
                             <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>14</td>
+                              <td>이동경</td>
+                              <td>CAM</td>
                             </tr>
                             <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>97</td>
+                              <td>켈빈</td>
+                              <td>LW</td>
                             </tr>
                             <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>18</td>
+                              <td>주민규</td>
+                              <td>ST</td>
                             </tr>
                             <tr class="team-name-row">
-                              <td >12</td>
-                              <td>김빵빵</td>
-                              <td>gk</td>
+                              <td>73</td>
+                              <td>윤일록</td>
+                              <td>RW</td>
                             </tr>
                             <tr>
-                              <td colspan="3">감독 : 이정효</td>
+                              <td colspan="3">감독 : 홍명보</td>
                             </tr>
                           </table>
                           <!-- 여기에 A팀 라인업 정보 추가 -->
                         </div>
                         <!-- B팀 라인업 -->
                         <div class="card-body team-lineup-b rounded p-3">
-                          <table class="table-sm table-img text-center table-text-color " style="width: 180px;">
+<table class="table-sm table-img text-center table-text-color no-wrap" style="width: 180px; white-space: nowrap;">
                             <tr class="team-name-row">
-                              <td colspan="3">팀 이름</td>
+                              <td colspan="3">대전 하나</td>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>이창근</td>
+                              <td>GK</td>
+                            </tr>
+                            <tr>
+                              <td>98</td>
+                              <td>안톤</td>
+                              <td>LCB</td>
+                            </tr>
+                            <tr>
+                              <td>28</td>
+                              <td>아론</td>
+                              <td>CB</td>
+                            </tr>
+                            <tr>
+                              <td>33</td>
+                              <td>이정택</td>
+                              <td>RCB</td>
+                            </tr>
+                            <tr>
+                              <td>13</td>
+                              <td>이동원</td>
+                              <td>LM</td>
+                            </tr>
+                            <tr>
+                              <td>8</td>
+                              <td>주세종</td>
+                              <td>CM</td>
+                            </tr>
+                            <tr>
+                              <td>15</td>
+                              <td>임덕근</td>
+                              <td>CM</td>
+                            </tr>
+                            <tr>
+                              <td>17</td>
+                              <td>이현식</td>
+                              <td>RM</td>
                             </tr>
                             <tr>
                               <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>김승대</td>
+                              <td>CAM</td>
                             </tr>
                             <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
-                            </tr>
-                            <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
-                            </tr>
-                            <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
-                            </tr>
-                            <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
-                            </tr>
-                            <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
-                            </tr>
-                            <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
-                            </tr>
-                            <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
-                            </tr>
-                            <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
-                            </tr>
-                            <tr>
-                              <td>12</td>
-                              <td>김옥지</td>
-                              <td>gk</td>
+                              <td>70</td>
+                              <td>레안드로</td>
+                              <td>ST</td>
                             </tr>
                             <tr class="team-name-row">
-                              <td >12</td>
-                              <td>김빵빵</td>
-                              <td>gk</td>
+                              <td >19</td>
+                              <td>신상은</td>
+                              <td>ST</td>
                             </tr>
                             <tr>
-                              <td colspan="3">감독 : 이정효</td>
+                              <td colspan="3">감독 : 이민성</td>
                             </tr>
                           </table>
                           <!-- 여기에 A팀 라인업 정보 추가 -->
@@ -356,28 +356,28 @@ if (authentication != null && authentication.isAuthenticated()
                   <div class="card-body">
                     <h5 class="card-title mb-3">Sub-Entry</h5>
                     <ul class="subList text-center">
-                      <li>팀이름</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
+<li class="fw-bold">울산</li>
+                      <li>조수혁</li>
+                      <li>임종은</li>
+                      <li>이명재</li>
+                      <li>최강민</li>
+                      <li>루빅손</li>
+                      <li>이규성</li>
+                      <li>이청용</li>
+                      <li>김민우</li>
+                      <li>마틴아담</li>
                     </ul>
                     <ul class="subList text-center">
-                      <li>팀이름</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
-                      <li>123</li>
+<li class="fw-bold">대전</li>
+                      <li>이준서</li>
+                      <li>김현우</li>
+                      <li>임유석</li>
+                      <li>오재석</li>
+                      <li>홍정운</li>
+                      <li>김한서</li>
+                      <li>호사</li>
+                      <li>음라파</li>
+                      <li>김인균</li>
                     </ul> 
                   </div>
                 </div>
