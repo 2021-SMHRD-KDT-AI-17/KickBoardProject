@@ -181,7 +181,7 @@ function addcart(idx) {
         type:"get",
         dataType:'json',
         success:(data)=>{
-            alert("장바구니에 '"+data.goods_name+"'가 추가 됬습니다");
+            alert("장바구니에 '"+data.goods_name+"'(이)가 추가 됬습니다");
         },error:()=>{
             alert("장바구니 추가 실패");
         }

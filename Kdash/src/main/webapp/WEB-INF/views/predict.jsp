@@ -381,7 +381,8 @@ if (authentication != null && authentication.isAuthenticated()
                     </ul> 
                   </div>
                 </div>
-                <div class="card">
+                <!--  -->
+<!--                 <div class="card">
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="card-body d-flex flex-column justify-content-center h-100">
@@ -457,12 +458,13 @@ if (authentication != null && authentication.isAuthenticated()
                     </div>
                   </div>
                 </div>
+                
                 <div class="card">
                   <div class="row">
                     <div class="col">
                       <div class="card-body">
                         <h5 class="card-title fw-semibold mb-4">팀 A</h5>
-                        <!-- 최다 득점자와 최다 어시스트자 테이블 -->
+                        최다 득점자와 최다 어시스트자 테이블
                         <div class="table-responsive">
                           <table class="table table-sm">
                             <thead>
@@ -483,7 +485,7 @@ if (authentication != null && authentication.isAuthenticated()
                                 <td>Player B</td>
                                 <td>18 points</td>
                               </tr>
-                              <!-- 추가적인 최다 득점자 행들 -->
+                              추가적인 최다 득점자 행들
                             </tbody>
                           </table>
                         </div>
@@ -508,7 +510,7 @@ if (authentication != null && authentication.isAuthenticated()
                                 <td>Player Y</td>
                                 <td>12 assists</td>
                               </tr>
-                              <!-- 추가적인 최다 어시스트자 행들 -->
+                              추가적인 최다 어시스트자 행들
                             </tbody>
                           </table>
                         </div>
@@ -517,7 +519,7 @@ if (authentication != null && authentication.isAuthenticated()
                     <div class="col">
                       <div class="card-body">
                         <h5 class="card-title fw-semibold mb-4">팀 B</h5>
-                        <!-- 최다 득점자와 최다 어시스트자 테이블 -->
+                        최다 득점자와 최다 어시스트자 테이블
                         <div class="table-responsive">
                           <table class="table table-sm">
                             <thead>
@@ -538,7 +540,7 @@ if (authentication != null && authentication.isAuthenticated()
                                 <td>Player B</td>
                                 <td>18 points</td>
                               </tr>
-                              <!-- 추가적인 최다 득점자 행들 -->
+                              추가적인 최다 득점자 행들
                             </tbody>
                           </table>
                         </div>
@@ -563,15 +565,15 @@ if (authentication != null && authentication.isAuthenticated()
                                 <td>Player Y</td>
                                 <td>12 assists</td>
                               </tr>
-                              <!-- 추가적인 최다 어시스트자 행들 -->
+                              추가적인 최다 어시스트자 행들
                             </tbody>
                           </table>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                
+                </div> -->
+                <!--  -->
               </div>
             </div>
           </div>

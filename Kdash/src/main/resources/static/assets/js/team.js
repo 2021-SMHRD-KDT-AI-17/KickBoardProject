@@ -24,9 +24,6 @@ const clubGoalplayerCNT = document.getElementsByClassName("clubgoalplayer_count"
 const clubGoalplayerPLY = document.getElementsByClassName("clubgoalplayer_player");
 const clubHelpplayerCNT = document.getElementsByClassName("clubhelpplayer_count");
 const clubHelpplayerPLY = document.getElementsByClassName("clubhelpplayer_player");
-console.log(scheduleDate);
-console.log(scheduleMy);
-console.log(scheduleEnemy);
 (() => {
 	$.ajax({
 		url: "showClub",
@@ -59,7 +56,6 @@ $(document).ready(function() {
 	// 선호 구단 선택 시
 	$('#teamselect').change(function() {
 		var selectedTeam = $('#teamselect option:selected').text();
-		/*console.log(selectedTeam);*/
 		$.ajax({
 			url: "showClub",
 			type: "get",
@@ -77,7 +73,6 @@ $(document).ready(function() {
 				let datelist=[];
 				let enemylist=[];
 				if (selectedTeam == "울산HDFC") {
-					console.log(selectedTeam);
 					var gname = ['이동경', '마틴아담', '장시영'];
 					var gcnt = [4, 2, 1]
 					var hname = ['이동경', '루빅손', '이규성'];
@@ -96,7 +91,6 @@ $(document).ready(function() {
 						scheduleEnemy[k].innerText=enemylist[k];
 					}
 				} else if (selectedTeam == "포항스틸러스") {
-					console.log(selectedTeam);
 					var gname = ['정재희', '백성동', '오베르단'];
 					var gcnt = [2, 1, 1]
 					var hname = ['이호재', '조르지', '정재희'];
@@ -115,7 +109,6 @@ $(document).ready(function() {
 					scheduleEnemy[k].innerText=enemylist[k];
 					}
 				} else {
-					console.log(selectedTeam);
 					var gname = ['가브리엘', '이희균', '이건희'];
 					var gcnt = [4, 2, 1]
 					var hname = ['두현석', '이건희', '엄지성'];
