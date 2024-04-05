@@ -77,9 +77,11 @@ $(document).ready(function () {
                     playerRadarchart(4,1,1,0,2,2,2,1);
                 }else if(who==272){
                     playerRadarchart(4,0,4,1,1,0,3,5);
-                }else{
+                }else if (who==268){
                     playerRadarchart(3,0,2,1,3,2,2,6);
-                }
+                }else{
+					playerRadarchart(2,4,1,1,1,0,0,2);
+				}
             }, erro: () => {
                 alert("통신오류!");
             }

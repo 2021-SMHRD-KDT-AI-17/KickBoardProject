@@ -428,9 +428,6 @@
                     <option>루빅손</option>
                     <option>이규성</option>
                     <option>김지현</option>
-                    <option>보야니치</option>
-                    <option>켈빈</option>
-                    <option>김민우</option>
                   </select>
                 </div>
                 <div class="ms-sm-3">
