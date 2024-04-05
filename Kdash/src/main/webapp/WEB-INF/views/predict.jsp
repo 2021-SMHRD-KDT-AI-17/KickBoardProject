@@ -794,10 +794,7 @@ if (authentication != null && authentication.isAuthenticated()
 				//스크롤 내리기
 				$('#chat_box').scrollTop($('#chat_box')[0].scrollHeight+20);
 				<%}else{ %>
-				var strong_msg = "<strong>"+"익명의 사용자 : "+"</strong>"+msg;
-				$('<div class=" bg-white rounded p-2 mb-2"></div>').html(strong_msg).appendTo("#chat_box");
-				//스크롤 내리기
-				$('#chat_box').scrollTop($('#chat_box')[0].scrollHeight+20);
+				
 				<%} %>
 			});
 		});
