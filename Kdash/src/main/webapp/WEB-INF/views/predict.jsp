@@ -709,15 +709,15 @@ if (authentication != null && authentication.isAuthenticated()
           </div>
           <div class="col-lg-3">
             <div class="card h-100">
-              <div class="card-body d-flex flex-column">
+              <div class="card-body d-flex flex-column justify-content-between">
                 <h5 class="card-title fw-semibold mb-4 text-center">참여 방법</h5>
                 <!-- 설명 칸 -->
                 <h6>game predict</h6>
-                <p class="mb-1">여기에 설명을 적어 주세요</p>
-                <h6>game predict</h6>
-                <p class="mb-1">여기에 설명을 적어 주세요</p>
-                <h6>game predict</h6>
-                <p >여기에 설명을 적어 주세요</p>
+                <p class="mb-1">홈 팀의 승무패를 예측해주세요</p>
+                <h6>most scorer, assist</h6>
+                <p class="mb-1">시즌 최다 득점자, 최다 도움자를 예측해주세요</p>
+                <h6>MVP , LVP</h6>
+                <p >경기 MVP, LVP 예측해주세요</p>
               </div>
             </div>
           </div>
