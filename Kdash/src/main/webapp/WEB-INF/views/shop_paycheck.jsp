@@ -221,20 +221,16 @@
 											<%=basket.get(i).getGoods_name() %>
 											</h5>
 											<div class="input-group mb-3">
-												<span class="input-group-text">주문수</span> <input
-													type="text" class="form-control" value="1" min="1">
-												<button class="btn btn-outline-secondary" type="button"
-													id="button-addon1">-</button>
-												<button class="btn btn-outline-secondary" type="button"
-													id="button-addon2">+</button>
+												<span class="input-group-text" style="min-width:80px;">주문수</span> <input
+													type="number" class="form-control" value="1" min="1">
 											</div>
 											<div class="input-group mb-3">
-												<span class="input-group-text">금액</span> <input type="text"
+												<span class="input-group-text" style="min-width:80px;">금액</span> <input type="text"
 													class="form-control" value="<%=basket.get(i).getGoods_price() %>" min="1" readonly>
 											</div>
 											
 											<div class="text-end">
-												<button class="btn btn-primary">장바구니에서 제거</button>
+												<button class="btn btn-primary" onclick="deleteCart(<%=i%>)">장바구니에서 제거</button>
 											</div>
 									</div>
 								</div>
@@ -249,7 +245,7 @@
 									class="card-body row align-items-center justify-content-center">
 									<div class="text-end">
 										<div class="input-group mb-3">
-											<span class="input-group-text">총금액</span> <input type="text"
+											<span class="input-group-text" style="min-width:80px;">총금액</span> <input type="text"
 												class="form-control" value="<%=totalpice %>" min="0" readonly>
 											<button class="btn btn-outline-primary" id="purchase">결제하기</button>
 										</div>

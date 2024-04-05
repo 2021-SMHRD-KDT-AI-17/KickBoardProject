@@ -93,7 +93,6 @@ function playerbargragh(idx) {
         data: "playeridx=" + idx,
         dataType: 'json',
         success: (data)=>{
-			console.log(data);
             namelist=['츨전수', '득점', '도움', '골킥', '코너킥', '파울', '아웃스윙어', '슈팅', '실점', '경고', '퇴장'];
             datalist=[data.appearance,data.goal,data.as,data.gk,data.ck,data.fo,data.os,data.st,data.loss,data.caution,data.ejection]
         },erro:()=>{
@@ -102,8 +101,6 @@ function playerbargragh(idx) {
         }
     })
     setTimeout(()=>{
-        console.log(namelist);
-        console.log(datalist);
         var options = {
             series: [{
                 name: '',
