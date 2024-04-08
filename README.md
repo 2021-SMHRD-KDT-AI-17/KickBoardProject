@@ -144,7 +144,7 @@
   <tr>
     <td align="center"><b>현<br>I'm Port를 연동한 결제 구현<br>산출문서 제작<br>룰렛 기능 구현</b></td>
     <td align="center"><b>전체 UI/UX 구현<br>ppt제작<br>쪽지 기능 구현<br>채팅 API 연동</b></td>
-    <td align="center"><b>크롤링을 통한 데이터 수집<br>DB구현<br>JS를 이용한 이벤트 구현<br>산출문서 제작/b></td>
+    <td align="center"><b>크롤링을 통한 데이터 수집<br>DB구현<br>JS를 이용한 이벤트 구현<br>산출문서 제작</b></td>
     <td align="center"><b>소캣을 이용한 채팅 구현<br>사이드 메뉴 이동 연결</b></td>
   </tr>
   <tr>
