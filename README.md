@@ -105,32 +105,41 @@
 
 ## 🖥 화면 구성
 
-### 로그인/회원가입
+### 로그인/회원가입<br>
 ![image](https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/6234ace0-b687-41ba-b524-06d3526f6f16)
 ![image](https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/c15ad78c-d26d-4968-8414-6b92888dd2da)
 ![image](https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/610d2b14-2b22-4e9c-babe-0bee671c8b92)
+<br>
+
+### 메인화면<br>
+<img src="https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/ce3144c2-d8de-49c6-9bda-1abd438e3354">
+<img src="https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/31865a9b-0f82-428e-846c-45160621944b">
+<br>
+
+### 경기예측<br>
+<img src="https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/6157e44f-882a-4841-a125-140f798189fd">
+<img src="https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/3cdae9b6-e725-4a7c-acf4-f28dd0027618">
 
 <br>
-### 메인화면
-![image](https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/ce3144c2-d8de-49c6-9bda-1abd438e3354)
-![image](https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/31865a9b-0f82-428e-846c-45160621944b)
+
+### 관련소식
+![image](https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/77ae8137-bdd1-48dd-b54a-87ca3e629418)
+<br>
+
+### 인터뷰게시판
+![image](https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/ede18510-5290-44b8-9d11-84445c89f4d8)
+![image](https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/666552dd-9afb-4388-8705-135a1a80856b)
 
 <br>
-### 채팅사용법
+
+### 굿즈샵
+![image](https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/41529cc3-9a5c-415c-830f-a21bfeff8167)
+![image](https://github.com/2021-SMHRD-KDT-AI-17/KickBoardProject/assets/157432780/ecd08615-aa70-4360-a5fb-cf0e7cbdc864)
+
 
 <br>
-### 오늘의 퀴즈
-
 <br>
-### 점심메뉴 추천 및 룰렛
 
-<br>
-### 쪽지 및 채팅
-
-<br>
-### 회원정보 수정 및 회원 탈퇴
-
-<br>
 ## 👨‍👩‍👦‍👦 팀원 역할
 <table>
   <tr>
@@ -148,7 +157,7 @@
   <tr>
     <td align="center"><b>I'm Port를 연동한 결제 구현<br>스프링 security, oauth2 적용<br>산출문서 제작</b></td>
     <td align="center"><b>전체 UI/UX 구현<br>ppt제작</b></td>
-    <td align="center"><b>데이터 수집<br>DB구현<br>JS를 이용한 이벤트 구현<br>산출문서 제작</b></td>
+    <td align="center"><b>데이터크롤링<br>DB구현<br>JS를 이용한 이벤트 구현<br>산출문서 제작</b></td>
     <td align="center"><b>소캣을 이용한 채팅 구현<br>사이드 메뉴 이동 연결</b></td>
   </tr>
   <tr>
@@ -161,12 +170,12 @@
 
 ## 🤾‍♂️ 트러블슈팅
 * 문제1<br>
-문제점 : K리그 데이터 포털에서 HTML태그로 페이지 이동이 불가능
+문제점 : K리그 데이터 포털에서 HTML태그로 페이지 이동이 불가능<br>
 해결방안 : 자바스크립트로 선언된 함수로 이동
  
 * 문제2<br>
-문제점 : 게시판 버튼에 for문을 이용해 함수 추가 시 for문안 i변수를 매개변수로 주면1~4버튼도 5로 인식 
-해결방안 : 클로저(내부함수)를 이용해 내부함수에 변수를 추가시켜 1~5각 각의 순서에 맞게 인식
+문제점 : 게시판 버튼에 for문을 이용해 함수 추가 시 for문안 i변수를 매개변수로 주면1,2,3,4버튼도 5로 인식<br>
+해결방안 : 클로저(내부함수)를 이용해 내부함수에 변수를 추가시켜 1,2,3,4,5각 각의 순서에 맞게 인식
 
 ## 채팅사용법
 1. node설치
