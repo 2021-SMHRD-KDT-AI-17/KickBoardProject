@@ -176,9 +176,3 @@
 * 문제2<br>
 문제점 : 게시판 버튼에 for문을 이용해 함수 추가 시 for문안 i변수를 매개변수로 주면1,2,3,4버튼도 5로 인식<br>
 해결방안 : 클로저(내부함수)를 이용해 내부함수에 변수를 추가시켜 1,2,3,4,5각 각의 순서에 맞게 인식
-
-## 채팅사용법
-1. node설치
-2. terminal에 npm init -y
-3. terminal에 npm install express, socket.io
-4. terminal에 node server.js 입력하면 서버실행
